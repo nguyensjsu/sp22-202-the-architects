@@ -1,1 +1,2 @@
-# sp22-202-the-architects
+# Team Project (Replace with your Team Name and Journal)
+
