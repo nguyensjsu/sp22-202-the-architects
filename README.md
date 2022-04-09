@@ -1,2 +1,4 @@
-# Team Project (Replace with your Team Name and Journal)
+# The Architects
+
+## Team Journal
 
