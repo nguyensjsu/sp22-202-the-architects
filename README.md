@@ -12,3 +12,8 @@
 
 ## Team Journal
 
+### Week 1
+
+- Weekly Scrum Report
+  - Paramjot Singh
+    
