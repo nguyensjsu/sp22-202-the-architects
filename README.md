@@ -20,3 +20,8 @@
    - What I plan to do today: Setup Greenfoot, Plan Design Patterns
    - Blockers: N/A
     
+### Week 1
+- Waqas Kureshy
+   - What I did: Explored Game development with Greenfoot
+   - What I plan to do today: Work on Game Interface, Figure out Design Patterns applicable to the game.
+   - Blockers: N/A
