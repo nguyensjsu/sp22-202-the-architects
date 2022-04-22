@@ -25,3 +25,9 @@
    - What I did: Explored Game development with Greenfoot
    - What I plan to do today: Work on Game Interface, Figure out Design Patterns applicable to the game.
    - Blockers: N/A
+
+### Week 1
+- Devansh Modi
+   - What I did: Setup local environment for Greenfoot, Swing, and game creation. Wrote boilerplate code.
+   - What I plan to do next: Plan for design patterns needed for the UNO game.
+   - Blockers: N/A
