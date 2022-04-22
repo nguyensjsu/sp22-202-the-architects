@@ -5,10 +5,12 @@
 - Ashutosh Ojha
 - Waqas Kureshy
 - Devansh Modi
+- Hanyu Hu
 
 ### Technologies
 - Abstract Window Toolkit
 - Java Swing
+- Greenfoot
 
 ## Team Journal
 
