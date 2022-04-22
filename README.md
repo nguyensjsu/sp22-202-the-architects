@@ -13,7 +13,8 @@
 ## Team Journal
 
 ### Week 1
-
-- Weekly Scrum Report
-  - Paramjot Singh
+- Paramjot Singh
+   - What I did: Broke down Uno into objects
+   - What I plan to do today: Setup Greenfoot, Plan Design Patterns
+   - Blockers: N/A
     
