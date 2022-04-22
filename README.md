@@ -1,7 +1,10 @@
 # The Architects
 
 ### Team Members
-- TBD
+- Paramjot Singh
+- Ashutosh Ojha
+- Waqas Kureshy
+- Devansh Modi
 
 ### Technologies
 - Abstract Window Toolkit
