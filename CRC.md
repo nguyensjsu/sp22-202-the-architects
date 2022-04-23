@@ -37,3 +37,20 @@ Reponsibilities:
 Collaborators: 
 - Deck
 - Player
+
+# Design Patterns
+
+Observer
+- Scoring: Player/GameController
+- Player/Deck
+
+Chain of Responsbility
+- Track of Turns
+
+Strategy
+- Special Card Actions
+
+Factory
+- Card Creation
+
+
