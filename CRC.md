@@ -22,7 +22,7 @@ Collaborators:
 ## Deck
 Reponsibilities: 
 - Knows which cards it owns
-- Knows the order of the cards
+- Responds to special card 
 
 Collaborators: 
 - Card
@@ -32,6 +32,7 @@ Reponsibilities:
 - Knows scores of both players
 - Handles the transfer of cards from deck to deck
 - Handles the switching of players on each turn
+- Handles special cards
 
 Collaborators: 
 - Deck
