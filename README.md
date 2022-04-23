@@ -43,4 +43,16 @@
       - Design UML class diagrams.
    - Blockers: 
       - N/A
+
+### Week 1
+- Hanyu Hu
+   - What I did: 
+     - Setup environment for Greenfoot.
+     - Getting familiar with Greenfoor development, and try out with some minor projects.
+     - Checked the tutorial videos.
+   - What I plan to do next: 
+     - Brainstorm with for the design patter that could best apply to UNO game
+     - Team meeting to finalize the UNO develop circle
+     - Start working on the structure of the game.
+   - Blockers: N/A
       
