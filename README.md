@@ -54,4 +54,9 @@
      - Start working on the structure of the game.
    - Blockers: N/A
       
-
+### Week 2
+- Paramjot Singh
+   - What I did: Setup Greenfoot, Plan Design Patterns
+   - What I plan to do today: Write code for the Number Cards and larger Card interfaces
+   - Blockers: N/A
+   - XP Value: Communication. A combination of IRL meeting and scheduled meetings on Google Meetings ensured we performed well in this value.
