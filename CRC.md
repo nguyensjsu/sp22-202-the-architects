@@ -53,4 +53,8 @@ Strategy
 Factory
 - Card Creation
 
+Singleton 
+- Game Controller
 
+State
+- Game Controller
