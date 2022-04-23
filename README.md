@@ -31,3 +31,16 @@
    - What I did: Setup local environment for Greenfoot, Swing, and game creation. Wrote boilerplate code.
    - What I plan to do next: Plan for design patterns needed for the UNO game.
    - Blockers: N/A
+
+### Week 1
+- Ashutosh Ojha
+   - What I did: 
+      - Setup dev environment: install Greenfoot.
+      - Get familiar with Greenfoot APIs.
+   - What I plan to do next: 
+      - Get aqcuainted with the objective task: Build UNO game
+      - Identify the objects and various interactions required
+      - Design UML class diagrams.
+   - Blockers: 
+      - N/A
+      
