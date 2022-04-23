@@ -19,6 +19,7 @@
    - What I did: Broke down Uno into objects
    - What I plan to do today: Setup Greenfoot, Plan Design Patterns
    - Blockers: N/A
+   - XP Value: Communication. We did struggle with communication earlier in the week, but by using Google Meetings and scheduling meetings in advance we were able to get more responsible with communication. 
     
 - Waqas Kureshy
    - What I did: Explored Game development with Greenfoot
@@ -53,3 +54,4 @@
      - Start working on the structure of the game.
    - Blockers: N/A
       
+
