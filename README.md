@@ -104,3 +104,22 @@
       - N/A
    - XP Value: Feedback - testing and acceptance.
 
+- Waqas Kureshy
+   - What I did: 
+      - Setup my Greenfoot environment.
+      - Get familiar with Greenfoot APIs.
+      - Practiced on a couple of games implemented on Greenfoot.
+      - Worked on UI elements of the game.
+   - What I plan to do next: 
+      - Finish up remaining UI wireframes.
+      - Start on building the Gaming application on Greenfoot. 
+      - Aid in Designing UML class diagrams.
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Simplicity 
+         - Contributed in team meetings to help decide the initial model of the gaming application.
+         - Worked up on simplifying the design implementation of the game with the team members.
+      - Feedback
+         - Recieved critical feedback from team to rework the visual elements of the gaming application.
+
