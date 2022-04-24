@@ -42,6 +42,8 @@
       - Design UML class diagrams.
    - Blockers: 
       - N/A
+   - XP Value:
+      - Simplicity - Facilitated the team to begin on a simple note and not get lost on the intricacies of the project. There was significant confusion in the team in regards to how should one approach the task. Dealt with the confusion by suggesting team to start small. Instead of diving deep into project designing, suggested to focus on getting familiar with Greenfoot first by building small starter projects.
 
 - Hanyu Hu
    - What I did: 
@@ -70,3 +72,5 @@
       - Map State pattern with the game controller logic.
    - Blockers: 
       - N/A
+   - XP Value:
+      - Simplicity - After getting familiar with the dev environment and tools, focused on decoding the high-level structure of the project. Key objective was to brainstorm and come up with individual classes and their relationships. A couple developers would be working on designing UML class diagrams, while some would be designing images to be used for UI starting with the various types of cards.
