@@ -14,6 +14,8 @@
 
 ## Team Journal
 
+[Burndown Chart/Sheet](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
+
 ### Week 1
 - Paramjot Singh
    - What I did: Broke down Uno into objects
