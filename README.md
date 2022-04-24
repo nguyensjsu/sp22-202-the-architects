@@ -60,3 +60,13 @@
    - What I plan to do today: Write code for the Number Cards and larger Card interfaces
    - Blockers: N/A
    - XP Value: Communication. A combination of IRL meeting and scheduled meetings on Google Meetings ensured we performed well in this value.
+
+- Ashutosh Ojha
+   - What I did: 
+      - Gained a high level understanding of the task: Build UNO game.
+      - Identified the objects and the relationships.
+   - What I plan to do next: 
+      - Design UML class diagrams.
+      - Map State pattern with the game controller logic.
+   - Blockers: 
+      - N/A
