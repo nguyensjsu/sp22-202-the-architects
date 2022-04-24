@@ -80,3 +80,15 @@
          - After getting familiar with the dev environment and tools, focused on decoding the high-level structure of the project. 
          - Key objective was to brainstorm and come up with individual classes and their relationships. 
          - A couple developers would be working on designing UML class diagrams, while others would be designing images to be used for UI, starting with the various types of cards.
+
+- Hanyu HU
+   - What I did: 
+      - Get familiar with UNO rules and practice with team
+      - BrainStorm the design patterns gonna apply with teams (State Machine Pattern / Observer patter)
+   - What I plan to do next: 
+      - After the CRC cards are created, start coding the initial code an fram works
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Communication, weekly scrum meeting help me to communicate with team regards to the Design or blokers
+      - Feedback, given feedback for the current state we are, and for the design pattern that planning to use
