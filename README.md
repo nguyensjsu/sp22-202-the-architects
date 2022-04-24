@@ -92,3 +92,15 @@
    - XP Value:
       - Communication, weekly scrum meeting help me to communicate with team regards to the Design or blokers
       - Feedback, given feedback for the current state we are, and for the design pattern that planning to use
+
+- Devansh Modi
+   - What I did: 
+      - Worked on initial tests for App Controller and Cards classes.
+      - Worked on design pattern for Deck object.
+   - What I plan to do next: 
+      - Write more unit tests to help in development.
+      - Apply identified design patterns.
+   - Blockers: 
+      - N/A
+   - XP Value: Feedback - testing and acceptance.
+
