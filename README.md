@@ -126,3 +126,6 @@
       - Feedback
          - Recieved critical feedback from team to rework the visual elements of the gaming application.
 
+### Week 3
+
+TBD
