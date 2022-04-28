@@ -11,6 +11,7 @@
 - Abstract Window Toolkit
 - Java Swing
 - Greenfoot
+- Sl4j
 
 ## Team Journal
 
