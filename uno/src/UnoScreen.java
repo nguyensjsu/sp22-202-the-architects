@@ -1,7 +1,9 @@
+package src;
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class UnoScreen here.
+ * Write a description of class src.UnoScreen here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -37,7 +39,7 @@ public class UnoScreen extends World
             return UnoGame;
     }
     
-    // public UnoScreen()
+    // public src.UnoScreen()
     //{    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
      //   super(WIDTH, HEIGHT, 1); 
