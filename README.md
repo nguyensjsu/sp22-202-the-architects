@@ -143,4 +143,19 @@
       - Simplicity 
          - Contributed in team meetings to help define and dive deeper into the project.
          - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
+- Hanyu Hu
+   - What I did: 
+      - Class design for game rules
+      - Made the initial code for game rules
+      - Chose Singleton design pattern for game rules
+   - What I plan to do next: 
+      - Implement the details for the game rules
+      - Corporate the current gamerules class with game screen
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+      - Waiting on the Player class and bring it into the scoop.
+   - XP Value:
+      - Simplicity 
+      - Communication
+      - Provide feedbacks
      
