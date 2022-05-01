@@ -128,4 +128,19 @@
 
 ### Week 3
 
-TBD
+- Waqas Kureshy
+   - What I did: 
+      - Made Cards for the Game
+      - Made Button class for navigation on screens
+      - Made Main menu screen for the game.
+      - Made UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
+   - What I plan to do next: 
+      - Work on UnoScreen with static elements to finish the design.
+      - Work on Direction functionality using state pattern.
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+   - XP Value:
+      - Simplicity 
+         - Contributed in team meetings to help define and dive deeper into the project.
+         - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
+     
