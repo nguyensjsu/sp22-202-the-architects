@@ -159,3 +159,19 @@
       - Communication
       - Provide feedbacks
      
+- Ashutosh Ojha
+   - What I did: 
+      - Designed the class diagram of Card and Player component of the game.
+      - Laid down the base interfaces, constants and enums for the Player component.
+   - What I plan to do next: 
+      - Work on the concrete implementation for Human player and a Computer player.
+      - Define the common and varying behaviors of both types of players.
+      - Define the logic of Computer player.
+   - Blockers: 
+      - Dependency on CardDeck class for Player interface.
+      - CardDeck is to be created by a fellow developer and hasn't been implemented yet.
+      - Handled it by defining a skeleton interface for CardDeck.
+   - XP Value:
+      - Simplicity 
+         - Focused on keeping the interface definitions for Player components as simple as possible.
+         - Discussed, explored the designs & definitions of team members' components to ensure they are simple and in accordance with SOLID design principles.
