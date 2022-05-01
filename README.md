@@ -175,3 +175,16 @@
       - Simplicity 
          - Focused on keeping the interface definitions for Player components as simple as possible.
          - Discussed, explored the designs & definitions of team members' components to ensure they are simple and in accordance with SOLID design principles.
+
+- Paramjot Singh
+   - What I did: 
+      - Class design for Cards
+      - Made the initial code for Card Factory Pattern
+   - What I plan to do next: 
+      - Implement the Card Factory Pattern fully
+      - Implement the Card class fully
+      - Sync with game screens
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Communication: We struggled with finding times to meet which worked for all members, and our online communication needed improvement.
