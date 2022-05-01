@@ -176,6 +176,18 @@
          - Focused on keeping the interface definitions for Player components as simple as possible.
          - Discussed, explored the designs & definitions of team members' components to ensure they are simple and in accordance with SOLID design principles.
 
+- Devansh Modi
+   - What I did: 
+      - Worked on algorithm for computer player for the Uno game rule engine.
+   - What I plan to do next: 
+      - Complete the implementation for computer player
+      - Add unit tests
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Feedback: Testing code is first class citizen
+
+
 - Paramjot Singh
    - What I did: 
       - Class design for Cards
