@@ -1,6 +1,6 @@
 public interface IPlayer {
     void drawCard(IDeck deck, int amount);
     void renderCards();
-    String getPlayerName()
+    String getPlayerName();
     boolean isHuman();
 }
