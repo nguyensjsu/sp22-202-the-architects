@@ -178,9 +178,9 @@
 
 - Devansh Modi
    - What I did: 
-      - Worked on algorithm for computer player for the Uno game rule engine.
+      - Worked on classes and design for Player Rules.
    - What I plan to do next: 
-      - Complete the implementation for computer player
+      - Complete the implementation for Player rules
       - Add unit tests
    - Blockers: 
       - N/A
