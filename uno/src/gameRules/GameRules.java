@@ -24,19 +24,6 @@ public class GameRules {
     // need put the card args in
   }
 
-  // Player relate rules
-  public void reverse() {
-    // toggle turn
-  }
-
-  public void skip() {
-    // toggle turn
-  }
-
-  public void draw(int num) {
-    // draw nums cards
-  }
-
   // general getter and setter
   public void getTopCard() {
     // return Card type
