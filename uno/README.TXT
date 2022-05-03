@@ -4,9 +4,14 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
+PROJECT TITLE: UNO GAME
+
 PURPOSE OF PROJECT:
 VERSION or DATE:
+
 HOW TO START THIS PROJECT:
+- Download Greenfoot sources from here `https://www.greenfoot.org/site/download_source`
+
 AUTHORS:
+
 USER INSTRUCTIONS:

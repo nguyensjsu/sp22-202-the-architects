@@ -128,4 +128,75 @@
 
 ### Week 3
 
-TBD
+- Waqas Kureshy
+   - What I did: 
+      - Made Cards for the Game
+      - Made Button class for navigation on screens
+      - Made Main menu screen for the game.
+      - Made UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
+   - What I plan to do next: 
+      - Work on UnoScreen with static elements to finish the design.
+      - Work on Direction functionality using state pattern.
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+   - XP Value:
+      - Simplicity 
+         - Contributed in team meetings to help define and dive deeper into the project.
+         - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
+- Hanyu Hu
+   - What I did: 
+      - Class design for game rules
+      - Made the initial code for game rules
+      - Chose Singleton design pattern for game rules
+   - What I plan to do next: 
+      - Implement the details for the game rules
+      - Corporate the current gamerules class with game screen
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+      - Waiting on the Player class and bring it into the scoop.
+   - XP Value:
+      - Simplicity 
+      - Communication
+      - Provide feedbacks
+     
+- Ashutosh Ojha
+   - What I did: 
+      - Designed the class diagram of Card and Player component of the game.
+      - Laid down the base interfaces, constants and enums for the Player component.
+   - What I plan to do next: 
+      - Work on the concrete implementation for Human player and a Computer player.
+      - Define the common and varying behaviors of both types of players.
+      - Define the logic of Computer player.
+   - Blockers: 
+      - Dependency on CardDeck class for Player interface.
+      - CardDeck is to be created by a fellow developer and hasn't been implemented yet.
+      - Handled it by defining a skeleton interface for CardDeck.
+   - XP Value:
+      - Simplicity 
+         - Focused on keeping the interface definitions for Player components as simple as possible.
+         - Discussed, explored the designs & definitions of team members' components to ensure they are simple and in accordance with SOLID design principles.
+
+- Devansh Modi
+   - What I did: 
+      - Worked on classes and design for Player Rules.
+   - What I plan to do next: 
+      - Complete the implementation for Player rules
+      - Add unit tests
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Feedback: Testing code is first class citizen
+
+
+- Paramjot Singh
+   - What I did: 
+      - Class design for Cards
+      - Made the initial code for Card Factory Pattern
+   - What I plan to do next: 
+      - Implement the Card Factory Pattern fully
+      - Implement the Card class fully
+      - Sync with game screens
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - Communication: We struggled with finding times to meet which worked for all members, and our online communication needed improvement.
