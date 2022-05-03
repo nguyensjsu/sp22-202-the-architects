@@ -13,13 +13,6 @@ public class GameRules {
 
   }
 
-  // Game play relate fucntions
-  public boolean canPlayCard() {
-    // need put the player args in
-    return false;
-
-  }
-
   public void replaceTopCard() {
     // need put the card args in
   }
