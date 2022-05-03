@@ -1,4 +1,8 @@
-public class User implements IPlayer {
+package com.architects.uno.player;
+
+import com.architects.uno.IDeck;
+
+public class Computer implements IPlayer {
     
     @Override
     public void drawCard(IDeck deck, int amount) {
@@ -17,6 +21,6 @@ public class User implements IPlayer {
     
     @Override
     public boolean isHuman() {
-        return true;
+        return false;
     }
 }
