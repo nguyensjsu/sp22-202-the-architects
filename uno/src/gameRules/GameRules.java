@@ -6,6 +6,7 @@ public class GameRules {
   // game setup relate functions
   public boolean getPlayerNum() {
 
+    return false;
   }
 
   public void gameSetUp() {
@@ -15,6 +16,8 @@ public class GameRules {
   // Game play relate fucntions
   public boolean canPlayCard() {
     // need put the player args in
+    return false;
+
   }
 
   public void replaceTopCard() {
