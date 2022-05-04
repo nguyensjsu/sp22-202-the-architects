@@ -1,3 +1,5 @@
+package com.architects.uno;
+
 enum SpecialAction {
 	DRAW_TWO,
 	REVERSE,
