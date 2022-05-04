@@ -200,3 +200,13 @@
       - N/A
    - XP Value:
       - Communication: We struggled with finding times to meet which worked for all members, and our online communication needed improvement.
+
+### Week 4
+
+- Ashutosh Ojha
+  - What I did:
+    - Updated class structure of players to include an abstract class for implementing the common features of both types of players.
+    - Updated the class diagram of players in the astah file.
+  - What I plan to do next:
+  - Blockers:
+  - XP Value:

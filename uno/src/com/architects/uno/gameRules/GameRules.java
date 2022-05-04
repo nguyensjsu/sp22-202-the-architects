@@ -1,3 +1,5 @@
+package com.architects.uno.gameRules;
+
 /**
  * Design pattern: Singleton
  */
