@@ -2,25 +2,20 @@ package com.architects.uno.player;
 
 import com.architects.uno.IDeck;
 
-public class Computer implements IPlayer {
-    
-    @Override
-    public void drawCard(IDeck deck, int amount) {
-        
+public class Computer extends Player {
+
+    public Computer(String playerName, IDeck deck) {
+        super(playerName, deck);
     }
     
     @Override
-    public void renderCards() {
-        
-    }
-    
-    @Override
-    public String getPlayerName() {
-        return "";
+    public void act() {
+        // perfrom action each iteration
     }
     
     @Override
     public boolean isHuman() {
-        return false;
+        return true;
     }
+    
 }
