@@ -5,5 +5,6 @@ enum SpecialAction {
 	REVERSE,
 	SKIP,
 	WILD,
-	WILD_DRAW_FOUR
+	WILD_DRAW_FOUR,
+	NULL
 }
