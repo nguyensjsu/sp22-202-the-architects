@@ -1,6 +1,6 @@
 package com.architects.uno.card;
 
-public class NumberCard extends Card
+public class SpecialCard extends Card
 {
 	
 }
