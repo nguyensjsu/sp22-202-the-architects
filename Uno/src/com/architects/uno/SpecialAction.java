@@ -6,5 +6,5 @@ enum SpecialAction {
 	SKIP,
 	WILD,
 	WILD_DRAW_FOUR,
-	NULL
+	NULL_ACTION
 }
