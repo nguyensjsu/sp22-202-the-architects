@@ -14,7 +14,7 @@ public class PlayerRules {
         // draw nums cards
     }
 
-    // Game play relate fucntions
+    // Game play relate functions
     public boolean canPlayCard() {
         // need put the player args in
         return false;

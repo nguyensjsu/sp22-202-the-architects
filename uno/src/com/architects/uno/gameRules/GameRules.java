@@ -12,7 +12,7 @@ public class GameRules {
   }
 
   public void gameSetUp() {
-    print("hello world")
+    //print("hello world");
   }
 
   public void replaceTopCard() {
