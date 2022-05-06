@@ -4,5 +4,6 @@ enum Color {
 	RED,
 	YELLOW,
 	BLUE,
-	GREEN
+	GREEN,
+	WHITE
 }
