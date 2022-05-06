@@ -1,9 +1,16 @@
 package com.architects.uno.card;
 
-public class NumberCard extends Card
+public class NumberCard extends Actor implements ICard
 {
 	private int value;
 	private Color color;
+
+	public NumberCard(int inputValue, String imageFilename, Color inputColor) 
+	{
+		value = inputValue;
+		color = inputColor;
+		setImage(imageFilename);
+	}
 
 	public boolean isSpecial()
 	{
@@ -18,7 +25,7 @@ public class NumberCard extends Card
 	public Color getColor() 
 	{
 		return color;
-	}
+	}	
 
 	public SpecialAction getAction()
 	{
