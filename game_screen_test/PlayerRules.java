@@ -1,4 +1,4 @@
-package com.architects.uno.gameRules;
+ 
 
 public class PlayerRules {
     // Player relate rules
