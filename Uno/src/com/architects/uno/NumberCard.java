@@ -4,7 +4,7 @@ import greenfoot.Actor;
 import greenfoot.Color;
 
 
-public class NumberCard extends Actor implements ICard
+public class NumberCard extends Card
 {
     private int value;
     private CardColor color;
