@@ -1,8 +1,7 @@
 public class ComputerStrategy implements IPlayerStrategy {
 
     @Override
-    public List<ICard> act(IPlayer player, List<ICard> cards) {
-        GameScreen game = (GameScreen) getWorld();
+    public List<ICard> act(IPlayer player, List<ICard> cards, GameScreen game) {
         GameScreen.wait(2000);
 
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {

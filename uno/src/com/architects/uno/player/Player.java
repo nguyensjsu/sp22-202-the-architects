@@ -6,6 +6,7 @@ public class Player extends Actor implements IPlayer {
     private static final int DECK_SIZE = 7;
     public static final int CARD_WIDTH = 50;
     public static final int CARD_HEIGHT = 72;
+    public static final int CARD_GAP = 10;
 
     String playerName;
     List<ICard> cards;
@@ -29,7 +30,7 @@ public class Player extends Actor implements IPlayer {
     
     @Override
     public void renderCards() {
-        GreenfootImage image = new GreenfootImage(this.cardGap * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
+        GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
         int x = CARD_WIDTH / 2;
         for (Card card: this.cards) {
             if (GameScreen.showEnemyCards || isHuman()) {
@@ -37,7 +38,7 @@ public class Player extends Actor implements IPlayer {
             } else {
                 image.drawImage(new GreenfootImage("Deck.png"), x, 0);
             } 
-            x += this.cardGap;
+            x += CARD_GAP;
         }
         setImage(image);
     }
@@ -50,8 +51,8 @@ public class Player extends Actor implements IPlayer {
     @Override
     public void act() {
         GameScreen game = (GameScreen) getWorld();
-        
-        cards = role.act(this, cards);
+
+        cards = strategy.act(this, cards, game);
         renderCards();
 
         if (cards.size() == 0) {
@@ -63,6 +64,6 @@ public class Player extends Actor implements IPlayer {
     
     @Override
     public boolean isHuman() {
-        return role.isHuman();
+        return strategy.isHuman();
     }
 }
