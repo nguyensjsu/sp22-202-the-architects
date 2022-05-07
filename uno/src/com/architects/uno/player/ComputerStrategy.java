@@ -1,3 +1,7 @@
+import greenfoot.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ComputerStrategy implements IPlayerStrategy {
 
     @Override
@@ -6,7 +10,7 @@ public class ComputerStrategy implements IPlayerStrategy {
 
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
             List<ICard> playableCards = new ArrayList<>();
-            for (ICard card : this.cards) {
+            for (ICard card : cards) {
                 if (game.canPlayCard(card)) {
                     playableCards.add(card);
                 }
