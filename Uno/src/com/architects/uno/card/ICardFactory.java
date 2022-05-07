@@ -1,5 +1,5 @@
-package com.architects.uno;
+package com.architects.uno.card;
 
-public class CardFactory {
+public class ICardFactory {
 	
 }

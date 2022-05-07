@@ -1,4 +1,9 @@
-package com.architects.uno;
+package com.architects.uno.card;
+
+import com.architects.uno.SpecialAction;
+import greenfoot.Color;
+
+import static com.architects.uno.SpecialAction.NULL_ACTION;
 
 public class CardFactory {
 
@@ -25,5 +30,6 @@ public class CardFactory {
 		{
 			return new SpecialCard(specialAction, imageFile, color);
 		}
+		return null;
 	}		
 }
