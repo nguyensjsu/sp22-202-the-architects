@@ -13,7 +13,6 @@ public class GameScreen extends World
     // Screen resolution
     private static final int WIDTH = 805;
     private static final int HEIGHT = 480;
-    private GameRules gr = GameRules.getInstance();
     private static GameScreen UnoGame;
     private List<Button> buttons;
     private List<Player> players;
@@ -28,8 +27,6 @@ public class GameScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(WIDTH, HEIGHT, 1);
-        prepare();
-
     }
     
     public synchronized static GameScreen getNewInstance() {
@@ -50,15 +47,15 @@ public class GameScreen extends World
     }
     
     private void prepare() {
-        gr.gameSetUp();
+        GameRules.getInstance().gameSetUp();
 
-        Deck deck = gr.getDeck();
+        Deck deck = GameRules.getInstance().getDeck();
         addObject(deck,70,240);
 
-        buttons = gr.getButtons();
+        buttons = GameRules.getInstance().getButtons();
         addObject(buttons.get(0), 60, 30);
 
-        players = gr.getPlayers();
+        players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), 475, 430);
         addObject(players.get(1), 475, 50);       
     }
@@ -69,30 +66,30 @@ public class GameScreen extends World
     }
     
     public Player getCurrentPlayer() {
-        return gr.getCurrentPlayer();
+        return GameRules.getInstance().getCurrentPlayer();
     }
     
     public IDeck getDeck() {
-        return gr.getDeck();
+        return GameRules.getInstance().getDeck();
     }
     
     public boolean canPlayCard(Card card) {
-        return gr.canPlayCard(card);
+        return GameRules.getInstance().canPlayCard(card);
     }
     
     public boolean canPlay() {
-        return gr.canPlay();
+        return GameRules.getInstance().canPlay();
     }
     
     public void toggleCanPlay() {
-        gr.toggleCanPlay();
+        GameRules.getInstance().toggleCanPlay();
     }
     
     public void toggleTurn() {
-        gr.toggleTurn();
+        GameRules.getInstance().toggleTurn();
     }
     
     public void replaceTopCard(Card card) {
-        gr.replaceTopCard(card);
+        GameRules.getInstance().replaceTopCard(card);
     }
 }
