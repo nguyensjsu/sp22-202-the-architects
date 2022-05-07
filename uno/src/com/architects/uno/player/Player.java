@@ -4,10 +4,12 @@ import java.util.List;
 
 public class Player extends Actor implements IPlayer {
     private static final int DECK_SIZE = 7;
+    public static final int CARD_WIDTH = 50;
+    public static final int CARD_HEIGHT = 72;
 
     String playerName;
     List<ICard> cards;
-    IPlayerRole role;
+    IPlayerStrategy strategy;
 
     public Player(String playerName, IDeck deck, IPlayerRole role) {
         this.playerName = playerName;
@@ -19,12 +21,25 @@ public class Player extends Actor implements IPlayer {
 
     @Override
     public void drawCard(IDeck deck, int amount) {
-        // adds a card to the deck
+        for (int i = 0; i < amount; i++) {
+            cards.add(deck.drawCard());
+        }
+        renderCards();
     }
     
     @Override
     public void renderCards() {
-        // uses appropriate image file to render cards
+        GreenfootImage image = new GreenfootImage(this.cardGap * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
+        int x = CARD_WIDTH / 2;
+        for (Card card: this.cards) {
+            if (GameScreen.showEnemyCards || isHuman()) {
+                image.drawImage(card.getImage(), x, 0);
+            } else {
+                image.drawImage(new GreenfootImage("Deck.png"), x, 0);
+            } 
+            x += this.cardGap;
+        }
+        setImage(image);
     }
     
     @Override
