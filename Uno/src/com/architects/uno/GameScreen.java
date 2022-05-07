@@ -9,30 +9,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class UnoScreen extends World
+public class GameScreen extends World
 {
 
      public static final int WIDTH =1000;
      public static final int HEIGHT =600;
      private int buttonWidth=70;
      private int buttonHeight=30;
-       public static final int textSize=25;
+     public static final int textSize=25;
      private Button backButton;
     
-     private static UnoScreen UnoGame=null;
+     private static GameScreen UnoGame=null;
      
-     private UnoScreen() {super(WIDTH, HEIGHT, 1); }
+     private GameScreen() {super(WIDTH, HEIGHT, 1); }
      
-     public synchronized static UnoScreen getNewInstance() {
-        UnoGame = new UnoScreen();
+     public synchronized static GameScreen getNewInstance() {
+        UnoGame = new GameScreen();
         UnoGame.prepare();
         return UnoGame;
     }
     
     
-    public synchronized static UnoScreen getInstance() {
+    public synchronized static GameScreen getInstance() {
         if (UnoGame == null) {
-            UnoGame = new UnoScreen();
+            UnoGame = new GameScreen();
             UnoGame.prepare();
             return UnoGame;
         }

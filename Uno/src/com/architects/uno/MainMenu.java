@@ -41,7 +41,7 @@ public class MainMenu extends World
      public void act() {
         
         if (Greenfoot.mouseClicked(startGameButton)) {
-            Greenfoot.setWorld(UnoScreen.getInstance());
+            Greenfoot.setWorld(GameScreen.getInstance());
         }        
         if (Greenfoot.mouseClicked(closeButton)) {
             Greenfoot.stop();
