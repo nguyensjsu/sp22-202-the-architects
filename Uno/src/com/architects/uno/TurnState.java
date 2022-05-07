@@ -30,7 +30,8 @@ public class TurnState extends Actor
    void showTurn(){
     state.showTurn();
     }
-     void setState(State statex) {
+
+   void setState(State statex) {
         this.state = statex;
     }
     

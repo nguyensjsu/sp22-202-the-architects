@@ -16,7 +16,7 @@ public class Player extends Actor implements IPlayer {
     List<ICard> cards;
     IPlayerStrategy strategy;
 
-    public Player(String playerName, IDeck deck, IPlayerRole role) {
+    public Player(String playerName, IPlayerRole role) {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
         this.role = role;
@@ -25,11 +25,12 @@ public class Player extends Actor implements IPlayer {
     }
 
     @Override
-    public void drawCard(IDeck deck, int amount) {
-        for (int i = 0; i < amount; i++) {
-            cards.add(deck.drawCard());
-        }
-        renderCards();
+    public void addCard(IDeck deck, int amount) {
+        cards.add(deck.drawCard());
+    }
+
+    public List<ICard> getCards() {
+        return cards;
     }
     
     @Override
