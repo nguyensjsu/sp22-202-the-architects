@@ -9,11 +9,16 @@ import java.util.*;
 public class Deck extends Actor implements IDeck
 {
     private ArrayList<ICard> cardDeck = new ArrayList<ICard>();
+    private static Deck singleton = null;
 
     private Deck() {}
 
     public getInstance() {
-
+        if (singleton == null)
+        {
+            singleton = new Deck();
+        }
+        return singleton; 
     }
     /**
      * Act - do whatever the Deck wants to do. This method is called whenever
