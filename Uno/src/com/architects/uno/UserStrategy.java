@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserStrategy implements IPlayerStrategy {
+public class UserStrategy extends Actor implements IPlayerStrategy {
     public static final int CARD_WIDTH = 50;
     public static final int CARD_HEIGHT = 72;
     public static final int CARD_GAP = 10;
@@ -33,7 +33,7 @@ public class UserStrategy implements IPlayerStrategy {
                 
                 if (game.canPlayCard(card)) {
                     game.toggleCanPlay();
-                    playableDeckCard(game, card);
+                    playableDeckCard(game, cards, card);
                 } else {
                     cards.add(card);
                 }
@@ -51,7 +51,7 @@ public class UserStrategy implements IPlayerStrategy {
         return true;
     }
 
-    public void playableDeckCard(GameScreen game, Card card) {
+    public void playableDeckCard(GameScreen game, List<Card> cards, Card card) {
         int ypos = getY() - 80;
         
         Button playCardButton = new Button(150, 45, "Play Card", 30, Color.BLACK, 20, 6);

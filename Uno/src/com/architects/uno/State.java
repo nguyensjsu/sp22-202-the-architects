@@ -9,4 +9,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public interface State 
 {
    public String showTurn();
+   public void switchTurn();
 }

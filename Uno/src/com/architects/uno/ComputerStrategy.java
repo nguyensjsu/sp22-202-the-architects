@@ -6,7 +6,12 @@ public class ComputerStrategy implements IPlayerStrategy {
 
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
-        GameScreen.wait(2000);
+        
+        try {
+        GameScreen.getInstance().wait(2000); } 
+        catch(Exception e) {
+
+        }
 
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
             List<Card> playableCards = new ArrayList<>();

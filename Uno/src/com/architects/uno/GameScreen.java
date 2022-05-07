@@ -18,12 +18,13 @@ public class GameScreen extends World
     private List<Button> buttons;
     private List<Player> players;
     public static boolean showEnemyCards = false;
+    static TurnState turnState;
     
     /**
      * Constructor for objects of class GameScreen.
      * 
      */
-    public GameScreen()
+    private GameScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(WIDTH, HEIGHT, 1);
@@ -59,9 +60,7 @@ public class GameScreen extends World
 
         players = gr.getPlayers();
         addObject(players.get(0), 475, 430);
-        addObject(players.get(1), 475, 50);
-        addObject(players.get(2), 200, 260);
-        addObject(players.get(3), 750, 260);        
+        addObject(players.get(1), 475, 50);       
     }
     
     public void act(){
@@ -75,5 +74,25 @@ public class GameScreen extends World
     
     public IDeck getDeck() {
         return gr.getDeck();
+    }
+    
+    public boolean canPlayCard(Card card) {
+        return gr.canPlayCard(card);
+    }
+    
+    public boolean canPlay() {
+        return gr.canPlay();
+    }
+    
+    public void toggleCanPlay() {
+        gr.toggleCanPlay();
+    }
+    
+    public void toggleTurn() {
+        gr.toggleTurn();
+    }
+    
+    public void replaceTopCard(Card card) {
+        gr.replaceTopCard(card);
     }
 }
