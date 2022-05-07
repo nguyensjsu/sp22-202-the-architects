@@ -14,6 +14,10 @@ public class GameScreen extends World
     private static final int WIDTH = 805;
     private static final int HEIGHT = 480;
     private GameRules gr = new GameRules(this);
+    private static GameScreen UnoGame;
+    private List<Button> buttons;
+    private List<Player> players;
+    
     /**
      * Constructor for objects of class GameScreen.
      * 
@@ -25,19 +29,41 @@ public class GameScreen extends World
         prepare();
     }
     
+    public synchronized static GameScreen getNewInstance() {
+        UnoGame = new GameScreen();
+        UnoGame.prepare();
+        return UnoGame;
+    }
+    
+    
+    public synchronized static GameScreen getInstance() {
+        if (UnoGame == null) {
+            UnoGame = new GameScreen();
+            UnoGame.prepare();
+            return UnoGame;
+        }
+        else
+            return UnoGame;
+    }
+    
     private void prepare() {
         gr.gameSetUp();
         
         Deck deck = gr.getDeck();
         addObject(deck,70,240);
         
-        List<Button> buttons = gr.getButtons();
+        buttons = gr.getButtons();
         addObject(buttons.get(0), 60, 30);
         
-        List<Player> players = gr.getPlayers();
+        players = gr.getPlayers();
         addObject(players.get(0), 475, 430);
         addObject(players.get(1), 475, 50);
         addObject(players.get(2), 200, 260);
         addObject(players.get(3), 750, 260);        
+    }
+    
+    public void act(){
+        if (Greenfoot.mouseClicked(buttons.get(0)))
+        {Greenfoot.setWorld(new MainMenu());}
     }
 }

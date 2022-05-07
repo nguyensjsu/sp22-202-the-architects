@@ -54,6 +54,7 @@ public class GameRules
         this.playerOrder.add(computerThree);
         
         this.currentPlayer = Greenfoot.getRandomNumber(playerOrder.size());
+        
 
       }
     
