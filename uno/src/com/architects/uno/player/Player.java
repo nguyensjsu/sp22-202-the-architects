@@ -2,15 +2,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Player extends Actor implements IPlayer {
+public class Player extends Actor implements IPlayer {
     private static final int DECK_SIZE = 7;
 
     String playerName;
     List<ICard> cards;
+    IPlayerRole role;
 
-    public Player(String playerName, IDeck deck) {
+    public Player(String playerName, IDeck deck, IPlayerRole role) {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
+        this.role = role;
         drawCard(deck, DECK_SIZE);
         renderCards();
     }
@@ -31,8 +33,12 @@ public abstract class Player extends Actor implements IPlayer {
     }
 
     @Override
-    public abstract void act();
+    public void act() {
+        role.act();
+    }
     
     @Override
-    public abstract boolean isHuman();
+    public boolean isHuman() {
+        return role.isHuman();
+    }
 }
