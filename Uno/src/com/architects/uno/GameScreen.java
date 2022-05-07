@@ -11,8 +11,8 @@ import java.util.*;
 public class GameScreen extends World
 {
     // Screen resolution
-    private static final int WIDTH = 805;
-    private static final int HEIGHT = 480;
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 600;
     private static GameScreen UnoGame;
     private List<Button> buttons;
     private List<Player> players;
@@ -50,13 +50,13 @@ public class GameScreen extends World
         GameRules.getInstance().gameSetUp();
 
         Deck deck = GameRules.getInstance().getDeck();
-        addObject(deck,70,240);
+        addObject(deck,120,300);
 
         buttons = GameRules.getInstance().getButtons();
         addObject(buttons.get(0), 60, 30);
 
         players = GameRules.getInstance().getPlayers();
-        addObject(players.get(0), 475, 430);
+        addObject(players.get(0), 475, 550);
         addObject(players.get(1), 475, 50);       
     }
     
