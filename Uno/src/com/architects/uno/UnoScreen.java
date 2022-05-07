@@ -18,6 +18,7 @@ public class UnoScreen extends World
      private int buttonHeight=30;
        public static final int textSize=25;
      private Button backButton;
+     static TurnState turnState;
     
      private static UnoScreen UnoGame=null;
      
