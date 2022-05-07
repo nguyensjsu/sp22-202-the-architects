@@ -49,7 +49,16 @@ public class Player extends Actor implements IPlayer {
 
     @Override
     public void act() {
-        role.act();
+        GameScreen game = (GameScreen) getWorld();
+        
+        cards = role.act(this, cards);
+        renderCards();
+
+        if (cards.size() == 0) {
+            Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
+            game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
+            Greenfoot.stop();
+        }
     }
     
     @Override
