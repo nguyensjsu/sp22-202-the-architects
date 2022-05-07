@@ -2,6 +2,6 @@ import java.util.List;
  
 
 public interface IDeck {
-    public ICard drawCard();
-    public List<ICard> getDeck();
+    public Card drawCard();
+    public List<Card> getDeck();
 }

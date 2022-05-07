@@ -8,7 +8,7 @@ public class UserStrategy implements IPlayerStrategy {
     public static final int CARD_GAP = 10;
     
     @Override
-    public List<ICard> act(IPlayer player, List<ICard> cards, GameScreen game) {
+    public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
         IDeck deck = game.getDeck();
         
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
@@ -19,7 +19,7 @@ public class UserStrategy implements IPlayerStrategy {
                 // System.out.println("Card Index Selected for "+ this.name +": " + cardIndex);
                 
                 if (cardIndex != -1) {
-                    ICard card = cards.get(cardIndex);
+                    Card card = cards.get(cardIndex);
                     
                     if (game.canPlayCard(card)) {
                         cards.remove(cardIndex);
@@ -29,7 +29,7 @@ public class UserStrategy implements IPlayerStrategy {
                 }
                 
             } else if (Greenfoot.mouseClicked(deck)) {
-                ICard card = deck.drawCard();
+                Card card = deck.drawCard();
                 
                 if (game.canPlayCard(card)) {
                     game.toggleCanPlay();
@@ -51,7 +51,7 @@ public class UserStrategy implements IPlayerStrategy {
         return true;
     }
 
-    public void playableDeckCard(GameScreen game, ICard card) {
+    public void playableDeckCard(GameScreen game, Card card) {
         int ypos = getY() - 80;
         
         Button playCardButton = new Button(150, 45, "Play Card", 30, Color.BLACK, 20, 6);

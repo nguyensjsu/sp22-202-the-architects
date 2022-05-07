@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Deck extends Actor implements IDeck
 {
-    private ArrayList<ICard> cardDeck = new ArrayList<ICard>();
+    private ArrayList<Card> cardDeck = new ArrayList<Card>();
     private static Deck singleton = null;
 
     private Deck() {
@@ -18,11 +18,11 @@ public class Deck extends Actor implements IDeck
         for (int index = 0; index < 10; index++)
         {
             String path = "images/Blue " +  index + ".png";
-            ICard blue0 = CardFactory.createCard("NUMBER", path, CardColor.BLUE, index);
+            Card blue0 = CardFactory.createCard("NUMBER", path, CardColor.BLUE, index);
             addCard(blue0);
         }
         // Add Blue Special Cards
-        ICard blueSpecial = CardFactory.createCard("SPECIAL", "images/Blue draw 2.png", CardColor.BLUE, SpecialAction.DRAW_TWO);
+        Card blueSpecial = CardFactory.createCard("SPECIAL", "images/Blue draw 2.png", CardColor.BLUE, SpecialAction.DRAW_TWO);
         addCard(blueSpecial);
         blueSpecial = CardFactory.createCard("SPECIAL", "images/Blue reverse.png", CardColor.BLUE, SpecialAction.REVERSE);
         addCard(blueSpecial);
@@ -33,11 +33,11 @@ public class Deck extends Actor implements IDeck
         for (int index = 0; index < 10; index++)
         {
             String path = "images/Red " +  index + ".png";
-            ICard red0 = CardFactory.createCard("NUMBER", path, CardColor.RED, index);
+            Card red0 = CardFactory.createCard("NUMBER", path, CardColor.RED, index);
             addCard(red0);
         }
         // Add Red Special Cards
-        ICard redSpecial = CardFactory.createCard("SPECIAL", "images/Red draw 2.png", CardColor.RED, SpecialAction.DRAW_TWO);
+        Card redSpecial = CardFactory.createCard("SPECIAL", "images/Red draw 2.png", CardColor.RED, SpecialAction.DRAW_TWO);
         addCard(redSpecial);
         redSpecial = CardFactory.createCard("SPECIAL", "images/Red reverse.png", CardColor.RED, SpecialAction.REVERSE);
         addCard(redSpecial);
@@ -48,11 +48,11 @@ public class Deck extends Actor implements IDeck
         for (int index = 0; index < 10; index++)
         {
             String path = "images/Yellow " +  index + ".png";
-            ICard red0 = CardFactory.createCard("NUMBER", path, CardColor.YELLOW, index);
+            Card red0 = CardFactory.createCard("NUMBER", path, CardColor.YELLOW, index);
             addCard(red0);
         }
         // Add Yellow Special Cards
-        ICard yellowSpecial = CardFactory.createCard("SPECIAL", "images/Yellow draw 2.png", CardColor.YELLOW, SpecialAction.DRAW_TWO);
+        Card yellowSpecial = CardFactory.createCard("SPECIAL", "images/Yellow draw 2.png", CardColor.YELLOW, SpecialAction.DRAW_TWO);
         addCard(yellowSpecial);
         yellowSpecial = CardFactory.createCard("SPECIAL", "images/Yellow reverse.png", CardColor.YELLOW, SpecialAction.REVERSE);
         addCard(yellowSpecial);
@@ -63,11 +63,11 @@ public class Deck extends Actor implements IDeck
         for (int index = 0; index < 10; index++)
         {
             String path = "images/Green " +  index + ".png";
-            ICard green0 = CardFactory.createCard("NUMBER", path, CardColor.GREEN, index);
+            Card green0 = CardFactory.createCard("NUMBER", path, CardColor.GREEN, index);
             addCard(green0);
         }
         // Add Green Special Cards
-        ICard greenSpecial = CardFactory.createCard("SPECIAL", "images/Green draw 2.png", CardColor.GREEN, SpecialAction.DRAW_TWO);
+        Card greenSpecial = CardFactory.createCard("SPECIAL", "images/Green draw 2.png", CardColor.GREEN, SpecialAction.DRAW_TWO);
         addCard(greenSpecial);
         greenSpecial = CardFactory.createCard("SPECIAL", "images/Green reverse.png", CardColor.GREEN, SpecialAction.REVERSE);
         addCard(greenSpecial);
@@ -93,18 +93,18 @@ public class Deck extends Actor implements IDeck
         // Add your action code here.
     }
     
-    public void addCard(ICard card) 
+    public void addCard(Card card) 
     {
         cardDeck.add(card);
     }
 
-    public ICard drawCard() {
-        ICard output = cardDeck.get(0);
+    public Card drawCard() {
+        Card output = cardDeck.get(0);
         cardDeck.remove(0);
         return output;
     }
     
-    public List<ICard> getDeck() {
+    public List<Card> getDeck() {
         return cardDeck;
     }
 }

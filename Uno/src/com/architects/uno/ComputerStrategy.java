@@ -5,19 +5,19 @@ import java.util.List;
 public class ComputerStrategy implements IPlayerStrategy {
 
     @Override
-    public List<ICard> act(IPlayer player, List<ICard> cards, GameScreen game) {
+    public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
         GameScreen.wait(2000);
 
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
-            List<ICard> playableCards = new ArrayList<>();
-            for (ICard card : cards) {
+            List<Card> playableCards = new ArrayList<>();
+            for (Card card : cards) {
                 if (game.canPlayCard(card)) {
                     playableCards.add(card);
                 }
             }
             
             if (playableCards.size() == 0) {
-                ICard card  = game.getDeck().drawCard();
+                Card card  = game.getDeck().drawCard();
                 cards.add(card);
                 // renderCards();
                 
@@ -27,7 +27,7 @@ public class ComputerStrategy implements IPlayerStrategy {
                     game.replaceTopCard(card);
                 }
             } else {
-                ICard playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
+                Card playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
                 cards.remove(playing);
                 // renderCards();
                 game.replaceTopCard(playing);

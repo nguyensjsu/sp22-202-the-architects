@@ -2,6 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface IPlayerStrategy {
-    List<ICard> act(IPlayer player, List<ICard> cards, GameScreen game);
+    List<Card> act(IPlayer player, List<Card> cards, GameScreen game);
     boolean isHuman();
 }

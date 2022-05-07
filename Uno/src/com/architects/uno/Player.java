@@ -9,7 +9,7 @@ public class Player extends Actor implements IPlayer {
     public static final int CARD_GAP = 10;
 
     String playerName;
-    List<ICard> cards;
+    List<Card> cards;
     IPlayerStrategy strategy;
 
     public Player(String playerName, IPlayerStrategy strategy) {
@@ -32,7 +32,7 @@ public class Player extends Actor implements IPlayer {
     public void renderCards() {
         GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
         int x = CARD_WIDTH / 2;
-        for (ICard card: this.cards) {
+        for (Card card: this.cards) {
             if (GameScreen.showEnemyCards || isHuman()) {
                 image.drawImage(card.getImage(), x, 0);
             } else {
