@@ -11,15 +11,22 @@ public class Deck extends Actor implements IDeck
     private ArrayList<ICard> cardDeck = new ArrayList<ICard>();
     private static Deck singleton = null;
 
-    private Deck() {}
+    private Deck() {
+        CardFactory cf = new CardFactory();
+            }
 
-    public getInstance() {
+    
+    public static Deck getInstance() {
         if (singleton == null)
         {
+        // Add Blue Number Cards
+        ICard blue0 = CardFactory.createCard("NUMBER", "images/Blue 0.png", CardColor.BLUE, 0);
+
             singleton = new Deck();
         }
         return singleton; 
     }
+    
     /**
      * Act - do whatever the Deck wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,7 +47,7 @@ public class Deck extends Actor implements IDeck
         return output;
     }
     
-    public ArrayList<ICard> getDeck() {
+    public List<ICard> getDeck() {
         return cardDeck;
     }
 }

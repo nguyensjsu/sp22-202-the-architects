@@ -8,17 +8,17 @@ public class CardFactory {
     public CardFactory()
     {}
 
-    public ICard createCard(String cardType, String imageFile, CardColor color, int value)
+    public static ICard createCard(String cardType, String imageFile, CardColor color, int value)
     {
-        return this.createCard(cardType, imageFile, color, value, SpecialAction.NULL_ACTION);
+        return createCard(cardType, imageFile, color, value, SpecialAction.NULL_ACTION);
     }    
 
-    public ICard createCard(String cardType, String imageFile, CardColor color, SpecialAction specialAction)
+    public static ICard createCard(String cardType, String imageFile, CardColor color, SpecialAction specialAction)
     {
-        return this.createCard(cardType, imageFile, color, -1, specialAction);
+        return createCard(cardType, imageFile, color, -1, specialAction);
     }        
 
-    public ICard createCard(String cardType, String imageFile, CardColor color, int value, SpecialAction specialAction)
+    public static ICard createCard(String cardType, String imageFile, CardColor color, int value, SpecialAction specialAction)
     {
         if (cardType == "NUMBER")
         {
