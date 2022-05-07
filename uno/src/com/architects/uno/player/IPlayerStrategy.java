@@ -1,4 +1,4 @@
 public interface IPlayerStrategy {
-    void act();
+    List<ICard> act(IPlayer player, List<ICard> cards);
     boolean isHuman();
 }
