@@ -17,7 +17,7 @@ public class TurnState extends Actor
         computersTurn = new ComputersTurn(this);
        
         state = computersTurn;
-        setImage(new GreenfootImage("Turn:", 30, Color.WHITE, Color.BLUE));
+        setImage(new GreenfootImage("Turn:"+state.showTurn(), 30, Color.WHITE, Color.BLUE));
         showTurn();
         
        
