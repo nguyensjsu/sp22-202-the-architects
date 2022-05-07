@@ -3,9 +3,9 @@ package com.architects.uno.card;
 public class NumberCard extends Actor implements ICard
 {
 	private int value;
-	private Color color;
+	private CardColor color;
 
-	public NumberCard(int inputValue, String imageFilename, Color inputColor) 
+	public NumberCard(int inputValue, String imageFilename, CardColor inputColor) 
 	{
 		value = inputValue;
 		color = inputColor;
@@ -22,7 +22,7 @@ public class NumberCard extends Actor implements ICard
 		return value;
 	}
 
-	public Color getColor() 
+	public CardColor getColor() 
 	{
 		return color;
 	}	

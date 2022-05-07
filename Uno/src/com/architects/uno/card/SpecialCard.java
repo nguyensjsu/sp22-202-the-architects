@@ -3,9 +3,9 @@ package com.architects.uno.card;
 public class SpecialCard extends Card
 {
 	private SpecialAction action;
-	private Color color;
+	private CardColor color;
 
-	public SpecialCard(SpecialAction inputAction, String imageFilename, Color inputColor) 
+	public SpecialCard(SpecialAction inputAction, String imageFilename, CardColor inputColor) 
 	{
 		action = inputAction;
 		color = inputColor;
@@ -23,7 +23,7 @@ public class SpecialCard extends Card
 		return -1;
 	}
 
-	public Color getColor() 
+	public CardColor getColor() 
 	{
 		return color;
 	}

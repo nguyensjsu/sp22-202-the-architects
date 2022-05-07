@@ -1,6 +1,6 @@
 package com.architects.uno;
 
-enum Color {
+enum CardColor {
 	RED,
 	YELLOW,
 	BLUE,
