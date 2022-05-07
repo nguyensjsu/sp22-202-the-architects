@@ -1,4 +1,4 @@
-package com.architects.uno;
+ 
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 

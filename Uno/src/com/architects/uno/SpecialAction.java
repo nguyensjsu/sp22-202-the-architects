@@ -1,4 +1,4 @@
-package com.architects.uno;
+ 
 
 public enum SpecialAction {
 	DRAW_TWO,
