@@ -1,6 +1,5 @@
-package com.architects.uno.player;
-
-import com.architects.uno.IDeck;
+import java.util.ArrayList;
+import java.util.List; 
 
 public interface IPlayer {
     void drawCard(IDeck deck, int amount);
