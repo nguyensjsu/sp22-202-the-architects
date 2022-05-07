@@ -1,4 +1,4 @@
-public class UserRole implements IPlayerRole {
+public class UserStrategy implements IPlayerStrategy {
     
     @Override
     public void act() {

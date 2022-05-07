@@ -1,4 +1,4 @@
-public class ComputerRole implements IPlayerRole {
+public class ComputerStrategy implements IPlayerStrategy {
     
     @Override
     public void act() {

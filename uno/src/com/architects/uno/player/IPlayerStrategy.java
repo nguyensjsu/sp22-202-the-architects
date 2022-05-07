@@ -1,4 +1,4 @@
-public interface IPlayerRole {
+public interface IPlayerStrategy {
     void act();
     boolean isHuman();
 }
