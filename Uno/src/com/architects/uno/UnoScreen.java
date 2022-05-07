@@ -48,7 +48,9 @@ public class UnoScreen extends World
     //}
     public void prepare(){
     backButton=new Button(buttonWidth,buttonHeight,"BACK",textSize, Color.WHITE,10,4);
-     addObject(backButton,35,50);
+    addObject(backButton,35,50);
+    TurnState turnState=new TurnState();
+    addObject(turnState,600,50);
     
     }
     
