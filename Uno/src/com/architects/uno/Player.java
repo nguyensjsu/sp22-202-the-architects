@@ -1,5 +1,3 @@
- 
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.List;
@@ -14,18 +12,18 @@ public class Player extends Actor implements IPlayer {
     List<ICard> cards;
     IPlayerStrategy strategy;
 
-    public Player(String playerName, IDeck deck, IPlayerStrategy strategy) {
+    public Player(String playerName, IPlayerStrategy strategy) {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
         this.strategy = strategy;
-        drawCard(deck, DECK_SIZE);
+        drawCard(DECK_SIZE);
         renderCards();
     }
 
     @Override
-    public void drawCard(IDeck deck, int amount) {
+    public void drawCard(int amount) {
         for (int i = 0; i < amount; i++) {
-            cards.add(deck.drawCard());
+            cards.add(Deck.getInstance().drawCard());
         }
         renderCards();
     }
@@ -34,7 +32,7 @@ public class Player extends Actor implements IPlayer {
     public void renderCards() {
         GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
         int x = CARD_WIDTH / 2;
-        for (Card card: this.cards) {
+        for (ICard card: this.cards) {
             if (GameScreen.showEnemyCards || isHuman()) {
                 image.drawImage(card.getImage(), x, 0);
             } else {
@@ -58,8 +56,8 @@ public class Player extends Actor implements IPlayer {
         renderCards();
 
         if (cards.size() == 0) {
-            Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
-            game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
+        //    Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
+        //    game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
             Greenfoot.stop();
         }
     }
