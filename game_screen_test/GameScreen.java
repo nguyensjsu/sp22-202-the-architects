@@ -48,13 +48,13 @@ public class GameScreen extends World
     
     private void prepare() {
         gr.gameSetUp();
-        
+
         Deck deck = gr.getDeck();
         addObject(deck,70,240);
-        
+
         buttons = gr.getButtons();
         addObject(buttons.get(0), 60, 30);
-        
+
         players = gr.getPlayers();
         addObject(players.get(0), 475, 430);
         addObject(players.get(1), 475, 50);
