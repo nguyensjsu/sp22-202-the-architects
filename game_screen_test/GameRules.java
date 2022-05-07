@@ -15,6 +15,7 @@ public class GameRules
     private Deck deck;
     private int currentPlayer;
     private List<Player> playerOrder = new ArrayList<Player>();
+    private List<Button> buttons = new ArrayList<Button>();
 
     /**
      * Constructor for objects of class GameRules
@@ -38,29 +39,22 @@ public class GameRules
     
       public void gameSetUp() {
         backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
-        world.addObject(backButton,60,30);
-        System.out.println("hello world");
-        
-        deck = new Deck();
-        world.addObject(deck,70,240);
+        this.buttons.add(backButton);
         
         User user = new User();
-        world.addObject(user, 475, 430);
         this.playerOrder.add(user);
         
         Computer computerOne = new Computer();
-        world.addObject(computerOne, 475, 50);
         this.playerOrder.add(computerOne);
         
         Computer computerTwo = new Computer();
-        world.addObject(computerTwo, 200, 260);
         this.playerOrder.add(computerTwo);
         
         Computer computerThree = new Computer();
-        world.addObject(computerThree, 750, 260);
         this.playerOrder.add(computerThree);
         
         this.currentPlayer = Greenfoot.getRandomNumber(playerOrder.size());
+        
 
       }
     
@@ -83,5 +77,17 @@ public class GameRules
     
       public void getNextPlayer() {
         // return the next player for current round
+      }
+      
+      public List<Player> getPlayers() {
+          return this.playerOrder;
+      }
+      
+      public List<Button> getButtons() {
+          return this.buttons;
+      }
+        
+      public Deck getDeck(){
+        return new Deck();
       }
 }
