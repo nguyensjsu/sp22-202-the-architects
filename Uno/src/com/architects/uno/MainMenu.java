@@ -2,6 +2,7 @@ package com.architects.uno;
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
  * Write a description of class MyWorld here.
  * 
@@ -31,9 +32,9 @@ public class MainMenu extends World
     }
     
     public void prepare(){
-        startGameButton=new Button(buttonWidth,buttonHeight,"NEW GAME",textSize,Color.WHITE,25,7);
+        startGameButton=new Button(buttonWidth,buttonHeight,"NEW GAME",textSize, Color.WHITE,25,7);
         addObject(startGameButton,WIDTH/2,250);
-        closeButton= new Button(buttonWidth,buttonHeight,"QUIT",textSize,Color.WHITE,65,8);
+        closeButton= new Button(buttonWidth,buttonHeight,"QUIT",textSize, Color.WHITE,65,8);
         addObject(closeButton,WIDTH/2,400);
     }
     

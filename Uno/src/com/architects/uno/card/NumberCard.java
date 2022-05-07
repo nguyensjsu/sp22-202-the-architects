@@ -1,5 +1,11 @@
 package com.architects.uno.card;
 
+import com.architects.uno.SpecialAction;
+import greenfoot.Actor;
+import greenfoot.Color;
+
+import static com.architects.uno.SpecialAction.NULL_ACTION;
+
 public class NumberCard extends Actor implements ICard
 {
 	private int value;
@@ -22,7 +28,7 @@ public class NumberCard extends Actor implements ICard
 		return value;
 	}
 
-	public Color getColor() 
+	public Color getColor()
 	{
 		return color;
 	}	

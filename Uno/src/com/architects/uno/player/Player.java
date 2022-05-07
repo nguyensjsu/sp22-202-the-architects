@@ -1,3 +1,7 @@
+package com.architects.uno.player;
+
+import com.architects.uno.IDeck;
+import com.architects.uno.card.ICard;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.List;

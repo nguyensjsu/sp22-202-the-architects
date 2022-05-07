@@ -1,5 +1,8 @@
 package com.architects.uno.card;
 
+import com.architects.uno.SpecialAction;
+import greenfoot.Color;
+
 public class SpecialCard extends Card
 {
 	private SpecialAction action;
@@ -9,7 +12,7 @@ public class SpecialCard extends Card
 	{
 		action = inputAction;
 		color = inputColor;
-		setImage(imageFilename);
+		//setImage(imageFilename); TODO: implement this method
 	}
 
 	public boolean isSpecial()
@@ -23,7 +26,7 @@ public class SpecialCard extends Card
 		return -1;
 	}
 
-	public Color getColor() 
+	public Color getColor()
 	{
 		return color;
 	}

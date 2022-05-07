@@ -1,6 +1,6 @@
 package com.architects.uno;
 
-enum SpecialAction {
+public enum SpecialAction {
 	DRAW_TWO,
 	REVERSE,
 	SKIP,
