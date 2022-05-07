@@ -14,12 +14,17 @@ public class PlayersTurn extends Actor implements State
      
     public PlayersTurn(TurnState turn)
      {this.turnState=turn;
-    setImage(new GreenfootImage("Human", size, Color.WHITE, Color.WHITE));
+        //GreenfootImage img = new GreenfootImage("Human", 35, Color.BLACK, new Color(0, 0, 0, 0));
+//That will make a GreenfootImage with your string with black letters on a transparent ground with a font size of 35;
+//setImage(img); //you need to set the image of your actor to the image you created to see it;
+    showTurn();
+        // setImage(new GreenfootImage("Human", size, Color.WHITE, Color.WHITE));
 
         }
    
-   public void showTurn(){
-    setImage(new GreenfootImage("Human", size, textColor, background));
+   public String showTurn(){
+    //setImage(new GreenfootImage("Human", size, textColor, background));
+    return "Human";
     }
     public void switchTurn(){
     turnState.setState(turnState.getComputersTurn());
