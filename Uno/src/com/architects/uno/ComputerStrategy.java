@@ -8,7 +8,7 @@ public class ComputerStrategy implements IPlayerStrategy {
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
         
         try {
-        GameScreen.getInstance().wait(2000); } 
+        GameScreen.getInstance().wait(1000); } 
         catch(Exception e) {
 
         }

@@ -71,7 +71,12 @@ public class GameRules
     }
 
     public void replaceTopCard(Card card) {
-        gs.addObject(card, topCard.getX(), topCard.getY());
+        if (topCard == null) {
+            gs.addObject(card, 475, 200);  // default coordinates when first card to be played.          
+        } else {
+            gs.addObject(card, topCard.getX(), topCard.getY());
+        }
+        
         topCard = card;
         gs.repaint();
         if (card instanceof SpecialCard) {
@@ -112,16 +117,20 @@ public class GameRules
     }
 
     public boolean canPlayCard(Card card) {
+        
+      if (topCard == null) {
+          return true; // allow to play if this is the first card to be played.
+      }
       boolean isPowerCard = card instanceof SpecialCard;
-      boolean doesColorMatch = card.getColor() != null && topCard.getColor() != null && card.getColor().equals(topCard.getColor());
-      boolean doesNumberMatch = card instanceof NumberCard && topCard instanceof NumberCard && ((NumberCard) card).getNumber() == ((NumberCard) topCard).getNumber();
-      boolean doesSpecialMatch = card instanceof SpecialCard && topCard instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) topCard).getAction();
+      boolean doesColorMatch = card.getColor() != null && getTopCard().getColor() != null && card.getColor().equals(getTopCard().getColor());
+      boolean doesNumberMatch = card instanceof NumberCard && getTopCard() instanceof NumberCard && ((NumberCard) card).getNumber() == ((NumberCard) getTopCard()).getNumber();
+      boolean doesSpecialMatch = card instanceof SpecialCard && getTopCard() instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) getTopCard()).getAction();
       return isPowerCard || doesColorMatch || doesNumberMatch || doesSpecialMatch;
     }
 
     // general getter and setter
-    public void getTopCard() {
-      // return Card type
+    public Card getTopCard() {
+      return topCard;
     }
 
     public void getPlayer(int index) {
