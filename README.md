@@ -268,7 +268,7 @@
       - Implemented TurnState machine
       - Added the Turn UI element
    - What I plan to do next: 
-      - N/A
+      - Merge Main code with personal code and reduce conflicts.
    - Blockers: 
       - N/A
    - XP Value:
