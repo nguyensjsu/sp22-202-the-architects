@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SpecialCard
+comment1.params=inputAction\ imageFilename\ inputColor
+comment1.target=SpecialCard(SpecialAction,\ java.lang.String,\ CardColor)
+comment2.params=
+comment2.target=boolean\ isSpecial()
+comment3.params=
+comment3.target=int\ getNumber()
+comment4.params=
+comment4.target=CardColor\ getColor()
+comment5.params=
+comment5.target=SpecialAction\ getAction()
+numComments=6

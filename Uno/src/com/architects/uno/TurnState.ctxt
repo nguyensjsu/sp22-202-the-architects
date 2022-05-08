@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TurnState
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Turn\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=TurnState()
+comment2.params=
+comment2.target=void\ switchTurn()
+comment3.params=
+comment3.target=void\ showTurn()
+comment4.params=statex
+comment4.target=void\ setState(State)
+comment5.params=
+comment5.target=State\ getComputersTurn()
+comment6.params=
+comment6.target=State\ getPlayersTurn()
+numComments=7

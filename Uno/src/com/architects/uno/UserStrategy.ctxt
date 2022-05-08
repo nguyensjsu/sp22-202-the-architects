@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=UserStrategy
+comment1.params=player\ cards\ game
+comment1.target=java.util.List\ act(IPlayer,\ java.util.List,\ GameScreen)
+comment2.params=
+comment2.target=boolean\ isHuman()
+comment3.params=game\ cards\ card
+comment3.target=void\ playableDeckCard(GameScreen,\ java.util.List,\ Card)
+comment4.params=
+comment4.target=int\ cardSelected()
+numComments=5
