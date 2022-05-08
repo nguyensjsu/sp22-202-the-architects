@@ -31,6 +31,11 @@ public class TurnState extends Actor
       //  state.turn();
    // }
    
+   public void switchTurn()
+   {
+   this.state.switchTurn();
+   }
+   
    void showTurn(){
         state.showTurn();
     }
