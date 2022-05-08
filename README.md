@@ -238,13 +238,18 @@
 
 - Hanyu Hu
    - What I did: 
-      - N/A
+      - Implemented the Game Screen and Game Rules classes
+      - Debugging the whole structure with outher classes
+      - Debugging the design pattern issue for the Game Screen and Game Rules
+      - Refactor the Game Rule class
+      - Collaborate with the team to make the whole thing work
    - What I plan to do next: 
-      - N/A
+      - Debugging the code
    - Blockers: 
-      - N/A
+      - The current structure has a lot bugs, happends in most units
    - XP Value:
-      - N/A
+      - Communication: Team collaborative was good, everyone is very supportive and hard working
+      - Simplicity: The brainstorm ideas need way much than we can do, we are just simplify the requirements and implement
 
 - Paramjot Singh
    - What I did: 
