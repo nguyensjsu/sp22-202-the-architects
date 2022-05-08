@@ -18,22 +18,6 @@
 [Burndown Chart/Sheet](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
 
 ### Week 1
-- Paramjot Singh
-   - What I did: Broke down Uno into objects
-   - What I plan to do today: Setup Greenfoot, Plan Design Patterns
-   - Blockers: N/A
-   - XP Value: Communication. We did struggle with communication earlier in the week, but by using Google Meetings and scheduling meetings in advance we were able to get more responsible with communication. 
-    
-- Waqas Kureshy
-   - What I did: Explored Game development with Greenfoot
-   - What I plan to do today: Work on Game Interface, Figure out Design Patterns applicable to the game.
-   - Blockers: N/A
-
-
-- Devansh Modi
-   - What I did: Setup local environment for Greenfoot, Swing, and game creation. Wrote boilerplate code.
-   - What I plan to do next: Plan for design patterns needed for the UNO game.
-   - Blockers: N/A
 
 - Ashutosh Ojha
    - What I did: 
@@ -51,6 +35,11 @@
          - There was significant confusion in the team in regards to how should one approach the task. Dealt with the confusion by suggesting team to start small. 
          - Instead of diving deep into project designing, suggested to focus on getting familiar with Greenfoot first by building small starter projects.
 
+- Devansh Modi
+   - What I did: Setup local environment for Greenfoot, Swing, and game creation. Wrote boilerplate code.
+   - What I plan to do next: Plan for design patterns needed for the UNO game.
+   - Blockers: N/A
+
 - Hanyu Hu
    - What I did: 
      - Setup environment for Greenfoot.
@@ -61,13 +50,19 @@
      - Team meeting to finalize the UNO develop circle
      - Start working on the structure of the game.
    - Blockers: N/A
+
+- Paramjot Singh
+   - What I did: Broke down Uno into objects
+   - What I plan to do today: Setup Greenfoot, Plan Design Patterns
+   - Blockers: N/A
+   - XP Value: Communication. We did struggle with communication earlier in the week, but by using Google Meetings and scheduling meetings in advance we were able to get more responsible with communication. 
+    
+- Waqas Kureshy
+   - What I did: Explored Game development with Greenfoot
+   - What I plan to do today: Work on Game Interface, Figure out Design Patterns applicable to the game.
+   - Blockers: N/A
       
 ### Week 2
-- Paramjot Singh
-   - What I did: Setup Greenfoot, Plan Design Patterns
-   - What I plan to do today: Write code for the Number Cards and larger Card interfaces
-   - Blockers: N/A
-   - XP Value: Communication. A combination of IRL meeting and scheduled meetings on Google Meetings ensured we performed well in this value.
 
 - Ashutosh Ojha
    - What I did: 
@@ -86,6 +81,17 @@
          - Key objective was to brainstorm and come up with individual classes and their relationships. 
          - A couple developers would be working on designing UML class diagrams, while others would be designing images to be used for UI, starting with the various types of cards.
 
+- Devansh Modi
+   - What I did: 
+      - Worked on initial tests for App Controller and Cards classes.
+      - Worked on design pattern for Deck object.
+   - What I plan to do next: 
+      - Write more unit tests to help in development.
+      - Apply identified design patterns.
+   - Blockers: 
+      - N/A
+   - XP Value: Feedback - testing and acceptance.
+
 - Hanyu HU
    - What I did: 
       - Get familiar with UNO rules and practice with team
@@ -98,16 +104,11 @@
       - Communication, weekly scrum meeting help me to communicate with team regards to the Design or blokers
       - Feedback, given feedback for the current state we are, and for the design pattern that planning to use
 
-- Devansh Modi
-   - What I did: 
-      - Worked on initial tests for App Controller and Cards classes.
-      - Worked on design pattern for Deck object.
-   - What I plan to do next: 
-      - Write more unit tests to help in development.
-      - Apply identified design patterns.
-   - Blockers: 
-      - N/A
-   - XP Value: Feedback - testing and acceptance.
+- Paramjot Singh
+   - What I did: Setup Greenfoot, Plan Design Patterns
+   - What I plan to do today: Write code for the Number Cards and larger Card interfaces
+   - Blockers: N/A
+   - XP Value: Communication. A combination of IRL meeting and scheduled meetings on Google Meetings ensured we performed well in this value.
 
 - Waqas Kureshy
    - What I did: 
@@ -130,37 +131,6 @@
 
 ### Week 3
 
-- Waqas Kureshy
-   - What I did: 
-      - Made Cards for the Game
-      - Made Button class for navigation on screens
-      - Made Main menu screen for the game.
-      - Made UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
-   - What I plan to do next: 
-      - Work on UnoScreen with static elements to finish the design.
-      - Work on Direction functionality using state pattern.
-   - Blockers: 
-      - Waiting on Card class to get completed to wrap up UnoScreen. 
-   - XP Value:
-      - Simplicity 
-         - Contributed in team meetings to help define and dive deeper into the project.
-         - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
-- Hanyu Hu
-   - What I did: 
-      - Class design for game rules
-      - Made the initial code for game rules
-      - Chose Singleton design pattern for game rules
-   - What I plan to do next: 
-      - Implement the details for the game rules
-      - Corporate the current gamerules class with game screen
-   - Blockers: 
-      - Waiting on Card class to get completed to wrap up UnoScreen. 
-      - Waiting on the Player class and bring it into the scoop.
-   - XP Value:
-      - Simplicity 
-      - Communication
-      - Provide feedbacks
-     
 - Ashutosh Ojha
    - What I did: 
       - Designed the class diagram of the Player component of the game.
@@ -191,6 +161,21 @@
    - XP Value:
       - Feedback: Testing code is first class citizen
 
+- Hanyu Hu
+   - What I did: 
+      - Class design for game rules
+      - Made the initial code for game rules
+      - Chose Singleton design pattern for game rules
+   - What I plan to do next: 
+      - Implement the details for the game rules
+      - Corporate the current gamerules class with game screen
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+      - Waiting on the Player class and bring it into the scoop.
+   - XP Value:
+      - Simplicity 
+      - Communication
+      - Provide feedbacks
 
 - Paramjot Singh
    - What I did: 
@@ -204,6 +189,22 @@
       - N/A
    - XP Value:
       - Communication: We struggled with finding times to meet which worked for all members, and our online communication needed improvement.
+
+- Waqas Kureshy
+   - What I did: 
+      - Made Cards for the Game
+      - Made Button class for navigation on screens
+      - Made Main menu screen for the game.
+      - Made UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
+   - What I plan to do next: 
+      - Work on UnoScreen with static elements to finish the design.
+      - Work on Direction functionality using state pattern.
+   - Blockers: 
+      - Waiting on Card class to get completed to wrap up UnoScreen. 
+   - XP Value:
+      - Simplicity 
+         - Contributed in team meetings to help define and dive deeper into the project.
+         - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
 
 ### Week 4
 
