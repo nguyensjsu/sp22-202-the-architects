@@ -16,6 +16,7 @@ public class GameRules
     private boolean canPlay = true;
     private GameScreen gs = GameScreen.getInstance();
     private int currentPlayer;
+    private PlayerRules playerRules = new PlayerRules();
     private TurnState turnState = new TurnState();
     private List<Player> playerOrder = new ArrayList<Player>();
     private List<Button> buttons = new ArrayList<Button>();
@@ -56,9 +57,7 @@ public class GameRules
       Player computer = new Player("computer #1", new ComputerStrategy());
       this.playerOrder.add(computer);
 
-      this.currentPlayer = Greenfoot.getRandomNumber(playerOrder.size());
-
-
+      this.currentPlayer = 1; //Greenfoot.getRandomNumber(playerOrder.size());
     }
 
     public List<ICard> getCardFromDeck(int num) {
@@ -84,13 +83,14 @@ public class GameRules
             SpecialCard specialCard = (SpecialCard) card;
 
             if (specialCard.getAction() == SpecialAction.DRAW_TWO) {
-                this.playerOrder.get(getNextPlayerIndex()).drawCard(2);
-                toggleTurn();
-            } else if (specialCard.getAction() == SpecialAction.REVERSE) {
-                this.turnState.switchTurn();
-                this.turnState.showTurn();
+                playerRules.draw(2);
+            } else if (specialCard.getAction() == SpecialAction.REVERSE) { 
+                //this.turnState.switchTurn();
+                //this.turnState.showTurn();
+                playerRules.reverse();
             } else if (specialCard.getAction() == SpecialAction.SKIP) {
-                toggleTurn();
+                //toggleTurn();
+                playerRules.skip();
             }
             wait(100);
             toggleTurn();
@@ -108,7 +108,7 @@ public class GameRules
     }
     
         public void toggleTurn() {
-        this.currentPlayer = (this.currentPlayer + 1) % 2;  
+        this.currentPlayer = (this.currentPlayer == 0 ? 1 : 0);  
         this.turnState.showTurn();
     }
     

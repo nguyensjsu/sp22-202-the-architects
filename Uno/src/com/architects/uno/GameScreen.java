@@ -57,7 +57,9 @@ public class GameScreen extends World
 
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), 475, 550);
-        addObject(players.get(1), 475, 50);       
+        addObject(players.get(1), 475, 50);
+        
+        GameRules.getInstance().getCurrentPlayer().act();
     }
     
     public void act(){

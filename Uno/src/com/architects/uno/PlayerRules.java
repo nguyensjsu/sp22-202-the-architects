@@ -1,48 +1,30 @@
-public class PlayerRules {
+/**
+ * class PlayerRules
+ * 
+ * @author Devansh Modi 
+ * @version (a version number or a date)
+ */
+public class PlayerRules implements IPlayerRules
+{
+    // instance variables - replace the example below with your own
+    private State state;
 
-    private State currentTurnState;
-
-    public PlayerRules(State turnState) {
-        this.currentTurnState = turnState;
+    /**
+     * Constructor for objects of class PlayerRules
+     */
+    public PlayerRules()
+    {
     }
 
-    // Player relate rules
     public void reverse() {
-        // For two players, reverse will give current player another chance.
-        State current = currentTurnState.showTurn();
-
-        if(current != null) {
-            current.setState(current);
-        }
+        GameRules.getInstance().toggleTurn();
     }
 
     public void skip() {
-        // toggle turn
-        State current = currentTurnState.showTurn();
-
-        if(current != null) {
-            current.setState(current);
-        }
+        GameRules.getInstance().toggleTurn();
     }
 
     public void draw(int num) {
-        // draw nums cards
-        for (int i = 0; i < num; ) {
-            ICard card = Deck.getInstance().drawCard();
-            GameRules.getInstance().getCurrentPlayer().addCard(card);
-        }
-    }
-
-    // Game play relate functions
-    public boolean canPlayCard() {
-        // need put the player args in
-        try {
-            if (GameRules.getInstance().getCurrentPlayer().getCards().size() > 0)
-                return true;
-        } catch (NullPointerException e) {
-            return false;
-        }
-
-        return false;
+        GameRules.getInstance().getCurrentPlayer().drawCard(num);
     }
 }
