@@ -261,10 +261,16 @@
 
 - Waqas Kureshy
    - What I did: 
-      - N/A
+      - Implemented the State Design Pattern for direction.
+      - Implemented ComputerTurn state
+      - Implemented PlayersTurn State
+      - Implemented State Interface
+      - Implemented TurnState machine
+      - Added the Turn UI element
    - What I plan to do next: 
       - N/A
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Communication: Effectively communicated with team members to mitigate errros, clear misunderstandings.
+      - Simplicity: Aided in simpligying the overall structure of the game.
