@@ -226,3 +226,42 @@
       - Collaborate with the team on integrating all the individual components of the game with a focus on minimizing the scope of modifications done as needed.
       - Aided the team members in the class design for their respective components.
   
+- Devansh Modi
+   - What I did: 
+      - N/A
+   - What I plan to do next: 
+      - N/A
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - N/A
+
+- Hanyu Hu
+   - What I did: 
+      - N/A
+   - What I plan to do next: 
+      - N/A
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - N/A
+
+- Paramjot Singh
+   - What I did: 
+      - N/A
+   - What I plan to do next: 
+      - N/A
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - N/A
+
+- Waqas Kureshy
+   - What I did: 
+      - N/A
+   - What I plan to do next: 
+      - N/A
+   - Blockers: 
+      - N/A
+   - XP Value:
+      - N/A
