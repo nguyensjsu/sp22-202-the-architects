@@ -248,13 +248,16 @@
 
 - Paramjot Singh
    - What I did: 
-      - N/A
+      - Implemented Card Object
+      - Implemented SpecialCard, NumberCard
+      - Implemented Card Factory Pattern
+      - Implemented Deck object
    - What I plan to do next: 
       - N/A
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Communication: We were able to effectively communicate via online and text messaging, but struggled with arranging in-person meetings, and online meeting times.
 
 - Waqas Kureshy
    - What I did: 
