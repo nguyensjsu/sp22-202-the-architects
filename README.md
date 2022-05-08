@@ -73,6 +73,8 @@
    - What I did: 
       - Gained a high level understanding of the task: Build UNO game.
       - Identified the objects and the relationships.
+      - Designed the class diagram of Card component of the game.
+      - Laid down the base interfaces, constants and enums for the Card component.
    - What I plan to do next: 
       - Design UML class diagrams.
       - Map State pattern with the game controller logic.
@@ -161,8 +163,10 @@
      
 - Ashutosh Ojha
    - What I did: 
-      - Designed the class diagram of Card and Player component of the game.
+      - Designed the class diagram of the Player component of the game.
       - Laid down the base interfaces, constants and enums for the Player component.
+      - Updated class structure of players to implement a base class for implementing the common features of both types of players.
+      - Updated the class diagram of players to include the new base Player class in the astah file.
    - What I plan to do next: 
       - Work on the concrete implementation for Human player and a Computer player.
       - Define the common and varying behaviors of both types of players.
@@ -205,8 +209,19 @@
 
 - Ashutosh Ojha
   - What I did:
-    - Updated class structure of players to include an abstract class for implementing the common features of both types of players.
-    - Updated the class diagram of players in the astah file.
+    - Apply design pattern thinking in the current Players implementation.
+    - Identify the scope of strategy pattern in Players implementation.
+    - Update the class diagram of Players to implement Strategy pattern.
+    - Implement strategy pattern in the Players implementation.
+    - Collaborated with the team to integrate all the individual components.
   - What I plan to do next:
+    - Create a Constants class to include all the constant values used.
+    - Refactor the codebase to use the constants defined in the Constants class.
   - Blockers:
+    - Waiting on minor bugfixes before starting the refactoring
   - XP Value:
+    - Simplicity
+      - Focused on improving and further simplifying the implementation of the Players implementation.
+      - Collaborate with the team on integrating all the individual components of the game with a focus on minimizing the scope of modifications done as needed.
+      - Aided the team members in the class design for their respective components.
+  
