@@ -228,13 +228,20 @@
   
 - Devansh Modi
    - What I did: 
-      - N/A
+      - Applied design patterns to the Player and Game Rules components.
+      - Updated the different areas where Rules Execution for UNO was involved.
+      - Resolved integration issues in game play.
+      - Collaborated with the team to integrate different components for. 
+      - Applied design patterns to the Player and Game Rules components UNO game play.
    - What I plan to do next: 
-      - N/A
+      - Implement a design pattern for handling initialization and teardown of screens.
+      - Resolve any new issues based on testing.
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Courage - Adapt to changes and be open minded to ideas. Evaluated work well using merge requests to bring any issues up with integrity.
+      - Communication: Everyone was supportive in the team.
+
 
 - Hanyu Hu
    - What I did: 
