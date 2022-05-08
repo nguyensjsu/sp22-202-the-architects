@@ -1,7 +1,3 @@
-package com.architects.uno.player;
-
-import com.architects.uno.IDeck;
-import com.architects.uno.card.ICard;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.List;
@@ -13,24 +9,23 @@ public class Player extends Actor implements IPlayer {
     public static final int CARD_GAP = 10;
 
     String playerName;
-    List<ICard> cards;
+    List<Card> cards;
     IPlayerStrategy strategy;
 
-    public Player(String playerName, IPlayerRole role) {
+    public Player(String playerName, IPlayerStrategy strategy) {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
-        this.role = role;
-        drawCard(deck, DECK_SIZE);
+        this.strategy = strategy;
+        drawCard(DECK_SIZE);
         renderCards();
     }
 
     @Override
-    public void addCard(IDeck deck, int amount) {
-        cards.add(deck.drawCard());
-    }
-
-    public List<ICard> getCards() {
-        return cards;
+    public void drawCard(int amount) {
+        for (int i = 0; i < amount; i++) {
+            cards.add(Deck.getInstance().drawCard());
+        }
+        renderCards();
     }
     
     @Override
@@ -61,8 +56,8 @@ public class Player extends Actor implements IPlayer {
         renderCards();
 
         if (cards.size() == 0) {
-            Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
-            game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
+        //    Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
+        //    game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
             Greenfoot.stop();
         }
     }

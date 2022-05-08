@@ -17,10 +17,14 @@ public class TurnState extends Actor
         computersTurn = new ComputersTurn(this);
        
         state = computersTurn;
-        setImage(new GreenfootImage("Turn:"+state.showTurn(), 30, Color.WHITE, Color.BLUE));
-        showTurn();
+        //setImage(new GreenfootImage("Turn:"+state.showTurn(), 30, Color.WHITE, Color.BLUE));
+        //showTurn();
         
        
+    }
+    
+    public void switchTurn(){
+        this.state.switchTurn();
     }
     
     // public void changeTurn() {
@@ -33,9 +37,10 @@ public class TurnState extends Actor
    }
    
    void showTurn(){
-    state.showTurn();
+        state.showTurn();
     }
-     void setState(State statex) {
+
+   void setState(State statex) {
         this.state = statex;
     }
     
