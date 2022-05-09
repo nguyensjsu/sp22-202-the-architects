@@ -8,10 +8,24 @@ import java.util.*;
  */
 public class Deck extends Actor implements IDeck
 {
-    private ArrayList<Card> cardDeck = new ArrayList<Card>();
-    private static Deck singleton = null;
+    private ArrayList<Card> cardDeck;
+    private static Deck singleton;
 
     private Deck() {
+        cardDeck = new ArrayList<Card>();
+        init();
+        shuffle();
+    }
+    
+    public static synchronized Deck getInstance() {
+        if (singleton == null)
+        {
+            singleton = new Deck();
+        }
+        return singleton; 
+    }
+    
+    public void init() {
         CardFactory cf = new CardFactory();
         
         // Add Blue Number Cards
@@ -72,16 +86,12 @@ public class Deck extends Actor implements IDeck
         greenSpecial = CardFactory.createCard("SPECIAL", "images/Green reverse.png", CardColor.GREEN, SpecialAction.REVERSE);
         addCard(greenSpecial);
         greenSpecial = CardFactory.createCard("SPECIAL", "images/Green skip.png", CardColor.GREEN, SpecialAction.SKIP);
-        addCard(greenSpecial);        
+        addCard(greenSpecial);
     }
-
     
-    public static synchronized Deck getInstance() {
-        if (singleton == null)
-        {
-            singleton = new Deck();
-        }
-        return singleton; 
+    public void shuffle() {
+        // Shuffle Deck
+        Collections.shuffle(this.cardDeck);
     }
     
     /**
