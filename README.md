@@ -8,10 +8,8 @@
 - Hanyu Hu
 
 ## Technologies
-- Abstract Window Toolkit
-- Java Swing
+- Java
 - Greenfoot
-- Sl4j
 
 ## Team Journals
 - [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
