@@ -16,6 +16,7 @@ public class GameRules
     private boolean canPlay = true;
     private GameScreen gs = GameScreen.getInstance();
     private int currentPlayer;
+    private PlayerRules playerRules = new PlayerRules();
     private TurnState turnState = new TurnState();
     private List<Player> playerOrder = new ArrayList<Player>();
     private List<Button> buttons = new ArrayList<Button>();
@@ -28,8 +29,7 @@ public class GameRules
          * @return     the sum of x and y
          */
 
-    private GameRules() {
-    }
+    private GameRules() {}
 
     public static synchronized GameRules getInstance() {
       if (singleton == null)
@@ -41,11 +41,11 @@ public class GameRules
     // game setup relate functions
     public int getPlayerNum() {
 
-      return 4;
+      return 2;
     }
 
     public void gameSetUp() {
-      gs.addObject(turnState, 900, 45);
+      gs.addObject(turnState, 900, 300);
       backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
       this.buttons.add(backButton);
       deck = Deck.getInstance();
@@ -56,9 +56,7 @@ public class GameRules
       Player computer = new Player("computer #1", new ComputerStrategy());
       this.playerOrder.add(computer);
 
-      this.currentPlayer = Greenfoot.getRandomNumber(playerOrder.size());
-
-
+      this.currentPlayer = 1; //Greenfoot.getRandomNumber(playerOrder.size());
     }
 
     public List<ICard> getCardFromDeck(int num) {
@@ -71,7 +69,12 @@ public class GameRules
     }
 
     public void replaceTopCard(Card card) {
-        gs.addObject(card, topCard.getX(), topCard.getY());
+        if (topCard == null) {
+            gs.addObject(card, 475, 300);  // default coordinates when first card to be played.          
+        } else {
+            gs.addObject(card, topCard.getX(), topCard.getY());
+        }
+        
         topCard = card;
         gs.repaint();
         if (card instanceof SpecialCard) {
@@ -79,13 +82,14 @@ public class GameRules
             SpecialCard specialCard = (SpecialCard) card;
 
             if (specialCard.getAction() == SpecialAction.DRAW_TWO) {
-                this.playerOrder.get(getNextPlayerIndex()).drawCard(2);
-                toggleTurn();
-            } else if (specialCard.getAction() == SpecialAction.REVERSE) {
-                this.turnState.switchTurn();
-                this.turnState.showTurn();
+                playerRules.draw(2);
+            } else if (specialCard.getAction() == SpecialAction.REVERSE) { 
+                //this.turnState.switchTurn();
+                //this.turnState.showTurn();
+                playerRules.reverse();
             } else if (specialCard.getAction() == SpecialAction.SKIP) {
-                toggleTurn();
+                //toggleTurn();
+                playerRules.skip();
             }
             wait(100);
             toggleTurn();
@@ -103,8 +107,8 @@ public class GameRules
     }
     
         public void toggleTurn() {
-        this.currentPlayer = (this.currentPlayer + 1) % 2;  
-        this.turnState.showTurn();
+        this.currentPlayer = (this.currentPlayer == 0 ? 1 : 0);  
+       this.turnState.switchTurn();
     }
     
     public int getNextPlayerIndex() {
@@ -112,16 +116,20 @@ public class GameRules
     }
 
     public boolean canPlayCard(Card card) {
+        
+      if (topCard == null) {
+          return true; // allow to play if this is the first card to be played.
+      }
       boolean isPowerCard = card instanceof SpecialCard;
-      boolean doesColorMatch = card.getColor() != null && topCard.getColor() != null && card.getColor().equals(topCard.getColor());
-      boolean doesNumberMatch = card instanceof NumberCard && topCard instanceof NumberCard && ((NumberCard) card).getNumber() == ((NumberCard) topCard).getNumber();
-      boolean doesSpecialMatch = card instanceof SpecialCard && topCard instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) topCard).getAction();
+      boolean doesColorMatch = card.getColor() != null && getTopCard().getColor() != null && card.getColor().equals(getTopCard().getColor());
+      boolean doesNumberMatch = card instanceof NumberCard && getTopCard() instanceof NumberCard && ((NumberCard) card).getNumber() == ((NumberCard) getTopCard()).getNumber();
+      boolean doesSpecialMatch = card instanceof SpecialCard && getTopCard() instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) getTopCard()).getAction();
       return isPowerCard || doesColorMatch || doesNumberMatch || doesSpecialMatch;
     }
 
     // general getter and setter
-    public void getTopCard() {
-      // return Card type
+    public Card getTopCard() {
+      return topCard;
     }
 
     public void getPlayer(int index) {
@@ -130,7 +138,9 @@ public class GameRules
 
     public Player getCurrentPlayer() {
       // return the player for current round
+      
       return this.playerOrder.get(this.currentPlayer);
+      //return this.playerOrder[(int)this.currentPlayer];
     }
 
     public void getNextPlayer() {
