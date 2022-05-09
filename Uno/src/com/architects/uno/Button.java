@@ -16,7 +16,7 @@ public class Button extends Actor
         //scale​(int width, int height)
         button.scale(w, h);
         //GreenfootImage​(java.lang.String string, int size, Color foreground, Color background, Color outline)
-        //drawImage​(GreenfootImage image, int x, int y)	
+        //drawImage​(GreenfootImage image, int x, int y)    
         button.drawImage(new GreenfootImage(text, textSize, textColor, new greenfoot.Color(0, 0, 0,
                 0),new greenfoot.Color(181, 180, 180, 255)), h_space, v_space);
         setImage(button);
