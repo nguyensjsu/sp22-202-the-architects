@@ -25,7 +25,7 @@ public class UserStrategy extends Actor implements IPlayerStrategy {
                     if (gsst.canPlayCard(card)) {
                         cards.remove(cardIndex);
                         // renderCards();
-                        game.replaceTopCard(card);
+                        gsst.replaceTopCard(card);
                     }
                 }
                 
