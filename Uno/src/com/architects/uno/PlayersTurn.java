@@ -23,11 +23,12 @@ public class PlayersTurn extends Actor implements State
         }
    
    public String showTurn(){
-    //setImage(new GreenfootImage("Human", size, textColor, background));
-    setImage(new GreenfootImage("Turn: Human", 30, Color.WHITE, Color.BLUE));
+   // setImage(new GreenfootImage("Human", size, textColor, background));
+    //setImage(new GreenfootImage("Turn: Human", 30, Color.WHITE, Color.BLUE));
     return "Human";
     }
     public void switchTurn(){
-        turnState.setState(turnState.getComputersTurn());
+        turnState.getComputersTurn();
+        //turnState.setState(
     }
 }
