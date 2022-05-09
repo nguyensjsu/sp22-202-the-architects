@@ -5,7 +5,7 @@ import java.util.List;
 public class UserStrategy extends Actor implements IPlayerStrategy {
     public static final int CARD_WIDTH = 72;
     public static final int CARD_HEIGHT = 96;
-    public static final int CARD_GAP = 10;
+    public static final int CARD_GAP = 30;
     
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
