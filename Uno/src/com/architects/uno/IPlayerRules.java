@@ -4,4 +4,6 @@ public interface IPlayerRules {
     void skip();
 
     void draw(int num);
+
+    
 }
