@@ -1,11 +1,11 @@
 # The Architects
 
 ## Team Members
-- Paramjot Singh
 - Ashutosh Ojha
-- Waqas Kureshy
 - Devansh Modi
 - Hanyu Hu
+- Paramjot Singh
+- Waqas Kureshy
 
 ## Technologies
 - Java
