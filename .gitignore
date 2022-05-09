@@ -2,4 +2,4 @@
 *.class
 *.ctxt
 .gradle
-Uno/project.greenfoot
+*.greenfoot
