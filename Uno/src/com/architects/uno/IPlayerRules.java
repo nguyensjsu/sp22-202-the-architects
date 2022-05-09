@@ -5,5 +5,5 @@ public interface IPlayerRules {
 
     void draw(int num);
 
-    boolean canPlayCard();
+    
 }
