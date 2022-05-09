@@ -163,40 +163,61 @@
   
 - Devansh Modi
    - What I did: 
-      - N/A
+      - Applied design patterns to the Player and Game Rules components.
+      - Updated the different areas where Rules Execution for UNO was involved.
+      - Resolved integration issues in game play.
+      - Collaborated with the team to integrate different components for. 
+      - Applied design patterns to the Player and Game Rules components UNO game play.
    - What I plan to do next: 
-      - N/A
+      - Implement a design pattern for handling initialization and teardown of screens.
+      - Resolve any new issues based on testing.
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Courage - Adapt to changes and be open minded to ideas. Evaluated work well using merge requests to bring any issues up with integrity.
+      - Communication: Everyone was supportive in the team.
+
 
 - Hanyu Hu
    - What I did: 
-      - N/A
+      - Implemented the Game Screen and Game Rules classes
+      - Debugging the whole structure with outher classes
+      - Debugging the design pattern issue for the Game Screen and Game Rules
+      - Refactor the Game Rule class
+      - Collaborate with the team to make the whole thing work
    - What I plan to do next: 
-      - N/A
+      - Debugging the code
    - Blockers: 
-      - N/A
+      - The current structure has a lot bugs, happends in most units
    - XP Value:
-      - N/A
+      - Communication: Team collaborative was good, everyone is very supportive and hard working
+      - Simplicity: The brainstorm ideas need way much than we can do, we are just simplify the requirements and implement
 
 - Paramjot Singh
    - What I did: 
-      - N/A
+      - Implemented Card Object
+      - Implemented SpecialCard, NumberCard
+      - Implemented Card Factory Pattern
+      - Implemented Deck object
    - What I plan to do next: 
       - N/A
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Communication: We were able to effectively communicate via online and text messaging, but struggled with arranging in-person meetings, and online meeting times.
 
 - Waqas Kureshy
    - What I did: 
-      - N/A
+      - Implemented the State Design Pattern for direction.
+      - Implemented ComputerTurn state
+      - Implemented PlayersTurn State
+      - Implemented State Interface
+      - Implemented TurnState machine
+      - Added the Turn UI element
    - What I plan to do next: 
-      - N/A
+      - Merge Main code with personal code and reduce conflicts.
    - Blockers: 
       - N/A
    - XP Value:
-      - N/A
+      - Communication: Effectively communicated with team members to mitigate errros, clear misunderstandings.
+      - Simplicity: Aided in simpligying the overall structure of the game.
