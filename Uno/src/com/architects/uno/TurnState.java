@@ -17,34 +17,44 @@ public class TurnState extends Actor
         computersTurn = new ComputersTurn(this);
        
         state = computersTurn;
-        setImage(new GreenfootImage("Turn:"+state.showTurn(), 30, Color.WHITE, Color.BLUE));
-        showTurn();
+        setImage(new GreenfootImage("Turn:"+state.showTurn(), 25, Color.WHITE, Color.RED));
+        //showTurn();
         
        
     }
     
     public void switchTurn(){
         this.state.switchTurn();
+        setImage(new GreenfootImage("Turn:"+state.showTurn(), 25, Color.WHITE, Color.RED));
     }
     
     // public void changeTurn() {
       //  state.turn();
    // }
    
+   
+   
    void showTurn(){
-    state.showTurn();
+        state.showTurn();
     }
 
    void setState(State statex) {
         this.state = statex;
     }
     
-     protected State getComputersTurn() {
-        return computersTurn;
+    // protected State getComputersTurn() {
+      //  this.state=computersTurn;
+        
+    //}
+      protected void getComputersTurn() {
+        this.state=computersTurn;
+        
     }
     
-    protected State getPlayersTurn() {
-        return playersTurn;
+    
+    
+    protected void getPlayersTurn() {
+        this.state= playersTurn;
     }
    
 }
