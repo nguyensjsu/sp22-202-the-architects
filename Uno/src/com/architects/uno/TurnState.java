@@ -17,7 +17,7 @@ public class TurnState extends Actor
         computersTurn = new ComputersTurn(this);
        
         state = computersTurn;
-        //setImage(new GreenfootImage("Turn:"+state.showTurn(), 30, Color.WHITE, Color.BLUE));
+        setImage(new GreenfootImage("Turn:"+state.showTurn(), 25, Color.WHITE, Color.RED));
         //showTurn();
         
        
@@ -25,16 +25,14 @@ public class TurnState extends Actor
     
     public void switchTurn(){
         this.state.switchTurn();
+        setImage(new GreenfootImage("Turn:"+state.showTurn(), 25, Color.WHITE, Color.RED));
     }
     
     // public void changeTurn() {
       //  state.turn();
    // }
    
-   public void switchTurn()
-   {
-   this.state.switchTurn();
-   }
+   
    
    void showTurn(){
         state.showTurn();
@@ -44,12 +42,19 @@ public class TurnState extends Actor
         this.state = statex;
     }
     
-     protected State getComputersTurn() {
-        return computersTurn;
+    // protected State getComputersTurn() {
+      //  this.state=computersTurn;
+        
+    //}
+      protected void getComputersTurn() {
+        this.state=computersTurn;
+        
     }
     
-    protected State getPlayersTurn() {
-        return playersTurn;
+    
+    
+    protected void getPlayersTurn() {
+        this.state= playersTurn;
     }
    
 }
