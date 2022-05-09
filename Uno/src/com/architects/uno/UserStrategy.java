@@ -9,6 +9,7 @@ public class UserStrategy extends Actor implements IPlayerStrategy {
      private GameScreen gsst = GameScreen.getInstance();
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
+        game = (GameScreen) getWorld();
         IDeck deck = game.getDeck();
         
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
