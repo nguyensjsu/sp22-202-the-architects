@@ -29,8 +29,7 @@ public class GameRules
          * @return     the sum of x and y
          */
 
-    private GameRules() {
-    }
+    private GameRules() {}
 
     public static synchronized GameRules getInstance() {
       if (singleton == null)
@@ -42,11 +41,11 @@ public class GameRules
     // game setup relate functions
     public int getPlayerNum() {
 
-      return 4;
+      return 2;
     }
 
     public void gameSetUp() {
-      gs.addObject(turnState, 900, 45);
+      gs.addObject(turnState, 900, 300);
       backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
       this.buttons.add(backButton);
       deck = Deck.getInstance();
@@ -71,7 +70,7 @@ public class GameRules
 
     public void replaceTopCard(Card card) {
         if (topCard == null) {
-            gs.addObject(card, 475, 200);  // default coordinates when first card to be played.          
+            gs.addObject(card, 475, 300);  // default coordinates when first card to be played.          
         } else {
             gs.addObject(card, topCard.getX(), topCard.getY());
         }
@@ -92,7 +91,7 @@ public class GameRules
                 //toggleTurn();
                 playerRules.skip();
             }
-            wait(100);
+            wait(500);
             toggleTurn();
         } else {
             toggleTurn();
@@ -109,7 +108,7 @@ public class GameRules
     
         public void toggleTurn() {
         this.currentPlayer = (this.currentPlayer == 0 ? 1 : 0);  
-        this.turnState.showTurn();
+       this.turnState.switchTurn();
     }
     
     public int getNextPlayerIndex() {
@@ -139,7 +138,9 @@ public class GameRules
 
     public Player getCurrentPlayer() {
       // return the player for current round
+      
       return this.playerOrder.get(this.currentPlayer);
+      //return this.playerOrder[(int)this.currentPlayer];
     }
 
     public void getNextPlayer() {
