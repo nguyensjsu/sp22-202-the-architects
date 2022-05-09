@@ -48,6 +48,7 @@ public class GameScreen extends World
     
     private void prepare() {
         GameRules.getInstance().gameSetUp();
+        
 
         Deck deck = GameRules.getInstance().getDeck();
         addObject(deck,120,300);
@@ -57,7 +58,9 @@ public class GameScreen extends World
 
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), 475, 500);
-        addObject(players.get(1), 475, 150);       
+        addObject(players.get(1), 475, 100);
+        
+        GameRules.getInstance().getCurrentPlayer().act();
     }
     
     public void act(){
