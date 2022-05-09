@@ -76,7 +76,7 @@ public class Deck extends Actor implements IDeck
     }
 
     
-    public static Deck getInstance() {
+    public static synchronized Deck getInstance() {
         if (singleton == null)
         {
             singleton = new Deck();
