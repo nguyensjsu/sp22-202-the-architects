@@ -12,7 +12,7 @@ public class UserStrategy extends Actor implements IPlayerStrategy {
         game = (GameScreen) getWorld();
         IDeck deck = game.getDeck();
         
-        if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
+       if (gsst.getCurrentPlayer().equals(player) && gsst.canPlay()) {
             // Clicked own cards
             if (Greenfoot.mouseClicked(player)) {
                 int cardIndex = cardSelected();
