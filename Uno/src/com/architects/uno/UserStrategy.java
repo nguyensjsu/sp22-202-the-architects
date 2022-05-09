@@ -6,7 +6,7 @@ public class UserStrategy extends Actor implements IPlayerStrategy {
     public static final int CARD_WIDTH = 72;
     public static final int CARD_HEIGHT = 96;
     public static final int CARD_GAP = 30;
-    
+     private GameScreen gsst = GameScreen.getInstance();
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
         IDeck deck = game.getDeck();
