@@ -23,13 +23,13 @@ public class ComputersTurn extends Actor  implements State
         }
    
    public String showTurn(){
-    setImage(new GreenfootImage("Computer", size, textColor, background));
+    //setImage(new GreenfootImage("Computer", size, textColor, background));
    //drawImage(new GreenfootImage("Text to display", 64, null, null), 40, 40);
     return "Computer";
     // getBackground().drawString("Computer", 800, 50);    
 }
     public void switchTurn(){
-    turnState.setState(turnState.getPlayersTurn());
+    turnState.getPlayersTurn();
     }
 }
 
