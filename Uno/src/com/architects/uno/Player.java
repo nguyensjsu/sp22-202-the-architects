@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Player extends Actor implements IPlayer {
     private static final int DECK_SIZE = 7;
-    public static final int CARD_WIDTH = 50;
-    public static final int CARD_HEIGHT = 72;
-    public static final int CARD_GAP = 10;
+    public static final int CARD_WIDTH = 72;
+    public static final int CARD_HEIGHT = 96;
+    public static final int CARD_GAP = 30;
 
     String playerName;
     List<Card> cards;
@@ -30,7 +30,7 @@ public class Player extends Actor implements IPlayer {
     
     @Override
     public void renderCards() {
-        GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + CARD_WIDTH, CARD_HEIGHT);
+        GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + 80, 96);
         int x = CARD_WIDTH / 2;
         for (Card card: this.cards) {
             if (GameScreen.showEnemyCards || isHuman()) {
@@ -60,6 +60,7 @@ public class Player extends Actor implements IPlayer {
         //    game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
             Greenfoot.stop();
         }
+        return;
     }
     
     @Override
