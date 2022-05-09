@@ -91,7 +91,7 @@ public class GameRules
                 //toggleTurn();
                 playerRules.skip();
             }
-            wait(100);
+            wait(300);
             toggleTurn();
         } else {
             toggleTurn();
