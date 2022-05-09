@@ -3,10 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComputerStrategy implements IPlayerStrategy {
+    
 
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
-    
+        
 
         if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
             List<Card> playableCards = new ArrayList<>();
@@ -33,6 +34,7 @@ public class ComputerStrategy implements IPlayerStrategy {
                 game.replaceTopCard(playing);
             }
         }
+        //game.toggleTurn();
         return cards;
     }
 
