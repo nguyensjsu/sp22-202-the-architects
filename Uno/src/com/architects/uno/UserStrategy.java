@@ -3,15 +3,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserStrategy extends Actor implements IPlayerStrategy {
-    public static final int CARD_WIDTH = 50;
-    public static final int CARD_HEIGHT = 72;
-    public static final int CARD_GAP = 10;
+    public static final int CARD_WIDTH = 72;
+    public static final int CARD_HEIGHT = 96;
+    public static final int CARD_GAP = 30;
+    private GameScreen gsst = GameScreen.getInstance();
     
     @Override
     public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
-        IDeck deck = game.getDeck();
+         game = (GameScreen) getWorld();
+         //game= game.getInsatance();
+        IDeck deck = gsst.getDeck();
         
-        if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
+        if (gsst.getCurrentPlayer().equals(player) && gsst.canPlay()) {
             // Clicked own cards
             if (Greenfoot.mouseClicked(player)) {
                 int cardIndex = cardSelected();
@@ -21,26 +24,26 @@ public class UserStrategy extends Actor implements IPlayerStrategy {
                 if (cardIndex != -1) {
                     Card card = cards.get(cardIndex);
                     
-                    if (game.canPlayCard(card)) {
+                    if (gsst.canPlayCard(card)) {
                         cards.remove(cardIndex);
                         // renderCards();
-                        game.replaceTopCard(card);
+                        gsst.replaceTopCard(card);
                     }
                 }
                 
             } else if (Greenfoot.mouseClicked(deck)) {
                 Card card = deck.drawCard();
                 
-                if (game.canPlayCard(card)) {
+                if (gsst.canPlayCard(card)) {
                     game.toggleCanPlay();
-                    playableDeckCard(game, cards, card);
+                    playableDeckCard(gsst, cards, card);
                 } else {
                     cards.add(card);
                 }
                 
                 // renderCards();
                 
-                game.toggleTurn();
+                gsst.toggleTurn();
             }
         }
         return cards;
