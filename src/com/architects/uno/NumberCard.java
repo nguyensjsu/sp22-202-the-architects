@@ -1,9 +1,3 @@
- 
-
-import greenfoot.Actor;
-import greenfoot.Color;
-
-
 public class NumberCard extends Card
 {
     private int value;

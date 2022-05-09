@@ -12,8 +12,7 @@ public class PlayerRules implements IPlayerRules
     /**
      * Constructor for objects of class PlayerRules
      */
-    public PlayerRules()
-    {
+    public PlayerRules() {
     }
 
     public void reverse() {

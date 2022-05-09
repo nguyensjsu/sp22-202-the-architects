@@ -1,5 +1,3 @@
- 
-
-public class ICardFactory {
+ public class ICardFactory {
 	
 }

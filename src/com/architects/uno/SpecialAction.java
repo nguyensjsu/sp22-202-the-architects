@@ -1,6 +1,4 @@
- 
-
-public enum SpecialAction {
+ public enum SpecialAction {
 	DRAW_TWO,
 	REVERSE,
 	SKIP,

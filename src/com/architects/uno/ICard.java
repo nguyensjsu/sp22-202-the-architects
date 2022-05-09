@@ -1,6 +1,3 @@
- 
-import greenfoot.Color;
-
 public interface ICard {
     public boolean isSpecial();
     public int getNumber();

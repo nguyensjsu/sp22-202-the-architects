@@ -1,6 +1,4 @@
- 
-
-public class SpecialCard extends Card
+ public class SpecialCard extends Card
 {
     private SpecialAction action;
     private CardColor color;

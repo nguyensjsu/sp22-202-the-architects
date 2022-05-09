@@ -1,6 +1,4 @@
- 
-
-enum CardColor {
+ enum CardColor {
     RED,
     YELLOW,
     BLUE,

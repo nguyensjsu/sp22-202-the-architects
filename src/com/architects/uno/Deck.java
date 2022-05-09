@@ -18,8 +18,7 @@ public class Deck extends Actor implements IDeck
     }
     
     public static synchronized Deck getInstance() {
-        if (singleton == null)
-        {
+        if (singleton == null) {
             singleton = new Deck();
         }
         return singleton; 
@@ -98,13 +97,11 @@ public class Deck extends Actor implements IDeck
      * Act - do whatever the Deck wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
+    public void act() {
         // Add your action code here.
     }
     
-    public void addCard(Card card) 
-    {
+    public void addCard(Card card) {
         cardDeck.add(card);
     }
 
