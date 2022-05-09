@@ -29,7 +29,7 @@ public class ComputersTurn extends Actor  implements State
     // getBackground().drawString("Computer", 800, 50);    
 }
     public void switchTurn(){
-    turnState.setState(turnState.getPlayersTurn());
+    turnState.getPlayersTurn();
     }
 }
 
