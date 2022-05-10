@@ -23,8 +23,9 @@
     - Worked on design pattern for Deck object.
 
 - ### What I plan to do next: 
-    - Write more unit tests to help in development.
+    - Perform functional tests to help in development.
     - Apply identified design patterns.
+    - Test other competing Uno apps to get inspiration of ideas and features.
 
 - ### Blockers: 
     - N/A
@@ -41,14 +42,14 @@
 
 - ### What I plan to do next: 
     - Complete the implementation for Player rules.
-    - Add unit tests.
+    - Perform functional testing to validate player and game rules.
 
 - ### Blockers: 
     - N/A
 
 - ### XP Value:
     - ### Feedback 
-        - Testing code is first class citizen.
+        - Testing code is first class citizen. I focused on functional testing of the code as finding the issues from the user's perspective is important to getting feedback for successful execution of this  project.
 
 
 ## Week 4
@@ -63,7 +64,8 @@
 - ### What I plan to do next: 
     - Implement a design pattern for handling initialization and teardown of screens.
     - Implement Sound Effects and Sound Handler using Observer design pattern.
-    - Resolve any new issues based on testing.
+    - Resolve any new issues based on testing. I played a key role in the team to find new bugs and do a bug bash for the team.
+    - Also supported the team in following a branching strategy in Week 4 to ensure main code does not break.
 
 - ### Blockers: 
     - N/A
