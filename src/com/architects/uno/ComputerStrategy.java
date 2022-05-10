@@ -23,6 +23,7 @@ public class ComputerStrategy implements IPlayerStrategy
                 }
             }
             if (playableCards.size() == 0) {
+                Greenfoot.delay(100);
                 Card card  = Deck.getInstance().drawCard();
                 if(card == null) {
                     // empty deck => game draw

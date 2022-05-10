@@ -6,14 +6,15 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Deck extends Actor implements IDeck
+public class Deck extends Actor implements IDeck, ISoundSubject
 {
     private GreenfootImage deckFull;
     private GreenfootImage deckFew;
     private GreenfootImage deckTwo;
     private GreenfootImage deckOne;
     private ArrayList<Card> cardDeck;
-    
+    private List<ISoundObserver> observers = new ArrayList<>();
+
     private static Deck singleton;
 
     private Deck() {
@@ -26,6 +27,8 @@ public class Deck extends Actor implements IDeck
         init();
         shuffle();
         setImage(deckFull);
+        this.attach(new SoundHandler());
+
     }
     
     public static synchronized Deck getNewInstance() {
@@ -103,6 +106,18 @@ public class Deck extends Actor implements IDeck
         addCard(greenSpecial);
         greenSpecial = CardFactory.createCard("SPECIAL", "images/Green skip.png", CardColor.GREEN, SpecialAction.SKIP);
         addCard(greenSpecial);
+    }
+    
+    public void attach(ISoundObserver o) {
+        this.observers.add(o);
+    }
+    public void  detach(ISoundObserver o) {
+        this.observers.remove(o);
+    }
+    public void notifySoundHandler(SoundEvent e) {
+        for(ISoundObserver o : observers) {
+            o.playSound(e);
+        }
     }
     
     @Override
