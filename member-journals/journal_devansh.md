@@ -1,7 +1,7 @@
 # Personal Journal
 
 ### Devansh Modi
-### SJSU ID - XXXXXXXXX
+### SJSU ID - 016114189
 
 
 ## Week 1
