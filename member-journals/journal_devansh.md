@@ -74,6 +74,6 @@
     - ### Courage 
         - Adapt to changes and be open minded to ideas. Evaluated work well using merge requests to bring any issues up with integrity.
         - By applying a strict pull request review policy in week 4, we were able to keep the code in master clean and almost bug-free.
-        
+        - We had productive meetings for bug bash but we displayed courage in prioritizing the most essential bugs.
     - ### Feedback
         - Everyone was supportive in the team.
