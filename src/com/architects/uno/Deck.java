@@ -141,9 +141,10 @@ public class Deck extends Actor implements IDeck, ISoundSubject
 
     @Override
     public Card drawCard() {
-        
-        notifySoundHandler(SoundEvent.PLAY_CARD);
-        Greenfoot.delay(40);
+        if(!GameScreen.getInstance().isFirstTurn()) {
+            notifySoundHandler(SoundEvent.PLAY_CARD);
+            Greenfoot.delay(40);
+        }
         if (cardDeck.size() != 0)
         {
             Card output = cardDeck.get(0);
