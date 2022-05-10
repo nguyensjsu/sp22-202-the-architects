@@ -54,7 +54,7 @@
 ## Week 4
 
 - ### What I did: 
-    - Applied design patterns to the Player and Game Rules components.
+    - Applied design patterns to the Player and Game Rules components. Used Singleton design pattern for Rules components.
     - Updated the different areas where Rules Execution for UNO was involved.
     - Resolved integration issues in game play.
     - Collaborated with the team to integrate different components for. 
@@ -62,6 +62,7 @@
 
 - ### What I plan to do next: 
     - Implement a design pattern for handling initialization and teardown of screens.
+    - Implement Sound Effects and Sound Handler using Observer design pattern.
     - Resolve any new issues based on testing.
 
 - ### Blockers: 
