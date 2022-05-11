@@ -46,7 +46,7 @@ public class GameScreen extends World
     }
     
     private void prepare() {
-        GameRules.getInstance().gameSetUp();
+        GameRules.getNewInstance().gameSetUp();
         
 
         Deck deck = GameRules.getInstance().getDeck();

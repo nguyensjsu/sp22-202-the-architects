@@ -7,6 +7,7 @@ public class Player extends Actor implements IPlayer {
     public static final int CARD_WIDTH = 72;
     public static final int CARD_HEIGHT = 96;
     public static final int CARD_GAP = 30;
+    public static final int SCREEN_WIDTH = 1000;
 
     String playerName;
     List<Card> cards;
@@ -17,7 +18,6 @@ public class Player extends Actor implements IPlayer {
         this.cards = new ArrayList<>();
         this.strategy = strategy;
         drawCard(DECK_SIZE);
-        renderCards();
     }
 
     @Override
@@ -28,19 +28,47 @@ public class Player extends Actor implements IPlayer {
         renderCards();
     }
     
+    public List<Card> getCards() {
+        return this.cards;
+    }
+    
+    public void addCard(Card card) {
+        for (int i=0; i<cards.size(); i++) {
+            GameScreen.getInstance().removeObject(cards.get(i));
+        }
+        cards.add(card);
+        renderCards();
+    }
+    
+    public void removeCard(Card card) {
+        for (int i=0; i<cards.size(); i++) {
+            GameScreen.getInstance().removeObject(cards.get(i));
+        }
+        cards.remove(card);
+        renderCards();
+    }
+    
+    public void removeCard(int index) {
+        for (int i=0; i<cards.size(); i++) {
+            GameScreen.getInstance().removeObject(cards.get(i));
+        }
+        cards.remove(index);
+        renderCards();
+    }
+    
     @Override
     public void renderCards() {
-        GreenfootImage image = new GreenfootImage(CARD_GAP * this.cards.size() + 80, 96);
-        int x = CARD_WIDTH / 2;
-        for (Card card: this.cards) {
+        int deckSize = CARD_WIDTH + ((cards.size()-1) * CARD_GAP);
+        int x = (SCREEN_WIDTH - deckSize + CARD_WIDTH)/2;
+        GreenfootImage image = new GreenfootImage(deckSize, CARD_HEIGHT);
+        
+        for (int i=0; i<cards.size(); i++) {
             if (GameScreen.showEnemyCards || isHuman()) {
-                //image.drawImage(card.getImage(), x, 0);
-                GameScreen.getInstance().addObject(card, 475 + x - 80, 500);
-                card.setImage(card.getImage());
+                GameScreen.getInstance().addObject(cards.get(i), x + (i * CARD_GAP), 500);
+                cards.get(i).setImage(cards.get(i).getImage());
             } else {
-                image.drawImage(new GreenfootImage("Deck.png"), x, 0);
+                image.drawImage(new GreenfootImage("Deck.png"), i * CARD_GAP, 0);
             } 
-            x += CARD_GAP;
         }
         setImage(image);
     }
@@ -53,10 +81,7 @@ public class Player extends Actor implements IPlayer {
     @Override
     public void act() {
         GameScreen game = (GameScreen) getWorld();
-
-        cards = strategy.act(this, cards, game);
-        renderCards();
-
+        strategy.act(this, game);
         if (cards.size() == 0) {
         //    Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
         //    game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);

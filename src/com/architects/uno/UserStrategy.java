@@ -6,47 +6,34 @@ public class UserStrategy implements IPlayerStrategy {
     public static final int CARD_WIDTH = 72;
     public static final int CARD_HEIGHT = 96;
     public static final int CARD_GAP = 30;
-    private GameScreen gsst = GameScreen.getInstance();
     
     @Override
-    public List<Card> act(IPlayer player, List<Card> cards, GameScreen game) {
-        //game = (GameScreen) getWorld();
-         //game= game.getInsatance();
-        IDeck deck = gsst.getDeck();
+    public void act(IPlayer player, GameScreen game) {
+        IDeck deck = GameScreen.getInstance().getDeck();
         
-        if (gsst.getCurrentPlayer().equals(player) && gsst.canPlay()) {
+        if (GameScreen.getInstance().getCurrentPlayer().equals(player) && GameScreen.getInstance().canPlay()) {
             // Clicked own cards
             if (Greenfoot.mouseClicked(player)) {
-                int cardIndex = cardSelected(cards);
-                
-                // System.out.println("Card Index Selected for "+ this.name +": " + cardIndex);
-                
+                int cardIndex = cardSelected(GameScreen.getInstance().getCurrentPlayer().getCards());
                 if (cardIndex != -1) {
-                    Card card = cards.get(cardIndex);
-                    
-                    if (gsst.canPlayCard(card)) {
-                        cards.remove(cardIndex);
-                        // renderCards();
-                        gsst.replaceTopCard(card);
+                    Card card = GameScreen.getInstance().getCurrentPlayer().getCards().get(cardIndex);
+                    if (GameScreen.getInstance().canPlayCard(card)) {
+                        GameScreen.getInstance().getCurrentPlayer().removeCard(cardIndex);
+                        GameScreen.getInstance().replaceTopCard(card);
                     }
                 }
                 
             } else if (Greenfoot.mouseClicked(deck)) {
                 Card card = deck.drawCard();
-                
-                if (gsst.canPlayCard(card)) {
+                if (GameScreen.getInstance().canPlayCard(card)) {
                     game.toggleCanPlay();
-                    playableDeckCard(gsst, cards, card);
+                    playableDeckCard(GameScreen.getInstance(), GameScreen.getInstance().getCurrentPlayer().getCards(), card);
                 } else {
-                    cards.add(card);
+                    GameScreen.getInstance().getCurrentPlayer().addCard(card);
                 }
-                
-                // renderCards();
-                
-                gsst.toggleTurn();
+                GameScreen.getInstance().toggleTurn();
             }
         }
-        return cards;
     }
 
     @Override
@@ -73,7 +60,7 @@ public class UserStrategy implements IPlayerStrategy {
             }
             
             if (Greenfoot.mouseClicked(keepCardButton)) {
-                cards.add(card);
+                GameScreen.getInstance().getCurrentPlayer().addCard(card);
                 game.toggleCanPlay();
                 break;
             }
@@ -82,7 +69,7 @@ public class UserStrategy implements IPlayerStrategy {
     
     private int cardSelected(List<Card> cards) {
         MouseInfo mouseInfo = Greenfoot.getMouseInfo();
-        
+
         while (mouseInfo == null) {
         }
         
