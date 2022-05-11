@@ -92,7 +92,7 @@ public class UserStrategy implements IPlayerStrategy {
         int bottomRightX = cards.get(cards.size()-1).getX(); //getX() + getImage().getWidth() / 2;
         
         int index = 0;
-        for (int i = topLeftX + CARD_WIDTH / 2; i < bottomRightX; i += CARD_GAP) {
+        for (int i = topLeftX - CARD_WIDTH / 2; i < bottomRightX; i += CARD_GAP) {
             if (mouseX >= i && mouseX <= i + CARD_GAP - 10) {
                 return index;
             }
