@@ -17,6 +17,11 @@ public class Deck extends Actor implements IDeck
         shuffle();
     }
     
+    public static synchronized Deck getNewInstance() {
+        singleton = new Deck();
+        return singleton; 
+    }
+    
     public static synchronized Deck getInstance() {
         if (singleton == null) {
             singleton = new Deck();

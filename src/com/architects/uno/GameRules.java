@@ -37,6 +37,11 @@ public class GameRules
         playerOrder = new ArrayList<Player>();
     }
 
+    public static synchronized GameRules getNewInstance() {
+        singleton = new GameRules();
+        return singleton;
+    }
+    
     public static synchronized GameRules getInstance() {
         if (singleton == null) {
             singleton = new GameRules();
@@ -54,7 +59,7 @@ public class GameRules
         GameScreen.getInstance().addObject(turnState, 900, 300);
         backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
         this.buttons.add(backButton);
-        deck = Deck.getInstance();
+        deck = Deck.getNewInstance();
 
         Player user = new Player("User #1", new UserStrategy());
         this.playerOrder.add(user);
