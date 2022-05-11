@@ -86,7 +86,14 @@ public class GameRules
             // remove the previous top card first
             GameScreen.getInstance().removeObject(topCard);
             GameScreen.getInstance().repaint();
-            GameScreen.getInstance().addObject(card, 475, 300);
+            
+            // animate the card movement
+            card.turn(-1 * (card.getY() - 300));
+            card.move(-1 * (card.getX() - 475));
+            
+            GameScreen.getInstance().getCurrentPlayer().removeCard(cardIndex);
+
+            //GameScreen.getInstance().addObject(card, 475, 300);
             GameScreen.getInstance().repaint();
             Greenfoot.delay(30);
         }

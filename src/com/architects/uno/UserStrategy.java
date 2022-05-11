@@ -18,7 +18,7 @@ public class UserStrategy implements IPlayerStrategy {
                 if (cardIndex != -1) {
                     Card card = GameScreen.getInstance().getCurrentPlayer().getCards().get(cardIndex);
                     if (GameScreen.getInstance().canPlayCard(card)) {
-                        GameScreen.getInstance().getCurrentPlayer().removeCard(cardIndex);
+                        //GameScreen.getInstance().getCurrentPlayer().removeCard(cardIndex);
                         GameScreen.getInstance().replaceTopCard(card);
                     }
                 }

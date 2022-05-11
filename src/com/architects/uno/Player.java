@@ -41,6 +41,7 @@ public class Player extends Actor implements IPlayer {
     }
     
     public void removeCard(Card card) {
+        // to rearrange cards, remove all first
         for (int i=0; i<cards.size(); i++) {
             GameScreen.getInstance().removeObject(cards.get(i));
         }
@@ -49,6 +50,7 @@ public class Player extends Actor implements IPlayer {
     }
     
     public void removeCard(int index) {
+        // to rearrange cards, remove all first
         for (int i=0; i<cards.size(); i++) {
             GameScreen.getInstance().removeObject(cards.get(i));
         }
