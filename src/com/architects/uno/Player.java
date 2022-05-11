@@ -35,7 +35,7 @@ public class Player extends Actor implements IPlayer {
         for (Card card: this.cards) {
             if (GameScreen.showEnemyCards || isHuman()) {
                 //image.drawImage(card.getImage(), x, 0);
-                GameScreen.getInstance().addObject(card, 475 + x, 500);
+                GameScreen.getInstance().addObject(card, 475 + x - 80, 500);
                 card.setImage(card.getImage());
             } else {
                 image.drawImage(new GreenfootImage("Deck.png"), x, 0);
