@@ -19,6 +19,7 @@ public class GameRules
     private TurnState turnState;
     private List<Player> playerOrder;
     private List<Button> buttons;
+    private boolean isFirstTurnFlag;
 
     private static GameRules singleton;
 
@@ -31,6 +32,7 @@ public class GameRules
 
     private GameRules() {
         canPlay = true;
+        isFirstTurnFlag = true;
         turnState = new TurnState();
         playerRules = new PlayerRules();
         buttons = new ArrayList<Button>();
@@ -179,5 +181,13 @@ public class GameRules
     
     public void toggleCanPlay() {
         this.canPlay = !this.canPlay;
+    }
+    
+    public boolean isFirstTurn() {
+        return isFirstTurnFlag;
+    }
+    
+    public void firstTurnDone() {
+        isFirstTurnFlag = false;
     }
 }

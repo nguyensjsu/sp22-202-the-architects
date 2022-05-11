@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComputerStrategy implements IPlayerStrategy 
-{    
+{
 
     @Override
     public void act(IPlayer player, GameScreen game) {
@@ -23,7 +23,11 @@ public class ComputerStrategy implements IPlayerStrategy
                 }
             } else {
                 Card playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
-                Greenfoot.delay(100);
+                if(!GameScreen.getInstance().isFirstTurn()) {
+                    Greenfoot.delay(100);
+                } else {
+                    GameScreen.getInstance().firstTurnDone();
+                }
                 GameScreen.getInstance().getCurrentPlayer().removeCard(playing);
                 game.replaceTopCard(playing);
             }
