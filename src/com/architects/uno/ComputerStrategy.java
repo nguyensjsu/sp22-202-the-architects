@@ -27,6 +27,7 @@ public class ComputerStrategy implements IPlayerStrategy
                 }
             } else {
                 Card playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
+                Greenfoot.delay(100);
                 cards.remove(playing);
                 // renderCards();
                 game.replaceTopCard(playing);
