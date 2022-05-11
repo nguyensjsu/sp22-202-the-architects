@@ -78,7 +78,9 @@ public class GameRules
         if (topCard == null) {
             GameScreen.getInstance().addObject(card, 475, 300);  // default coordinates when first card to be played.          
         } else {
-            GameScreen.getInstance().addObject(card, topCard.getX(), topCard.getY());
+            // remove the previous top card first
+            GameScreen.getInstance().removeObject(topCard);
+            GameScreen.getInstance().addObject(card, 475, 300);
         }
         
         topCard = card;
