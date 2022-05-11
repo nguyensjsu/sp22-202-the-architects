@@ -1,7 +1,7 @@
 # Personal Journal
 
 ### Paramjot Singh
-### SJSU ID - XXXXXXXXX
+### SJSU ID - 011013063
 
 
 ## Week 1
@@ -64,7 +64,8 @@
     - Implemented Deck object
 
 - ### What I plan to do next: 
-    - N/A
+    - Minor bug-fixes
+    - Debug GUI of Card objects
 
 - ### Blockers: 
     - N/A
