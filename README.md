@@ -21,12 +21,6 @@
 ### [Burndown Chart](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
 
 ### Week 1
-
-- Paramjot Singh
-   - What I did: Broke down Uno into objects
-   - What I plan to do today: Setup Greenfoot, Plan Design Patterns
-   - Blockers: N/A
-   - XP Value: Communication. We did struggle with communication earlier in the week, but by using Google Meetings and scheduling meetings in advance we were able to get more responsible with communication. 
     
 - Waqas Kureshy
    - What I did: Explored Game development with Greenfoot
@@ -34,12 +28,6 @@
    - Blockers: N/A
       
 ### Week 2
-
-- Paramjot Singh
-   - What I did: Setup Greenfoot, Plan Design Patterns
-   - What I plan to do today: Write code for the Number Cards and larger Card interfaces
-   - Blockers: N/A
-   - XP Value: Communication. A combination of IRL meeting and scheduled meetings on Google Meetings ensured we performed well in this value.
 
 - Waqas Kureshy
    - What I did: 
@@ -62,19 +50,6 @@
 
 ### Week 3
 
-- Paramjot Singh
-   - What I did: 
-      - Class design for Cards
-      - Made the initial code for Card Factory Pattern
-   - What I plan to do next: 
-      - Implement the Card Factory Pattern fully
-      - Implement the Card class fully
-      - Sync with game screens
-   - Blockers: 
-      - N/A
-   - XP Value:
-      - Communication: We struggled with finding times to meet which worked for all members, and our online communication needed improvement.
-
 - Waqas Kureshy
    - What I did: 
       - Made Cards for the Game
@@ -92,19 +67,6 @@
          - Worked up on simplifying the design implementation of the game and identifying key goals with the team members.
 
 ### Week 4
-
-- Paramjot Singh
-   - What I did: 
-      - Implemented Card Object
-      - Implemented SpecialCard, NumberCard
-      - Implemented Card Factory Pattern
-      - Implemented Deck object
-   - What I plan to do next: 
-      - N/A
-   - Blockers: 
-      - N/A
-   - XP Value:
-      - Communication: We were able to effectively communicate via online and text messaging, but struggled with arranging in-person meetings, and online meeting times.
 
 - Waqas Kureshy
    - What I did: 
