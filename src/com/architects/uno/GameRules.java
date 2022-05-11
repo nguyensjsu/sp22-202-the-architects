@@ -80,7 +80,10 @@ public class GameRules
         } else {
             // remove the previous top card first
             GameScreen.getInstance().removeObject(topCard);
+            GameScreen.getInstance().repaint();
             GameScreen.getInstance().addObject(card, 475, 300);
+            GameScreen.getInstance().repaint();
+            Greenfoot.delay(30);
         }
         
         topCard = card;
