@@ -22,6 +22,8 @@ public class GameRules
     private boolean isFirstTurnFlag;
 
     private static GameRules singleton;
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 600;
 
     /**
          * An example of a method - replace this comment with your own
@@ -58,7 +60,7 @@ public class GameRules
     }
 
     public void gameSetUp() {
-        GameScreen.getInstance().addObject(turnState, 900, 300);
+        GameScreen.getInstance().addObject(turnState, 900, HEIGHT/2);
         backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
         this.buttons.add(backButton);
         deck = Deck.getNewInstance();
@@ -83,12 +85,12 @@ public class GameRules
 
     public void replaceTopCard(Card card) {
         if (topCard == null) {
-            GameScreen.getInstance().addObject(card, 475, 300);  // default coordinates when first card to be played.          
+            GameScreen.getInstance().addObject(card, WIDTH/2, HEIGHT/2);  // default coordinates when first card to be played.          
         } else {
             // remove the previous top card first
             GameScreen.getInstance().removeObject(topCard);
             GameScreen.getInstance().repaint();
-            GameScreen.getInstance().addObject(card, 475, 300);
+            GameScreen.getInstance().addObject(card, WIDTH/2, HEIGHT/2);
             GameScreen.getInstance().repaint();
             Greenfoot.delay(30);
         }
@@ -98,15 +100,11 @@ public class GameRules
         if (card instanceof SpecialCard) {
             // Player Special Colored Cards
             SpecialCard specialCard = (SpecialCard) card;
-
             if (specialCard.getAction() == SpecialAction.DRAW_TWO) {
                 playerRules.draw(2);
             } else if (specialCard.getAction() == SpecialAction.REVERSE) { 
-                //this.turnState.switchTurn();
-                //this.turnState.showTurn();
                 playerRules.reverse();
             } else if (specialCard.getAction() == SpecialAction.SKIP) {
-                //toggleTurn();
                 playerRules.skip();
             }
             wait(500);

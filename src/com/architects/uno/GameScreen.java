@@ -50,7 +50,7 @@ public class GameScreen extends World
         
 
         Deck deck = GameRules.getInstance().getDeck();
-        addObject(deck,120,300);
+        addObject(deck,120, HEIGHT/2);
 
         buttons = GameRules.getInstance().getButtons();
         addObject(buttons.get(0), 60, 30);
