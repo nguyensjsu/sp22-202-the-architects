@@ -58,9 +58,7 @@ public class GameScreen extends World implements ISoundSubject
         addObject(players.get(1), Constants.SCREEN_WIDTH/2, 100);
         
         GameRules.getInstance().getCurrentPlayer().act();
-        
-        addObject(buttons.get(1), 900, 200);
-        
+                
         // play background music now
         this.attach(new SoundHandler());
         notifySoundHandler(SoundEvent.BACKGROUND);
