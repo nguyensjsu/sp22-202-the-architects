@@ -126,6 +126,14 @@ public class GameRules
     public void toggleTurn() {
         this.currentPlayer = (this.currentPlayer == 0 ? 1 : 0);  
         this.turnState.switchTurn();
+        
+        // check if Human can Say Uno!
+        if (getCurrentPlayer().isHuman() && getCurrentPlayer().getCards().size() == 2) {
+            GameScreen.getInstance().addObject(buttons.get(1), 900, 200);
+        } else if(buttons.get(1).getWorld() != null) {
+            GameScreen.getInstance().removeObject(buttons.get(1));
+        }
+        
         GameScreen.getInstance().repaint();
     }
 
