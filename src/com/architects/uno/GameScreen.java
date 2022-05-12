@@ -68,6 +68,7 @@ public class GameScreen extends World implements ISoundSubject
         if (Greenfoot.mouseClicked(buttons.get(0))) {
             Greenfoot.setWorld(new MainMenu());
         } else if (Greenfoot.mouseClicked(buttons.get(1))) {
+            notifySoundHandler(SoundEvent.SAY_UNO);
             PlayerRules.getInstance().sayUno();
         }
     }

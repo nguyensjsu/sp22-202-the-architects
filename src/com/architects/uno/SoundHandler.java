@@ -33,6 +33,9 @@ public class SoundHandler implements ISoundObserver
             case DRAW_CARDS:
                 Greenfoot.playSound("draw.wav");
                 break;
+            case SAY_UNO:
+                Greenfoot.playSound("say_uno.wav");
+                break;
         }
     }
 }
