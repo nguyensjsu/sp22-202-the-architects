@@ -1,3 +1,5 @@
+import greenfoot.*;
+
 /**
  * Sound Handler handles sound events
  * 
@@ -30,6 +32,6 @@ public class SoundHandler implements ISoundObserver
     
     public void playSound(SoundEvent e) {
         // handle the Sound Event and Play the required Sound
-        
+        Greenfoot.playSound("happy.wav");
     }
 }

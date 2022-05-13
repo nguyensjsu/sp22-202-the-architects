@@ -8,7 +8,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameScreen extends World
+public class GameScreen extends World implements ISoundSubject
 {
     private static GameScreen UnoGame;
     public static boolean showEnemyCards = true;
@@ -16,6 +16,7 @@ public class GameScreen extends World
     
     private List<Button> buttons;
     private List<Player> players;
+    private List<ISoundObserver> observers = new ArrayList<>();
     
     /**
      * Constructor for objects of class GameScreen.
@@ -62,6 +63,18 @@ public class GameScreen extends World
     public void act(){
         if (Greenfoot.mouseClicked(buttons.get(0)))
             Greenfoot.setWorld(new MainMenu());
+    }
+    
+    public void attach(ISoundObserver o) {
+        this.observers.add(o);
+    }
+    public void  detach(ISoundObserver o) {
+        this.observers.remove(o);
+    }
+    public void notifySoundHandler(SoundEvent e) {
+        for(ISoundObserver o : observers) {
+            o.playSound(e);
+        }
     }
     
     public Player getCurrentPlayer() {
