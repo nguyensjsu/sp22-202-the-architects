@@ -32,11 +32,7 @@ public class NumberCard extends Card
     }
     
     public void act() {
-        if(Greenfoot.mouseClicked(this)) {
+        if(Greenfoot.mouseClicked(this))
             GameScreen.getInstance().getCurrentPlayer().checkAndPlayCard(this);
-            //Greenfoot.setWorld(new GameOverScreen(
-            //"Card tapped: \nValue = " + getNumber() 
-            //+ "\nColor = " + getColor().toString()));
-        }
     }
 }
