@@ -28,8 +28,8 @@ public class UserStrategy implements IPlayerStrategy {
                     GameScreen.getInstance().replaceTopCard(card);
                 } else {
                     GameScreen.getInstance().getCurrentPlayer().addCard(card);
+                    GameScreen.getInstance().toggleTurn();
                 }
-                GameScreen.getInstance().toggleTurn();
             }
         }
     }
