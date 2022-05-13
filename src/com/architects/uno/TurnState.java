@@ -23,7 +23,7 @@ public class TurnState extends Actor
     
     public void switchTurn() {
         this.state.switchTurn();
-        setImage(new GreenfootImage("Turn:"+state.showTurn(), 25, Color.WHITE, Color.RED));
+        setImage(new GreenfootImage("Turn: "+state.showTurn(), 25, Color.WHITE, Color.RED));
     }
    
     void showTurn() {
