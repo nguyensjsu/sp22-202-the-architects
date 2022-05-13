@@ -68,7 +68,7 @@ public class GameRules
         Player user = new Player("User #1", new UserStrategy());
         this.playerOrder.add(user);
 
-        Player computer = new Player("computer #1", new ComputerStrategy());
+        Player computer = new Player("Computer #1", new ComputerStrategy());
         this.playerOrder.add(computer);
 
         this.currentPlayer = 1; //Greenfoot.getRandomNumber(playerOrder.size());
