@@ -132,11 +132,6 @@ public class GameRules
         } else {
             return doesSpecialActionMatch || doesColorMatch;
         }
-        //boolean isPowerCard = card instanceof SpecialCard;
-        //boolean doesColorMatch = card.getColor() != null && getTopCard().getColor() != null && card.getColor().equals(getTopCard().getColor());
-        //boolean doesNumberMatch = card instanceof NumberCard && getTopCard() instanceof NumberCard && ((NumberCard) card).getNumber() == ((NumberCard) getTopCard()).getNumber();
-        //boolean doesSpecialMatch = card instanceof SpecialCard && getTopCard() instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) getTopCard()).getAction();
-        //return isPowerCard || doesColorMatch || doesNumberMatch || doesSpecialMatch;
     }
     
     public Card getTopCard() {
