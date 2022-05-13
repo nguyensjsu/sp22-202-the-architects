@@ -9,22 +9,22 @@ import java.util.*;
  */
 public class GameRules
 {
-    // instance variables - replace the example below with your own
-    private Button backButton;
-    private Card topCard;
-    private Deck deck;
     private boolean canPlay;
     private int currentPlayer;
+    private boolean isFirstTurnFlag;
+    
+    private Button backButton;
+    private Card topCard;
+    
     private PlayerRules playerRules;
     private TurnState turnState;
-    private List<Player> playerOrder;
+    
     private List<Button> buttons;
-    private boolean isFirstTurnFlag;
+    private List<Player> playerOrder;
+    
 
     private static GameRules singleton;
-    private static final int WIDTH = 1000;
-    private static final int HEIGHT = 600;
-
+    
     /**
          * An example of a method - replace this comment with your own
          *
@@ -60,10 +60,9 @@ public class GameRules
     }
 
     public void gameSetUp() {
-        GameScreen.getInstance().addObject(turnState, 900, HEIGHT/2);
+        GameScreen.getInstance().addObject(turnState, 900, Constants.SCREEN_HEIGHT/2);
         backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
         this.buttons.add(backButton);
-        deck = Deck.getNewInstance();
 
         Player user = new Player("User #1", new UserStrategy());
         this.playerOrder.add(user);
@@ -74,10 +73,10 @@ public class GameRules
         this.currentPlayer = 1; //Greenfoot.getRandomNumber(playerOrder.size());
     }
 
-    public List<ICard> getCardFromDeck(int num) {
-        List<ICard> cardsDeck = new ArrayList<ICard>();
+    public List<Card> getCardFromDeck(int num) {
+        List<Card> cardsDeck = new ArrayList<Card>();
         for (int i = 0; i < num; i++) {
-            ICard newCard = deck.drawCard();
+            Card newCard = Deck.getInstance().drawCard();
             if (newCard == null)
             {
                 gameIsDraw();
@@ -89,12 +88,12 @@ public class GameRules
 
     public void replaceTopCard(Card card) {
         if (topCard == null) {
-            GameScreen.getInstance().addObject(card, WIDTH/2, HEIGHT/2);  // default coordinates when first card to be played.          
+            GameScreen.getInstance().addObject(card, Constants.SCREEN_WIDTH/2, Constants.SCREEN_HEIGHT/2);  // default coordinates when first card to be played.          
         } else {
             // remove the previous top card first
             GameScreen.getInstance().removeObject(topCard);
             GameScreen.getInstance().repaint();
-            GameScreen.getInstance().addObject(card, WIDTH/2, HEIGHT/2);
+            GameScreen.getInstance().addObject(card, Constants.SCREEN_WIDTH/2, Constants.SCREEN_HEIGHT/2);
             GameScreen.getInstance().repaint();
             Greenfoot.delay(30);
         }
@@ -158,7 +157,6 @@ public class GameRules
     public Player getCurrentPlayer() {
         // return the player for current round
         return this.playerOrder.get(this.currentPlayer);
-        //return this.playerOrder[(int)this.currentPlayer];
     }
 
     public void getNextPlayer() {
@@ -193,8 +191,7 @@ public class GameRules
         isFirstTurnFlag = false;
     }
     
-        public void gameIsDraw()
-    {
+    public void gameIsDraw() {
         Greenfoot.setWorld(new GameOverScreen("It's a Draw!"));
     }
     
