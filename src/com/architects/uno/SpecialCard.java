@@ -1,4 +1,5 @@
- public class SpecialCard extends Card
+import greenfoot.*;
+public class SpecialCard extends Card
 {
     private SpecialAction action;
     private CardColor color;
@@ -29,5 +30,14 @@
     public SpecialAction getAction()
     {
         return action;
+    }
+    
+    public void act() {
+        if(Greenfoot.mouseClicked(this)) {
+            GameScreen.getInstance().getCurrentPlayer().checkAndPlayCard(this);
+            //Greenfoot.setWorld(new GameOverScreen(
+            //"Card tapped: \nValue = " + getNumber() 
+            //+ "\nColor = " + getColor().toString()));
+        }
     }
 }

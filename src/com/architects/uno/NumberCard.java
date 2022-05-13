@@ -1,3 +1,4 @@
+import greenfoot.*;
 public class NumberCard extends Card
 {
     private int value;
@@ -28,5 +29,14 @@ public class NumberCard extends Card
     public SpecialAction getAction()
     {
         return SpecialAction.NULL_ACTION;
-    }    
+    }
+    
+    public void act() {
+        if(Greenfoot.mouseClicked(this)) {
+            GameScreen.getInstance().getCurrentPlayer().checkAndPlayCard(this);
+            //Greenfoot.setWorld(new GameOverScreen(
+            //"Card tapped: \nValue = " + getNumber() 
+            //+ "\nColor = " + getColor().toString()));
+        }
+    }
 }
