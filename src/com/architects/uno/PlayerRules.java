@@ -26,6 +26,6 @@ public class PlayerRules implements IPlayerRules
     public void draw(int num) {
        GameRules.getInstance().toggleTurn();
         GameRules.getInstance().getCurrentPlayer().drawCard(num);
-        GameRules.getInstance().toggleTurn();
+      
     }
 }
