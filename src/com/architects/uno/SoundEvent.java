@@ -6,6 +6,8 @@
  */
 public enum SoundEvent  
 {
-    
-    
+    DRAW_CARDS,
+    PLAY_CARD,
+    BACKGROUND,
+    START
 }
