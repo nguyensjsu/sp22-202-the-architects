@@ -17,21 +17,22 @@ public class SoundHandler implements ISoundObserver
     public SoundHandler()
     {
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
     
     public void playSound(SoundEvent e) {
         // handle the Sound Event and Play the required Sound
-        Greenfoot.playSound("happy.wav");
+        switch (e) {
+            case START:
+                Greenfoot.playSound("start.wav");
+                break;
+            case PLAY_CARD:
+                Greenfoot.playSound("play_card.wav");
+                break;
+            case BACKGROUND:
+                Greenfoot.playSound("happy.wav");
+                break;
+            case DRAW_CARDS:
+                Greenfoot.playSound("draw.wav");
+                break;
+        }
     }
 }

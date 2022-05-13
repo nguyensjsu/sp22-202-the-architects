@@ -58,6 +58,10 @@ public class GameScreen extends World implements ISoundSubject
         addObject(players.get(1), Constants.SCREEN_WIDTH/2, 100);
         
         GameRules.getInstance().getCurrentPlayer().act();
+        
+        // play background music now
+        this.attach(new SoundHandler());
+        notifySoundHandler(SoundEvent.BACKGROUND);
     }
     
     public void act(){
@@ -102,6 +106,7 @@ public class GameScreen extends World implements ISoundSubject
     }
     
     public void replaceTopCard(Card card) {
+        notifySoundHandler(SoundEvent.PLAY_CARD);
         GameRules.getInstance().replaceTopCard(card);
     }
     
