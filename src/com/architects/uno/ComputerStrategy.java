@@ -17,10 +17,14 @@ public class ComputerStrategy implements IPlayerStrategy
             }
             if (playableCards.size() == 0) {
                 Card card  = Deck.getInstance().drawCard();
-                GameScreen.getInstance().getCurrentPlayer().addCard(card);
-                if (GameScreen.getInstance().canPlayCard(card)) {
-                    GameScreen.getInstance().getCurrentPlayer().removeCard(card);
+                if(card == null) {
+                    // empty deck => game draw
+                    GameScreen.getInstance().gameIsDraw();
+                } else if (GameScreen.getInstance().canPlayCard(card)) {
                     GameScreen.getInstance().replaceTopCard(card);
+                } else {
+                    GameScreen.getInstance().getCurrentPlayer().addCard(card);
+                    GameScreen.getInstance().toggleTurn();
                 }
             } else {
                 Card playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
