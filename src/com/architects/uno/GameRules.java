@@ -61,7 +61,7 @@ public class GameRules
 
     public void gameSetUp() {
         GameScreen.getInstance().addObject(turnState, 900, Constants.SCREEN_HEIGHT/2);
-        backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
+        backButton = new Button(100, 40, "Back", 30, Color.WHITE, 23, 5);
         this.buttons.add(backButton);
 
         Player user = new Player("User #1", new UserStrategy());
