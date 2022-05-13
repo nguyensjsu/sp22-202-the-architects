@@ -36,7 +36,7 @@ public class GameRules
         canPlay = true;
         isFirstTurnFlag = true;
         turnState = new TurnState();
-        playerRules = new PlayerRules();
+        playerRules = PlayerRules.getInstance();
         buttons = new ArrayList<Button>();
         playerOrder = new ArrayList<Player>();
     }
@@ -63,6 +63,17 @@ public class GameRules
         GameScreen.getInstance().addObject(turnState, 900, Constants.SCREEN_HEIGHT/2);
         backButton = new Button(100, 40, "Back", 30, Color.BLACK, 23, 5);
         this.buttons.add(backButton);
+        
+        Button sayUnoButton= new Button(
+            140,
+            30,
+            "Say Uno",
+            24,
+            Color.WHITE,
+            30,
+            8
+        );
+        this.buttons.add(sayUnoButton);
 
         Player user = new Player("User #1", new UserStrategy());
         this.playerOrder.add(user);
