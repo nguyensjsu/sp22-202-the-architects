@@ -24,7 +24,10 @@ public class UserStrategy implements IPlayerStrategy {
                 
             } else if (Greenfoot.mouseClicked(deck)) {
                 Card card = deck.drawCard();
-                if (GameScreen.getInstance().canPlayCard(card)) {
+                if(card == null) {
+                    // empty deck => game draw
+                    GameScreen.getInstance().gameIsDraw();
+                } else if (GameScreen.getInstance().canPlayCard(card)) {
                     GameScreen.getInstance().replaceTopCard(card);
                 } else {
                     GameScreen.getInstance().getCurrentPlayer().addCard(card);

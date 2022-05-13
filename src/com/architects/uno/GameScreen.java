@@ -102,5 +102,8 @@ public class GameScreen extends World
     public void firstTurnDone() {
         GameRules.getInstance().firstTurnDone();
     }
-
+    
+    public void gameIsDraw() {
+        GameRules.getInstance().gameIsDraw();
+    }
 }

@@ -145,11 +145,6 @@ public class GameRules
         boolean doesSpecialMatch = card instanceof SpecialCard && getTopCard() instanceof SpecialCard && ((SpecialCard) card).getAction() == ((SpecialCard) getTopCard()).getAction();
         return isPowerCard || doesColorMatch || doesNumberMatch || doesSpecialMatch;
     }
-
-    public void gameIsDraw()
-    {
-        Greenfoot.stop();
-    }
     
     // general getter and setter
     public Card getTopCard() {
@@ -197,4 +192,10 @@ public class GameRules
     public void firstTurnDone() {
         isFirstTurnFlag = false;
     }
+    
+        public void gameIsDraw()
+    {
+        Greenfoot.setWorld(new GameOverScreen("It's a Draw!"));
+    }
+    
 }
