@@ -90,4 +90,9 @@ public class Player extends Actor implements IPlayer {
     public boolean isHuman() {
         return strategy.isHuman();
     }
+    
+    @Override
+    public void checkAndPlayCard(Card card) {
+        strategy.checkAndPlayCard(card);
+    }
 }
