@@ -8,6 +8,7 @@ public class Player extends Actor implements IPlayer {
     public static final int CARD_HEIGHT = 96;
     public static final int CARD_GAP = 30;
     public static final int SCREEN_WIDTH = 1000;
+    private static final int SCREEN_HEIGHT = 600;
 
     String playerName;
     List<Card> cards;
@@ -86,9 +87,7 @@ public class Player extends Actor implements IPlayer {
         GameScreen game = (GameScreen) getWorld();
         strategy.act(this, game);
         if (cards.size() == 0) {
-        //    Text text = new Text(playerName + " Wins!", 60, Color.WHITE);
-        //    game.addObject(text, game.getWidth() / 2, game.getHeight() / 2);
-            Greenfoot.stop();
+            Greenfoot.setWorld(new GameOverScreen(playerName + " Wins!"));
         }
         return;
     }
