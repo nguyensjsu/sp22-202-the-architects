@@ -59,17 +59,7 @@ public class GameScreen extends World implements ISoundSubject
         
         GameRules.getInstance().getCurrentPlayer().act();
         
-        Button sayUnoButton= new Button(
-            200,
-            50,
-            "Say Uno",
-            35,
-            Color.WHITE,
-            65,
-            8
-        );
-        
-        addObject(buttons.get(0), 60, 30);
+        addObject(buttons.get(1), 900, 200);
         
         // play background music now
         this.attach(new SoundHandler());
@@ -77,8 +67,12 @@ public class GameScreen extends World implements ISoundSubject
     }
     
     public void act(){
-        if (Greenfoot.mouseClicked(buttons.get(0)))
+        if (Greenfoot.mouseClicked(buttons.get(0))) {
             Greenfoot.setWorld(new MainMenu());
+        } else if (Greenfoot.mouseClicked(buttons.get(1))) {
+            // update Player's state
+        }
+        
     }
     
     public void attach(ISoundObserver o) {

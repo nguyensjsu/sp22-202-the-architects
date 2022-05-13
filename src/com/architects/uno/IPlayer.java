@@ -4,4 +4,5 @@ public interface IPlayer {
     String getPlayerName();
     boolean isHuman();
     void checkAndPlayCard(Card card);
+    void sayUno();
 }

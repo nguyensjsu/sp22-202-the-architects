@@ -6,11 +6,13 @@ public class Player extends Actor implements IPlayer {
     String playerName;
     List<Card> cards;
     IPlayerStrategy strategy;
+    Boolean saidUno;
 
     public Player(String playerName, IPlayerStrategy strategy) {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
         this.strategy = strategy;
+        this.saidUno =  false;
         drawCard(Constants.DECK_SIZE);
     }
 
@@ -91,6 +93,14 @@ public class Player extends Actor implements IPlayer {
     @Override
     public boolean isHuman() {
         return strategy.isHuman();
+    }
+    
+    @Override
+    public void sayUno() {
+        if(this.saidUno)
+            this.saidUno = false;
+        else
+            this.saidUno = true;
     }
     
     @Override
