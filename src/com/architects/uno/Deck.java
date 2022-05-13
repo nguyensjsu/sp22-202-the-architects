@@ -111,9 +111,13 @@ public class Deck extends Actor implements IDeck
     }
 
     public Card drawCard() {
-        Card output = cardDeck.get(0);
-        cardDeck.remove(0);
-        return output;
+        if (cardDeck.size() != 0)
+        {
+            Card output = cardDeck.get(0);
+            cardDeck.remove(0);
+            return output;
+        }
+        return null;
     }
     
     public List<Card> getDeck() {

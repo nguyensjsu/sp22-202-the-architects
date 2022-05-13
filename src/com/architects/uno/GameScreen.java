@@ -10,14 +10,12 @@ import java.util.*;
  */
 public class GameScreen extends World
 {
-    // Screen resolution
-    private static final int WIDTH = 1000;
-    private static final int HEIGHT = 600;
     private static GameScreen UnoGame;
+    public static boolean showEnemyCards = true;
+    static TurnState turnState;
+    
     private List<Button> buttons;
     private List<Player> players;
-    public static boolean showEnemyCards = false;
-    static TurnState turnState;
     
     /**
      * Constructor for objects of class GameScreen.
@@ -25,7 +23,7 @@ public class GameScreen extends World
      */
     private GameScreen() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(WIDTH, HEIGHT, 1);
+        super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
     }
     
     public synchronized static GameScreen getNewInstance() {
@@ -33,7 +31,6 @@ public class GameScreen extends World
         UnoGame.prepare();
         return UnoGame;
     }
-    
     
     public synchronized static GameScreen getInstance() {
         if (UnoGame == null) {
@@ -50,21 +47,21 @@ public class GameScreen extends World
         
 
         Deck deck = GameRules.getInstance().getDeck();
-        addObject(deck,120,300);
+        addObject(deck,120, Constants.SCREEN_HEIGHT/2);
 
         buttons = GameRules.getInstance().getButtons();
         addObject(buttons.get(0), 60, 30);
 
         players = GameRules.getInstance().getPlayers();
-        addObject(players.get(0), 475, 500);
-        addObject(players.get(1), 475, 100);
+        addObject(players.get(0), Constants.SCREEN_WIDTH/2, 500);
+        addObject(players.get(1), Constants.SCREEN_WIDTH/2, 100);
         
         GameRules.getInstance().getCurrentPlayer().act();
     }
     
     public void act(){
         if (Greenfoot.mouseClicked(buttons.get(0)))
-        {Greenfoot.setWorld(new MainMenu());}
+            Greenfoot.setWorld(new MainMenu());
     }
     
     public Player getCurrentPlayer() {
@@ -93,5 +90,17 @@ public class GameScreen extends World
     
     public void replaceTopCard(Card card) {
         GameRules.getInstance().replaceTopCard(card);
+    }
+    
+    public boolean isFirstTurn() {
+        return GameRules.getInstance().isFirstTurn();
+    }
+    
+    public void firstTurnDone() {
+        GameRules.getInstance().firstTurnDone();
+    }
+    
+    public void gameIsDraw() {
+        GameRules.getInstance().gameIsDraw();
     }
 }
