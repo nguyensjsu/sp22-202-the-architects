@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOverScreen extends World
 {
-    private static final int SCREEN_WIDTH = 1000;
-    private static final int SCREEN_HEIGHT = 600;
     private String result;
     /**
      * Constructor for objects of class GameOverScreen.
@@ -18,7 +16,7 @@ public class GameOverScreen extends World
     public GameOverScreen(String result)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(SCREEN_WIDTH, SCREEN_HEIGHT, 1);
+        super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
         this.result = result;
         showResult();
     }
@@ -33,8 +31,8 @@ public class GameOverScreen extends World
         
         this.getBackground().drawImage(
             resultImage, 
-            (SCREEN_WIDTH - resultImage.getWidth())/2, 
-            (SCREEN_HEIGHT - resultImage.getHeight())/2
+            (Constants.SCREEN_WIDTH - resultImage.getWidth())/2, 
+            (Constants.SCREEN_HEIGHT - resultImage.getHeight())/2
         );
     }
     
