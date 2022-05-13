@@ -1,7 +1,7 @@
 import java.util.List;
 
 public interface IPlayerStrategy {
-    void act(IPlayer player, GameScreen game);
+    void play(IPlayer player);
     void checkAndPlayCard(Card card);
     boolean isHuman();
 }

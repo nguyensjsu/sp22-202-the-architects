@@ -6,20 +6,21 @@ public class ComputerStrategy implements IPlayerStrategy
 {
 
     @Override
-    public void act(IPlayer player, GameScreen game) {
-        if (game.getCurrentPlayer().equals(player) && game.canPlay()) {
+    public void play(IPlayer player) {
+        if (GameScreen.getInstance().getCurrentPlayer().equals(player) 
+            && GameScreen.getInstance().canPlay()) {
             List<Card> playableCards = new ArrayList<>();
             for (Card card : GameScreen.getInstance().getCurrentPlayer().getCards()) {
-                if (game.canPlayCard(card)) {
+                if (GameScreen.getInstance().canPlayCard(card)) {
                     playableCards.add(card);
                 }
             }
             if (playableCards.size() == 0) {
-                Card card  = game.getDeck().drawCard();
+                Card card  = Deck.getInstance().drawCard();
                 GameScreen.getInstance().getCurrentPlayer().addCard(card);
-                if (game.canPlayCard(card)) {
+                if (GameScreen.getInstance().canPlayCard(card)) {
                     GameScreen.getInstance().getCurrentPlayer().removeCard(card);
-                    game.replaceTopCard(card);
+                    GameScreen.getInstance().replaceTopCard(card);
                 }
             } else {
                 Card playing = playableCards.get(Greenfoot.getRandomNumber(playableCards.size()));
@@ -29,7 +30,7 @@ public class ComputerStrategy implements IPlayerStrategy
                     GameScreen.getInstance().firstTurnDone();
                 }
                 GameScreen.getInstance().getCurrentPlayer().removeCard(playing);
-                game.replaceTopCard(playing);
+                GameScreen.getInstance().replaceTopCard(playing);
             }
         }
     }

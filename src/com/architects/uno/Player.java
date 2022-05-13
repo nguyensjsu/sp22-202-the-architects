@@ -79,7 +79,7 @@ public class Player extends Actor implements IPlayer {
     @Override
     public void act() {
         GameScreen game = (GameScreen) getWorld();
-        strategy.act(this, game);
+        strategy.play(this);
         if (cards.size() == 0) {
             Greenfoot.setWorld(new GameOverScreen(playerName + " Wins!"));
         }

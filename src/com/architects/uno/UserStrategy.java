@@ -5,8 +5,7 @@ import java.util.List;
 public class UserStrategy implements IPlayerStrategy {
     
     @Override
-    public void act(IPlayer player, GameScreen game) {
-        IDeck deck = GameScreen.getInstance().getDeck();
+    public void play(IPlayer player) {
         if (GameScreen.getInstance().getCurrentPlayer().equals(player) && GameScreen.getInstance().canPlay()) {
             // Clicked own cards
             if (Greenfoot.mouseClicked(player)) {
@@ -16,8 +15,8 @@ public class UserStrategy implements IPlayerStrategy {
                     checkAndPlayCard(card);
                 }
                 
-            } else if (Greenfoot.mouseClicked(deck)) {
-                Card card = deck.drawCard();
+            } else if (Greenfoot.mouseClicked(Deck.getInstance())) {
+                Card card = Deck.getInstance().drawCard();
                 if(card == null) {
                     // empty deck => game draw
                     GameScreen.getInstance().gameIsDraw();
