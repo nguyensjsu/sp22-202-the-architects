@@ -10,7 +10,6 @@ public class UserStrategy implements IPlayerStrategy {
     @Override
     public void act(IPlayer player, GameScreen game) {
         IDeck deck = GameScreen.getInstance().getDeck();
-        
         if (GameScreen.getInstance().getCurrentPlayer().equals(player) && GameScreen.getInstance().canPlay()) {
             // Clicked own cards
             if (Greenfoot.mouseClicked(player)) {
@@ -26,8 +25,7 @@ public class UserStrategy implements IPlayerStrategy {
             } else if (Greenfoot.mouseClicked(deck)) {
                 Card card = deck.drawCard();
                 if (GameScreen.getInstance().canPlayCard(card)) {
-                    game.toggleCanPlay();
-                    playableDeckCard(GameScreen.getInstance(), GameScreen.getInstance().getCurrentPlayer().getCards(), card);
+                    GameScreen.getInstance().replaceTopCard(card);
                 } else {
                     GameScreen.getInstance().getCurrentPlayer().addCard(card);
                 }
@@ -41,31 +39,31 @@ public class UserStrategy implements IPlayerStrategy {
         return true;
     }
 
-    public void playableDeckCard(GameScreen game, List<Card> cards, Card card) {
-        int ypos = cards.get(0).getY() - 80;
+    // public void playableDeckCard(GameScreen game, List<Card> cards, Card card) {
+    //    int ypos = cards.get(0).getY() - 80;
         
-        Button playCardButton = new Button(150, 45, "Play Card", 30, Color.BLACK, 20, 6);
-        game.addObject(playCardButton, cards.get(0).getX() - 120, ypos);
+    //  Button playCardButton = new Button(150, 45, "Play Card", 30, Color.BLACK, 20, 6);
+    //    game.addObject(playCardButton, cards.get(0).getX() - 120, ypos);
         
-        game.addObject(card, cards.get(0).getX(), ypos);
+    //    game.addObject(card, cards.get(0).getX(), ypos);
         
-        Button keepCardButton = new Button(150, 45, "Keep Card", 30, Color.BLACK, 20, 6);
-        game.addObject(keepCardButton, cards.get(0).getX() + 120, ypos);
+    //    Button keepCardButton = new Button(150, 45, "Keep Card", 30, Color.BLACK, 20, 6);
+    //    game.addObject(keepCardButton, cards.get(0).getX() + 120, ypos);
         
-        while (true) {
-            if (Greenfoot.mouseClicked(playCardButton)) {
-                game.replaceTopCard(card);
-                game.toggleCanPlay();
-                break;
-            }
+    //    while (true) {
+    //        if (Greenfoot.mouseClicked(playCardButton)) {
+    //            game.replaceTopCard(card);
+    //            game.toggleCanPlay();
+    //            break;
+    //       }
             
-            if (Greenfoot.mouseClicked(keepCardButton)) {
-                GameScreen.getInstance().getCurrentPlayer().addCard(card);
-                game.toggleCanPlay();
-                break;
-            }
-        }
-    }
+    //        if (Greenfoot.mouseClicked(keepCardButton)) {
+    //            GameScreen.getInstance().getCurrentPlayer().addCard(card);
+    //            game.toggleCanPlay();
+    //            break;
+    //       }
+    //    }
+    //}
     
     private int cardSelected(List<Card> cards) {
         MouseInfo mouseInfo = Greenfoot.getMouseInfo();
