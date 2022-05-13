@@ -1,10 +1,10 @@
 /**
- * Sound Manager handles sound events
+ * Sound Handler handles sound events
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SoundHandler implements 
+public class SoundHandler implements ISoundObserver
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -12,7 +12,7 @@ public class SoundHandler implements
     /**
      * Constructor for objects of class SoundManager
      */
-    public SoundManager()
+    public SoundHandler()
     {
     }
 
@@ -26,5 +26,10 @@ public class SoundHandler implements
     {
         // put your code here
         return x + y;
+    }
+    
+    public void playSound(SoundEvent e) {
+        // handle the Sound Event and Play the required Sound
+        
     }
 }
