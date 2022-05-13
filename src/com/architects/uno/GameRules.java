@@ -78,6 +78,10 @@ public class GameRules
         List<ICard> cardsDeck = new ArrayList<ICard>();
         for (int i = 0; i < num; i++) {
             ICard newCard = deck.drawCard();
+            if (newCard == null)
+            {
+                gameIsDraw();
+            }
             cardsDeck.add(newCard);
         }
         return cardsDeck;
@@ -142,6 +146,11 @@ public class GameRules
         return isPowerCard || doesColorMatch || doesNumberMatch || doesSpecialMatch;
     }
 
+    public void gameIsDraw()
+    {
+        Greenfoot.stop();
+    }
+    
     // general getter and setter
     public Card getTopCard() {
         return topCard;
