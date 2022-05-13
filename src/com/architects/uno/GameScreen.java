@@ -14,7 +14,7 @@ public class GameScreen extends World
     private static final int WIDTH = 1000;
     private static final int HEIGHT = 600;
     private static GameScreen UnoGame;
-    public static boolean showEnemyCards = false;
+    public static boolean showEnemyCards = true;
     static TurnState turnState;
     
     private List<Button> buttons;
