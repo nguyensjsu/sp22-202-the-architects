@@ -68,6 +68,7 @@ public class Player extends Actor implements IPlayer {
             } 
         }
         setImage(image);
+        GameScreen.getInstance().repaint();
     }
     
     @Override

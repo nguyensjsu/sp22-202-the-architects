@@ -128,6 +128,7 @@ public class GameRules
     public void toggleTurn() {
         this.currentPlayer = (this.currentPlayer == 0 ? 1 : 0);  
         this.turnState.switchTurn();
+        GameScreen.getInstance().repaint();
     }
     
     public int getNextPlayerIndex() {
