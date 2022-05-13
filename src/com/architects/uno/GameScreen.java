@@ -59,6 +59,18 @@ public class GameScreen extends World implements ISoundSubject
         
         GameRules.getInstance().getCurrentPlayer().act();
         
+        Button sayUnoButton= new Button(
+            200,
+            50,
+            "Say Uno",
+            35,
+            Color.WHITE,
+            65,
+            8
+        );
+        
+        addObject(buttons.get(0), 60, 30);
+        
         // play background music now
         this.attach(new SoundHandler());
         notifySoundHandler(SoundEvent.BACKGROUND);
