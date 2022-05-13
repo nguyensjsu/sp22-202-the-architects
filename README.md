@@ -49,9 +49,33 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 - In case of a special card been played, the permissible action of the next player is determined by the type of the special card.
 - The objective of the game is to be the first player to get rid of all the cards in one's hand.
 
-## Steps to launch
+## Steps to Launch
 - Install [Greenfoot](https://www.greenfoot.org/download)
 - Clone or download this repository
 - Launch `project.greenfoot` inside src/com/architects/uno directory
+
+## Screenshots
+
+### Main Menu Screen aka Start Screen
+<br>
+<p align="center">
+    <image src="images/main_menu_screen.png">
+</p>
+<br>
+
+### Game Screen
+<br>
+<p align="center">
+    <image src="images/game_screen.png">
+</p>
+<br>
+
+### Game Over Screen
+<br>
+<p align="center">
+    <image src="images/game_over_screen.png">
+</p>
+<br>
+
 
 ### [Burndown Chart](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
