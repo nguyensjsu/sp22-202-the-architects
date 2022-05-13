@@ -33,6 +33,11 @@ public class ComputerStrategy implements IPlayerStrategy
             }
         }
     }
+    
+    @Override
+    public void checkAndPlayCard(Card card) {
+        // do nothing
+    }
 
     @Override
     public boolean isHuman() {

@@ -1,5 +1,4 @@
- import greenfoot.Actor;
-import greenfoot.Color;
+import greenfoot.*;
 
 public class Card extends Actor implements ICard
 {
@@ -23,5 +22,5 @@ public class Card extends Actor implements ICard
     public SpecialAction getAction() {
         return null;
     }
-
+    
 }

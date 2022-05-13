@@ -13,10 +13,7 @@ public class UserStrategy implements IPlayerStrategy {
                 int cardIndex = cardSelected(GameScreen.getInstance().getCurrentPlayer().getCards());
                 if (cardIndex != -1) {
                     Card card = GameScreen.getInstance().getCurrentPlayer().getCards().get(cardIndex);
-                    if (GameScreen.getInstance().canPlayCard(card)) {
-                        GameScreen.getInstance().getCurrentPlayer().removeCard(cardIndex);
-                        GameScreen.getInstance().replaceTopCard(card);
-                    }
+                    checkAndPlayCard(card);
                 }
                 
             } else if (Greenfoot.mouseClicked(deck)) {
@@ -31,6 +28,15 @@ public class UserStrategy implements IPlayerStrategy {
                     GameScreen.getInstance().toggleTurn();
                 }
             }
+        }
+    }
+    
+    @Override
+    public void checkAndPlayCard(Card card) {
+        if (GameScreen.getInstance().canPlayCard(card)
+            && GameScreen.getInstance().getCurrentPlayer().getCards().contains(card)) {
+            GameScreen.getInstance().getCurrentPlayer().removeCard(card);
+            GameScreen.getInstance().replaceTopCard(card);
         }
     }
 
