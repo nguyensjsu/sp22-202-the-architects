@@ -3,13 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player extends Actor implements IPlayer {
-    private static final int DECK_SIZE = 7;
-    public static final int CARD_WIDTH = 72;
-    public static final int CARD_HEIGHT = 96;
-    public static final int CARD_GAP = 30;
-    public static final int SCREEN_WIDTH = 1000;
-    private static final int SCREEN_HEIGHT = 600;
-
     String playerName;
     List<Card> cards;
     IPlayerStrategy strategy;
@@ -18,7 +11,7 @@ public class Player extends Actor implements IPlayer {
         this.playerName = playerName;
         this.cards = new ArrayList<>();
         this.strategy = strategy;
-        drawCard(DECK_SIZE);
+        drawCard(Constants.DECK_SIZE);
     }
 
     @Override
@@ -59,19 +52,19 @@ public class Player extends Actor implements IPlayer {
     
     @Override
     public void renderCards() {
-        int deckSize = CARD_WIDTH + ((cards.size()-1) * CARD_GAP);
-        int x = (SCREEN_WIDTH - deckSize + CARD_WIDTH)/2;
-        GreenfootImage image = new GreenfootImage(deckSize, CARD_HEIGHT);
+        int deckSize = Constants.CARD_WIDTH + ((cards.size()-1) * Constants.CARD_GAP);
+        int x = (Constants.SCREEN_WIDTH - deckSize + Constants.CARD_WIDTH)/2;
+        GreenfootImage image = new GreenfootImage(deckSize, Constants.CARD_HEIGHT);
         
         for (int i=0; i<cards.size(); i++) {
             if (isHuman()) {
-                GameScreen.getInstance().addObject(cards.get(i), x + (i * CARD_GAP), 500);
+                GameScreen.getInstance().addObject(cards.get(i), x + (i * Constants.CARD_GAP), 500);
                 cards.get(i).setImage(cards.get(i).getImage());
             } else {
                 if(GameScreen.showEnemyCards)
-                    image.drawImage(new GreenfootImage(cards.get(i).getImage()), i * CARD_GAP, 0);
+                    image.drawImage(new GreenfootImage(cards.get(i).getImage()), i * Constants.CARD_GAP, 0);
                 else
-                    image.drawImage(new GreenfootImage("Deck.png"), i * CARD_GAP, 0);
+                    image.drawImage(new GreenfootImage("Deck.png"), i * Constants.CARD_GAP, 0);
             } 
         }
         setImage(image);
