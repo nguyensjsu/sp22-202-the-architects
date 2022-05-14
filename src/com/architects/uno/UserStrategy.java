@@ -52,8 +52,8 @@ public class UserStrategy implements IPlayerStrategy {
         
         int mouseX = mouseInfo.getX();
         
-        int topLeftX = cards.get(0).getX(); //getX() - getImage().getWidth() / 2;
-        int bottomRightX = cards.get(cards.size()-1).getX(); //getX() + getImage().getWidth() / 2;
+        int topLeftX = cards.get(0).getX();
+        int bottomRightX = cards.get(cards.size()-1).getX();
         
         int index = 0;
         for (int i = topLeftX - Constants.CARD_WIDTH / 2; i < bottomRightX; i += Constants.CARD_GAP) {
