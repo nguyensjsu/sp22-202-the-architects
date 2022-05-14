@@ -40,6 +40,7 @@ public class Deck extends Actor implements IDeck
         return singleton; 
     }
     
+    @Override
     public void init() {
         CardFactory cf = new CardFactory();
         
@@ -104,6 +105,7 @@ public class Deck extends Actor implements IDeck
         addCard(greenSpecial);
     }
     
+    @Override
     public void shuffle() {
         // Shuffle Deck
         Collections.shuffle(this.cardDeck);
@@ -117,10 +119,12 @@ public class Deck extends Actor implements IDeck
         // Add your action code here.
     }
     
+    @Override
     public void addCard(Card card) {
         cardDeck.add(card);
     }
 
+    @Override
     public Card drawCard() {
         if (cardDeck.size() != 0)
         {
@@ -132,6 +136,7 @@ public class Deck extends Actor implements IDeck
         return null;
     }
     
+    @Override
     public List<Card> getDeck() {
         return cardDeck;
     }
