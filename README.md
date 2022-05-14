@@ -124,7 +124,7 @@ The Strategy pattern lets us indirectly alter the object's behavior at runtime b
     <image src="images/strategy.png">
 </p>
 
-7. State Design Pattern is for Turn Management in the Game - Waqas
+7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
  
 We present the Deck Singleton UML Diagram:
 
