@@ -81,3 +81,6 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 ### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
   
 ## Key Design Features
+
+1.  Factory Pattern
+  The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation. The diagram is presented here.
