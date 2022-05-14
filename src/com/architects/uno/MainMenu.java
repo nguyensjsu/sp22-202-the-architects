@@ -16,6 +16,9 @@ public class MainMenu extends World
     private Button closeButton;
     private Button optionButton;
     private Color RED;
+    private boolean show;
+    private int number = 1;
+    
    
     /**
      * Constructor for objects of class MyWorld.
@@ -28,6 +31,7 @@ public class MainMenu extends World
     }
     
     public void prepare() {
+        show = false;
         startGameButton = new Button(
             buttonWidth,
             buttonHeight,
@@ -49,7 +53,7 @@ public class MainMenu extends World
         optionButton= new Button(
             buttonWidth,
             buttonHeight,
-            "#1Show Enemy Cards",
+            String.valueOf(number) +"Show Enemy Cards",
             textSize,
             Color.YELLOW,
             87,
@@ -63,19 +67,21 @@ public class MainMenu extends World
      public void act() { 
         if (Greenfoot.mouseClicked(optionButton)) {
             removeObject(optionButton);
+            number = (number + 1)%2;
             optionButton= new Button(
             buttonWidth,
             buttonHeight,
-            "#2Show Enemy Cards",
+            String.valueOf(number) + "Show Enemy Cards",
             textSize,
             Color.YELLOW,
             87,
             22
         );
         addObject(optionButton, 183, 320);
+        show = !show;
         } 
         if (Greenfoot.mouseClicked(startGameButton)) {
-            Greenfoot.setWorld(GameScreen.getNewInstance());
+            Greenfoot.setWorld(GameScreen.getNewInstance(show));
         }        
         if (Greenfoot.mouseClicked(closeButton)) {
             Greenfoot.stop();

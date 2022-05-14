@@ -68,7 +68,7 @@ public class GameOverScreen extends World
         if(Greenfoot.mouseClicked(playButton)) {
             Greenfoot.delay(25);
             Greenfoot.stop();
-            Greenfoot.setWorld(GameScreen.getNewInstance());
+            Greenfoot.setWorld(GameScreen.getNewInstance(GameScreen.getInstance().getShowEnemyCardOption()));
             
         }
     }
