@@ -57,6 +57,8 @@ public class GameScreen extends World implements ISoundSubject
             Constants.SCREEN_HEIGHT - 51
         );
         
+        addObject(buttons.get(1), 900, 200);
+        
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), Constants.SCREEN_WIDTH/2, 500);
         addObject(players.get(1), Constants.SCREEN_WIDTH/2, 100);
@@ -73,8 +75,10 @@ public class GameScreen extends World implements ISoundSubject
             notifySoundHandler(SoundEvent.STOP);
             Greenfoot.setWorld(new MainMenu());
         } else if (Greenfoot.mouseClicked(buttons.get(1))) {
-            notifySoundHandler(SoundEvent.SAY_UNO);
-            PlayerRules.getInstance().sayUno();
+            if (getCurrentPlayer().isHuman() && getCurrentPlayer().getCards().size() == 2) {
+                notifySoundHandler(SoundEvent.SAY_UNO);
+                PlayerRules.getInstance().sayUno();
+            }
         }
     }
     
