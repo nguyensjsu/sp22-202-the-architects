@@ -76,4 +76,4 @@
         - By applying a strict pull request review policy in week 4, we were able to keep the code in master clean and almost bug-free.
         - We had productive meetings for bug bash but we displayed courage in prioritizing the most essential bugs.
     - ### Feedback
-        - Everyone was supportive in the team.
+        - Everyone was supportive in the team. Great team work was able to resolve major bugs and work on several fronts in parallel.
