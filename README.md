@@ -87,4 +87,4 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
   
   The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation. The diagram is presented here.
   
-As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four.
+As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects.
