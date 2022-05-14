@@ -11,8 +11,13 @@ import java.util.*;
 public class GameScreen extends World implements ISoundSubject
 {
     private static GameScreen UnoGame;
-    public static boolean showEnemyCards = true;
+    public static boolean showEnemyCards = false;
     static TurnState turnState;
+<<<<<<< HEAD
+=======
+    private BackButton backButton;
+    private Button optionButton;
+>>>>>>> 79d0f47c9c9cebc37eeddc0790ab193de0514f2c
     private List<Button> buttons;
     private List<Player> players;
     private List<ISoundObserver> observers = new ArrayList<>();
@@ -55,6 +60,8 @@ public class GameScreen extends World implements ISoundSubject
             Constants.SCREEN_WIDTH - 60 ,
             Constants.SCREEN_HEIGHT - 51
         );
+        
+        //addObject(buttons.get(2), 60, 30);
 
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), Constants.SCREEN_WIDTH/2, 500);
@@ -76,6 +83,7 @@ public class GameScreen extends World implements ISoundSubject
             PlayerRules.getInstance().sayUno();
         }
     }
+    
     
     public void attach(ISoundObserver o) {
         this.observers.add(o);
@@ -128,5 +136,9 @@ public class GameScreen extends World implements ISoundSubject
     
     public void gameIsDraw() {
         GameRules.getInstance().gameIsDraw();
+    }
+    
+    public boolean getShowEnemyCardOption() {
+        return showEnemyCards;
     }
 }

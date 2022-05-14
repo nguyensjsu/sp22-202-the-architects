@@ -12,6 +12,7 @@ public class MainMenu extends World
     public static final int textSize=26;
     private Button startGameButton;
     private Button closeButton;
+    private Button optionButton;
     private Color RED;
    
     /**
@@ -35,7 +36,13 @@ public class MainMenu extends World
             Constants.BUTTON_HEIGHT,
             Constants.QUIT_BUTTON
         );
+        optionButton = new Button(
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.SAMPLE_BUTTON
+        );
         addObject(startGameButton, Constants.SCREEN_WIDTH/5, 200);
+        addObject(optionButton, Constants.SCREEN_WIDTH/5, 300);
         addObject(closeButton, Constants.SCREEN_WIDTH/5, 350);
     }
     
