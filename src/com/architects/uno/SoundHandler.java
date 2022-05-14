@@ -10,9 +10,7 @@ public class SoundHandler implements ISoundObserver
 {
 
     public GreenfootSound track1;
-    
-    public GreenfootSound track2;
-    
+        
     /**
      * Constructor for objects of class SoundManager
      */
