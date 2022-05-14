@@ -37,6 +37,9 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 - Clone or download this repository
 - Launch `project.greenfoot` inside src/com/architects/uno directory
 
+## User Story Video
+<a href="https://www.kapwing.com/videos/627fe667bd647500d421bea4"><image src="images/video.png"></a>
+
 ## Game Screens:
 The game consists of only 3 screens:
   1. Start Screen
