@@ -92,7 +92,7 @@ public class MainMenu extends World
             this.repaint();
         } 
         if (Greenfoot.mouseClicked(startGameButton)) {
-            Greenfoot.setWorld(GameScreen.getNewInstance(show));
+            Greenfoot.setWorld(GameScreen.getNewInstance());
         }        
         if (Greenfoot.mouseClicked(closeButton)) {
             Greenfoot.stop();
