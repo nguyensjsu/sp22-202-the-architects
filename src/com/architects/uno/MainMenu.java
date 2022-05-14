@@ -12,8 +12,10 @@ public class MainMenu extends World
     public static final int textSize=26;
     private Button startGameButton;
     private Button closeButton;
-    private Button optionButton;
-    private Color RED;
+    private Button trainingModeOnButton;
+    private Button trainingModeOffButton;
+    private Button currentTrainingModeButton;
+    private boolean currentTrainingModeStatus;
    
     /**
      * Constructor for objects of class MyWorld.
@@ -26,6 +28,8 @@ public class MainMenu extends World
     }
     
     public void prepare() {
+        currentTrainingModeStatus = GameScreen.showEnemyCards;
+        
         startGameButton = new Button(
             Constants.BUTTON_WIDTH,
             Constants.BUTTON_HEIGHT,
@@ -36,29 +40,56 @@ public class MainMenu extends World
             Constants.BUTTON_HEIGHT,
             Constants.QUIT_BUTTON
         );
-        optionButton = new Button(
+        trainingModeOnButton = new Button(
             Constants.BUTTON_WIDTH,
             Constants.BUTTON_HEIGHT,
-            Constants.SAMPLE_BUTTON
+            Constants.TRAINING_ON_BUTTON
         );
-        addObject(startGameButton, Constants.SCREEN_WIDTH/5, 200);
-        addObject(optionButton, Constants.SCREEN_WIDTH/5, 300);
-        addObject(closeButton, Constants.SCREEN_WIDTH/5, 350);
+        trainingModeOffButton = new Button(
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.TRAINING_OFF_BUTTON
+        );
+        
+        currentTrainingModeButton = currentTrainingModeStatus
+            ? trainingModeOnButton
+            : trainingModeOffButton;
+        
+        addObject(
+            startGameButton,
+            Constants.SCREEN_WIDTH/5,
+            Constants.SCREEN_HEIGHT/2 - 92
+        );
+        addObject(
+            currentTrainingModeButton,
+            Constants.SCREEN_WIDTH/5,
+            Constants.SCREEN_HEIGHT/2
+        );
+        addObject(
+            closeButton,
+            Constants.SCREEN_WIDTH/5,
+            Constants.SCREEN_HEIGHT/2 + 92
+        );
     }
     
      public void act() { 
-        if (Greenfoot.mouseClicked(optionButton)) {
-            removeObject(optionButton);
-            optionButton= new Button(
-            buttonWidth,
-            buttonHeight,
-            "#2Show Enemy Cards",
-            textSize,
-            Color.YELLOW,
-            87,
-            22
-        );
-        addObject(optionButton, 183, 320);
+        if (Greenfoot.mouseClicked(currentTrainingModeButton)) {
+            removeObject(currentTrainingModeButton);
+            this.repaint();
+            
+            currentTrainingModeStatus = !currentTrainingModeStatus;
+            GameScreen.showEnemyCards = currentTrainingModeStatus;
+            
+            currentTrainingModeButton = currentTrainingModeStatus
+            ? trainingModeOnButton
+            : trainingModeOffButton;
+            
+            addObject(
+                currentTrainingModeButton,
+                Constants.SCREEN_WIDTH/5,
+                Constants.SCREEN_HEIGHT/2
+            );
+            this.repaint();
         } 
         if (Greenfoot.mouseClicked(startGameButton)) {
             Greenfoot.setWorld(GameScreen.getNewInstance());
