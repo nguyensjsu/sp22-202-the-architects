@@ -1,7 +1,11 @@
 import greenfoot.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Strategy class for a player role: User.
+ * 
+ * @author Ashutosh Ojha (leoAshu) 
+ */
 public class UserStrategy implements IPlayerStrategy {
     
     @Override

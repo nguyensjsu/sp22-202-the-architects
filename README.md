@@ -53,21 +53,22 @@ The game consists of only 3 screens:
 ## Game Screen:
 <br>
 <p align="center">
-    <image src="images/game_screen.png">
-</p>
-<p align="center">
     <b>Training Mode OFF</b>
 </p>
-<br>
 <p align="center">
-    <image src="images/game_screen_training.png">
+    <image src="images/game_screen.png">
 </p>
+<br>
+<br>
 <p align="center">
     <b>Training Mode ON</b>
 </p>
+<p align="center">
+    <image src="images/game_screen_training.png">
+</p>
 <br>
 
-### Game Over Screen:
+## Game Over Screen:
 <br>
 <p align="center">
     <image src="images/game_over_screen.png">

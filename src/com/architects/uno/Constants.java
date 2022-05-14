@@ -1,9 +1,8 @@
 import greenfoot.Color;
 /**
- * Write a description of class Constants here.
+ * Class to store all the global constants.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ashutosh Ojha (leoAshu) 
  */
 public class Constants  
 {

@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GameOverScreen here.
+ * Class of type World to display the game results after a game ends.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ashutosh Ojha (leoAshu) 
  */
 public class GameOverScreen extends World
 {

@@ -1,7 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Implementation class of IPlayer interface.
+ * 
+ * @author Ashutosh Ojha (leoAshu) 
+ */
 public class Player extends Actor implements IPlayer {
     String playerName;
     List<Card> cards;
