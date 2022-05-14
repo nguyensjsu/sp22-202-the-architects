@@ -8,9 +8,9 @@ import greenfoot.*;
  */
 public class SoundHandler implements ISoundObserver
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
+    public GreenfootSound track1;
+        
     /**
      * Constructor for objects of class SoundManager
      */
@@ -24,11 +24,17 @@ public class SoundHandler implements ISoundObserver
             case START:
                 Greenfoot.playSound("start.wav");
                 break;
+            case STOP:
+                if (track1 != null && track1.isPlaying()) {
+                    track1.stop();
+                }
+                break;
             case PLAY_CARD:
                 Greenfoot.playSound("play_card.wav");
                 break;
             case BACKGROUND:
-                Greenfoot.playSound("happy.wav");
+                track1 = new GreenfootSound("happy.wav");
+                track1.play();
                 break;
             case DRAW_CARDS:
                 Greenfoot.playSound("draw.wav");

@@ -10,5 +10,6 @@ public enum SoundEvent
     PLAY_CARD,
     BACKGROUND,
     START,
+    STOP,
     SAY_UNO
 }

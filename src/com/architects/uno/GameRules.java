@@ -171,10 +171,6 @@ public class GameRules
         return this.buttons;
     }
     
-    public Deck getDeck() {
-        return Deck.getInstance();
-    }
-    
     public boolean canPlay() {
         return this.canPlay;
     }
@@ -192,6 +188,7 @@ public class GameRules
     }
     
     public void gameIsDraw() {
+        GameScreen.getInstance().notifySoundHandler(SoundEvent.STOP);
         Greenfoot.setWorld(new GameOverScreen("It's a Draw!"));
     }
     
