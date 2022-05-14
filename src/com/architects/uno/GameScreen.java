@@ -59,16 +59,6 @@ public class GameScreen extends World implements ISoundSubject
             30,
             22);
         addObject(backButton,930, 500);
-        
-        optionButton = new Button(
-            100,
-            30,
-            "Show Enemy Cards",
-            100,
-            Color.WHITE,
-            20,
-            8);
-        addObject(optionButton,870, 30);
     
         buttons = GameRules.getInstance().getButtons();
         //addObject(buttons.get(2), 60, 30);
@@ -91,8 +81,6 @@ public class GameScreen extends World implements ISoundSubject
         }  if (Greenfoot.mouseClicked(buttons.get(1))) {
             notifySoundHandler(SoundEvent.SAY_UNO);
             PlayerRules.getInstance().sayUno();
-        } if (Greenfoot.mouseClicked(optionButton)) {
-            showEnemyCards = !showEnemyCards;
         }
     }
     
