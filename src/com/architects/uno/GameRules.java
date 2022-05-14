@@ -61,17 +61,17 @@ public class GameRules
 
     public void gameSetUp() {
         GameScreen.getInstance().addObject(turnState, 900, Constants.SCREEN_HEIGHT/2);
-        backButton = new Button(100, 40, "Back", 30, Color.WHITE, 23, 5);
+        backButton = new Button(
+            120,
+            102,
+            Constants.BACK_BUTTON
+        );
         this.buttons.add(backButton);
         
         Button sayUnoButton= new Button(
             100,
-            30,
-            "Say Uno",
-            18,
-            Color.WHITE,
-            20,
-            8
+            40,
+            Constants.SAY_UNO_BUTTON
         );
         this.buttons.add(sayUnoButton);
 

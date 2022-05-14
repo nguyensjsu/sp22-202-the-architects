@@ -9,9 +9,7 @@
  */
 public class MainMenu extends World
 {
-    private int buttonWidth=250;
-    private int buttonHeight=80;
-    public static final int textSize=50;
+    public static final int textSize=26;
     private Button startGameButton;
     private Button closeButton;
     private Color RED;
@@ -28,25 +26,17 @@ public class MainMenu extends World
     
     public void prepare() {
         startGameButton = new Button(
-            buttonWidth,
-            buttonHeight,
-            "NEW GAME",
-            textSize,
-            Color.YELLOW,
-            30,
-            22
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.NEW_GAME_BUTTON
         );
         closeButton= new Button(
-            buttonWidth,
-            buttonHeight,
-            "   QUIT",
-            textSize,
-            Color.YELLOW,
-            87,
-            22
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.QUIT_BUTTON
         );
-        addObject(startGameButton, 183, 183);
-        addObject(closeButton, 187, 400);
+        addObject(startGameButton, Constants.SCREEN_WIDTH/5, 200);
+        addObject(closeButton, Constants.SCREEN_WIDTH/5, 350);
     }
     
      public void act() {  

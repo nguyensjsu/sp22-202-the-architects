@@ -22,22 +22,14 @@ public class GameOverScreen extends World
         this.result = result;
         showResult();
         playButton = new Button(
-            280,
-            96,
-            "NEW GAME",
-            50,
-            Color.YELLOW,
-            30,
-            22
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.PLAY_AGAIN_BUTTON
         );
         quitButton= new Button(
-            280,
-            96,
-            "   QUIT",
-            50,
-            Color.YELLOW,
-            87,
-            22
+            Constants.BUTTON_WIDTH,
+            Constants.BUTTON_HEIGHT,
+            Constants.QUIT_BUTTON
         );
        // addObject(playButton, 300, 400);
         addObject(quitButton, 500, 400);
@@ -46,11 +38,11 @@ public class GameOverScreen extends World
     public void showResult() {
         GreenfootImage img = new GreenfootImage(500, 100);
     
-    img.setColor(Color.YELLOW);
-    img.setFont(new Font("Comic Sans MS", true, false , 50));
-    img.drawString(result, 20, 50);
+        img.setColor(Constants.YELLOW);
+        img.setFont(new Font("Comic Sans MS", true, false , 50));
+        img.drawString(result, 20, 50);
     
-    this.getBackground().drawImage(
+        this.getBackground().drawImage(
             img, 
             ((Constants.SCREEN_WIDTH - img.getWidth())/2)+70 , 
             (Constants.SCREEN_HEIGHT - img.getHeight())/2
@@ -60,16 +52,11 @@ public class GameOverScreen extends World
     public void act() {
         if(Greenfoot.mouseClicked(quitButton)) {
             Greenfoot.delay(25);
-            //Greenfoot.stop();
             Greenfoot.setWorld(new MainMenu());
-            
-            
         }
         if(Greenfoot.mouseClicked(playButton)) {
             Greenfoot.delay(25);
-            Greenfoot.stop();
             Greenfoot.setWorld(GameScreen.getNewInstance());
-            
         }
     }
 }
