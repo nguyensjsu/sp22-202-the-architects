@@ -1,19 +1,25 @@
 # Personal Journal
 
 ### Waqas Kureshy
-### SJSU ID - XXXXXXXXX
+### SJSU ID - 015421575
 
 
 ## Week 1
 
 - ### What I did: 
     - Explored Game development with Greenfoot.
+    - Setup environment
+    - Learned by implementing a basic project
 
 - ### What I plan to do next: 
     - Work on Game Interface, Figure out Design Patterns applicable to the game.
 
 - ### Blockers: 
     - N/A
+- ### XP Value:
+    - ### Simplicity 
+        - Tried to understand and convey to the team members the high level picture of the project.
+        - Collaborated with team members to gain insight and requirements of the project. 
 
 
 ## Week 2
@@ -21,7 +27,7 @@
 - ### What I did: 
     - Setup my Greenfoot environment.
     - Get familiar with Greenfoot APIs.
-    - Practiced on a couple of games implemented on Greenfoot.
+    - Practiced on some base project games implemented on Greenfoot.
     - Worked on UI elements of the game.
 
 - ### What I plan to do next: 
@@ -43,10 +49,10 @@
 ## Week 3
 
 - ### What I did: 
-    - Made Cards for the Game.
-    - Made Button class for navigation on screens.
-    - Made Main menu screen for the game.
-    - Made UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
+    - Designed and Rendered Cards for the Game.
+    - Designed the  Button class for navigation on screens.
+    - Designed the  Main menu screen for the game.
+    - Designed  UnoScreen (Main Game Screen ) by implementing the Singelton pattern.
 
 - ### What I plan to do next: 
     - Work on UnoScreen with static elements to finish the design.
@@ -70,6 +76,8 @@
     - Implemented State Interface.
     - Implemented TurnState machine.
     - Added the Turn UI element.
+    - General Debugging of the game.
+    - Worked on redesigning Game Screen, Main Screen and Game over screen by enhancing and introducing new features.
 
 - ### What I plan to do next: 
     - Merge Main code with personal code and reduce conflicts.
@@ -82,3 +90,5 @@
         - Effectively communicated with team members to mitigate errros, clear misunderstandings.
     - ### Simplicity
         - Aided in simpligying the overall structure of the game.
+    - ### Courage
+        - Understood the need of the hour, collaborated with team to make major changes in design and implementation when flaws were recognised.
