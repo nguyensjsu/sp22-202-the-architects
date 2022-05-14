@@ -14,6 +14,7 @@ public class MainMenu extends World
     public static final int textSize=50;
     private Button startGameButton;
     private Button closeButton;
+    private Button optionButton;
     private Color RED;
    
     /**
@@ -45,13 +46,24 @@ public class MainMenu extends World
             87,
             22
         );
-        addObject(startGameButton, 183, 183);
-        addObject(closeButton, 187, 400);
+        optionButton= new Button(
+            buttonWidth,
+            buttonHeight,
+            "Show Enemy Cards",
+            textSize,
+            Color.YELLOW,
+            87,
+            22
+        );
+        addObject(startGameButton, 183, 160);
+        addObject(optionButton, 183, 320);
+        addObject(closeButton, 183, 480);
     }
     
      public void act() {  
+        GameScreen.getNewInstance();
         if (Greenfoot.mouseClicked(startGameButton)) {
-            Greenfoot.setWorld(GameScreen.getNewInstance());
+            Greenfoot.setWorld(GameScreen.getInstance());
         }        
         if (Greenfoot.mouseClicked(closeButton)) {
             Greenfoot.stop();
