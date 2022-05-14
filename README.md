@@ -1,5 +1,5 @@
 <p align="center">
-    <image src="images/cover.png"  width="1280" height="auto">
+    <image src="images/uno-logo.png"  width="360" height="auto">
 </p>
 
 # UNO
