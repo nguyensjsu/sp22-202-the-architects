@@ -10,7 +10,7 @@ public class GameOverScreen extends World
 {
     private String result;
     private Button playButton;
-    private Button quitButton;
+    private Button menuButton;
     /**
      * Constructor for objects of class GameOverScreen.
      * 
@@ -21,18 +21,27 @@ public class GameOverScreen extends World
         super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
         this.result = result;
         showResult();
+        
         playButton = new Button(
-            Constants.BUTTON_WIDTH,
+            160,
             Constants.BUTTON_HEIGHT,
             Constants.PLAY_AGAIN_BUTTON
         );
-        quitButton= new Button(
-            Constants.BUTTON_WIDTH,
+        menuButton= new Button(
+            160,
             Constants.BUTTON_HEIGHT,
-            Constants.QUIT_BUTTON
+            Constants.MENU_BUTTON
         );
-       // addObject(playButton, 300, 400);
-        addObject(quitButton, 500, 400);
+        addObject(
+            playButton,
+            Constants.SCREEN_WIDTH/2 - 96, 
+            Constants.SCREEN_HEIGHT/2 + 76
+        );
+        addObject(
+            menuButton,
+            Constants.SCREEN_WIDTH/2 + 96,
+            Constants.SCREEN_HEIGHT/2 + 76
+        );
     }
     
     public void showResult() {
@@ -50,7 +59,7 @@ public class GameOverScreen extends World
     }
     
     public void act() {
-        if(Greenfoot.mouseClicked(quitButton)) {
+        if(Greenfoot.mouseClicked(menuButton)) {
             Greenfoot.delay(25);
             Greenfoot.setWorld(new MainMenu());
         }
