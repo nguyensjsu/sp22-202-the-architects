@@ -171,10 +171,6 @@ public class GameRules
         return this.buttons;
     }
     
-    public Deck getDeck() {
-        return Deck.getInstance();
-    }
-    
     public boolean canPlay() {
         return this.canPlay;
     }

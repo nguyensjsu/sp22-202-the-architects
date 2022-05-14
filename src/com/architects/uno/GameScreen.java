@@ -44,12 +44,12 @@ public class GameScreen extends World implements ISoundSubject
     }
     
     private void prepare() {
-        GameRules.getNewInstance().gameSetUp();
-        
-
-        Deck deck = GameRules.getInstance().getDeck();
+        // ensure unique deck before each game
+        Deck deck = Deck.getNewInstance();
         addObject(deck,120, Constants.SCREEN_HEIGHT/2);
-
+        
+        GameRules.getNewInstance().gameSetUp();
+    
         buttons = GameRules.getInstance().getButtons();
         addObject(buttons.get(0), 60, 30);
 
@@ -90,7 +90,7 @@ public class GameScreen extends World implements ISoundSubject
     }
     
     public IDeck getDeck() {
-        return GameRules.getInstance().getDeck();
+        return Deck.getInstance();
     }
     
     public boolean canPlayCard(Card card) {

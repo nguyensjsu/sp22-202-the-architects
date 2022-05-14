@@ -8,14 +8,13 @@ import greenfoot.*;
  */
 public class SoundHandler implements ISoundObserver
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
     /**
      * Constructor for objects of class SoundManager
      */
     public SoundHandler()
     {
+        GreenfootSound sound = new GreenfootSound("filename");// the filename is the same as the one you would use in the playSound method;
     }
     
     public void playSound(SoundEvent e) {
