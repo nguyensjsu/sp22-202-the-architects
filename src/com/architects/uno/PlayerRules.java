@@ -27,20 +27,24 @@ public class PlayerRules implements IPlayerRules
         }
         return singleton;
     }
-
-    public void reverse() {
-        GameRules.getInstance().toggleTurn();
-    }
-
-    public void skip() {
-        GameRules.getInstance().toggleTurn();
-    }
-
+    
+    @Override
     public void draw(int num) {
         GameRules.getInstance().toggleTurn();
         GameRules.getInstance().getCurrentPlayer().drawCard(num);
     }
+
+    @Override
+    public void reverse() {
+        GameRules.getInstance().toggleTurn();
+    }
+
+    @Override
+    public void skip() {
+        GameRules.getInstance().toggleTurn();
+    }
     
+    @Override
     public void sayUno() {
         GameRules.getInstance().getCurrentPlayer().sayUno();
     }
