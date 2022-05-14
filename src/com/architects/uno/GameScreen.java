@@ -13,7 +13,7 @@ public class GameScreen extends World implements ISoundSubject
     private static GameScreen UnoGame;
     public static boolean showEnemyCards = true;
     static TurnState turnState;
-    
+    private BackButton backButton;
     private List<Button> buttons;
     private List<Player> players;
     private List<ISoundObserver> observers = new ArrayList<>();
@@ -49,9 +49,18 @@ public class GameScreen extends World implements ISoundSubject
         addObject(deck,120, Constants.SCREEN_HEIGHT/2);
         
         GameRules.getNewInstance().gameSetUp();
+        backButton=new BackButton( 
+            120,
+            102,
+            "",
+            1,
+            Color.YELLOW,
+            30,
+            22);
+        addObject(backButton,930, 500);
     
         buttons = GameRules.getInstance().getButtons();
-        addObject(buttons.get(0), 60, 30);
+        //addObject(buttons.get(0), 60, 30);
 
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), Constants.SCREEN_WIDTH/2, 500);
@@ -64,11 +73,11 @@ public class GameScreen extends World implements ISoundSubject
         notifySoundHandler(SoundEvent.BACKGROUND);
     }
     
-    public void act(){
-        if (Greenfoot.mouseClicked(buttons.get(0))) {
+    public void act(){  
+        if (Greenfoot.mouseClicked(backButton)) {
             notifySoundHandler(SoundEvent.STOP);
             Greenfoot.setWorld(new MainMenu());
-        } else if (Greenfoot.mouseClicked(buttons.get(1))) {
+        }  if (Greenfoot.mouseClicked(buttons.get(1))) {
             notifySoundHandler(SoundEvent.SAY_UNO);
             PlayerRules.getInstance().sayUno();
         }
