@@ -16,7 +16,7 @@ public class Constants
     public static final int CARD_HEIGHT = 96;
     
     // button dimensions
-    public static final int BUTTON_WIDTH = 200;
+    public static final int BUTTON_WIDTH = 260;
     public static final int BUTTON_HEIGHT = 60;
     public static final int BUTTON_TEXT_SIZE = 26;
     
@@ -30,8 +30,9 @@ public class Constants
     // button image paths
     public static final String BACK_BUTTON = "back-button.png";
     public static final String QUIT_BUTTON = "quit-button.png";
-    public static final String SAMPLE_BUTTON = "sample-button.png";
     public static final String SAY_UNO_BUTTON = "say-uno-button.png";
     public static final String NEW_GAME_BUTTON = "new-game-button.png";
     public static final String PLAY_AGAIN_BUTTON = "play-again-button.png";
+    public static final String TRAINING_ON_BUTTON = "training-on-button.png";
+    public static final String TRAINING_OFF_BUTTON = "training-off-button.png";
 }
