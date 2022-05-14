@@ -79,3 +79,5 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 
 ### Burndown Chart
 ### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
+  
+## Key Design Features
