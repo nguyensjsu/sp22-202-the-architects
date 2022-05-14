@@ -98,6 +98,13 @@ The game consists of only 3 screens:
 2. Deck Singleton Pattern - Paramjot
 We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
 
+We present the Deck Singleton UML Diagram:
+
+<br>
+<p align="center">
+    <image src="images/decksingletonpattern.png">
+</p>
+<br>
 
 3. GameRules Singleton Pattern - Han Yu/Devansh
 We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. This allows IPlayer.java objects to manipulate the games using a single source.
@@ -125,14 +132,6 @@ The Strategy pattern lets us indirectly alter the object's behavior at runtime b
 </p>
 
 7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
- 
-We present the Deck Singleton UML Diagram:
-
-<br>
-<p align="center">
-    <image src="images/decksingletonpattern.png">
-</p>
-<br>
  
 ## Class Diagram
 
