@@ -65,12 +65,12 @@ public class GameRules
         this.buttons.add(backButton);
         
         Button sayUnoButton= new Button(
-            160,
+            100,
             30,
             "Say Uno",
-            24,
+            18,
             Color.WHITE,
-            30,
+            20,
             8
         );
         this.buttons.add(sayUnoButton);
