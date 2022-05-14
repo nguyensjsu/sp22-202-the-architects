@@ -92,6 +92,7 @@ The game consists of only 3 screens:
 <br>
   As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects. In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
 
+
     
 2.  Deck Singleton Pattern
    
