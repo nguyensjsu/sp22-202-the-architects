@@ -14,6 +14,7 @@ public class GameScreen extends World implements ISoundSubject
     public static boolean showEnemyCards = false;
     static TurnState turnState;
     private BackButton backButton;
+    private Button optionButton;
     private List<Button> buttons;
     private List<Player> players;
     private List<ISoundObserver> observers = new ArrayList<>();
@@ -58,9 +59,19 @@ public class GameScreen extends World implements ISoundSubject
             30,
             22);
         addObject(backButton,930, 500);
+        
+        optionButton = new Button(
+            100,
+            30,
+            "Show Enemy Cards",
+            100,
+            Color.WHITE,
+            20,
+            8);
+        addObject(optionButton,870, 30);
     
         buttons = GameRules.getInstance().getButtons();
-        //addObject(buttons.get(0), 60, 30);
+        //addObject(buttons.get(2), 60, 30);
 
         players = GameRules.getInstance().getPlayers();
         addObject(players.get(0), Constants.SCREEN_WIDTH/2, 500);
@@ -80,8 +91,11 @@ public class GameScreen extends World implements ISoundSubject
         }  if (Greenfoot.mouseClicked(buttons.get(1))) {
             notifySoundHandler(SoundEvent.SAY_UNO);
             PlayerRules.getInstance().sayUno();
+        } if (Greenfoot.mouseClicked(optionButton)) {
+            showEnemyCards = !showEnemyCards;
         }
     }
+    
     
     public void attach(ISoundObserver o) {
         this.observers.add(o);
