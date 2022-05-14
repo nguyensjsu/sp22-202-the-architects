@@ -23,7 +23,7 @@ public class GameScreen extends World implements ISoundSubject
      * 
      */
     private GameScreen() {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels
         super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
     }
     
