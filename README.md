@@ -95,15 +95,16 @@ The game consists of only 3 screens:
     
 2.  Deck Singleton Pattern
    
-    
-    We present the Deck Singleton UML Diagram:
+ 
+We present the Deck Singleton UML Diagram:
+
 <br>
 <p align="center">
     <image src="images/decksingletonpattern.png">
 </p>
 <br>
  
-    We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present.
+We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
     
 ## Team: The Architects
 
