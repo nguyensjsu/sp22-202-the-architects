@@ -96,14 +96,33 @@ The game consists of only 3 screens:
   As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects. In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
     
 2. Deck Singleton Pattern - Paramjot
+We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
+
 
 3. GameRules Singleton Pattern - Han Yu/Devansh
+We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. This allows IPlayer.java objects to manipulate the games using a single source.
+
 
 4. PlayerRules Singleton Pattern - Devansh
+We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules and to ensure one source of Player Rules like draw, reverse, skip for all players. This allows IPlayer.java objects to manipulate the games using a single source.
+
+<p align="center">
+    <image src="images/playerrules.png">
+</p>
 
 5. Sound Observer Pattern - Devansh
+Observer pattern was a good fit for sound effects as we needed multiple tracks of sound. We added ISoundObserver, ISoundSubject, and SoundHandler for this pattern. Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. We also have a STOP event. 
+
+<p align="center">
+    <image src="images/observersound.png">
+</p>
 
 6. Strategy for User and Computer Algorithm - Ashutosh
+The Strategy pattern lets us indirectly alter the object's behavior at runtime by associating it with different sub-objects which can perform specific sub-tasks in different ways. Using the Strategy for Human players and Computer Players only differ in the way they execute their behavior.
+
+<p align="center">
+    <image src="images/strategy.png">
+</p>
 
 7. State Design Pattern is for Turn Management in the Game - Waqas
  
@@ -115,8 +134,6 @@ We present the Deck Singleton UML Diagram:
 </p>
 <br>
  
-We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
-
 ## Class Diagram
 
 <image src="images/class-diagram.png">
