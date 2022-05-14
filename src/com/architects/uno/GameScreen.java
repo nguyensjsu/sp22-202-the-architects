@@ -13,11 +13,10 @@ public class GameScreen extends World implements ISoundSubject
     private static GameScreen UnoGame;
     public static boolean showEnemyCards = false;
     static TurnState turnState;
-<<<<<<< HEAD
-=======
+
     private BackButton backButton;
     private Button optionButton;
->>>>>>> 79d0f47c9c9cebc37eeddc0790ab193de0514f2c
+    
     private List<Button> buttons;
     private List<Player> players;
     private List<ISoundObserver> observers = new ArrayList<>();
