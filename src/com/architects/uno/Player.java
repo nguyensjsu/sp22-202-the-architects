@@ -71,7 +71,7 @@ public class Player extends Actor implements IPlayer {
                 GameScreen.getInstance().addObject(cards.get(i), x + (i * Constants.CARD_GAP), 500);
                 cards.get(i).setImage(cards.get(i).getImage());
             } else {
-                if(GameScreen.showEnemyCards)
+                if(GameScreen.getInstance().getShowEnemyCardOption())
                     image.drawImage(new GreenfootImage(cards.get(i).getImage()), i * Constants.CARD_GAP, 0);
                 else
                     image.drawImage(new GreenfootImage("Deck.png"), i * Constants.CARD_GAP, 0);

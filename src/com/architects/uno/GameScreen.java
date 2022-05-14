@@ -11,7 +11,7 @@ import java.util.*;
 public class GameScreen extends World implements ISoundSubject
 {
     private static GameScreen UnoGame;
-    public static boolean showEnemyCards = true;
+    public static boolean showEnemyCards = false;
     static TurnState turnState;
     private BackButton backButton;
     private List<Button> buttons;
@@ -134,5 +134,9 @@ public class GameScreen extends World implements ISoundSubject
     
     public void gameIsDraw() {
         GameRules.getInstance().gameIsDraw();
+    }
+    
+    public boolean getShowEnemyCardOption() {
+        return showEnemyCards;
     }
 }
