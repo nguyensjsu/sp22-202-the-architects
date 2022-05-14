@@ -105,7 +105,7 @@ The game consists of only 3 screens:
 
 6. Strategy for User and Computer Algorithm - Ashutosh
 
-7. State Design Pattern is for Turn Management in the Game - Waqas
+7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
  
 We present the Deck Singleton UML Diagram:
 
