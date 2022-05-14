@@ -10,8 +10,8 @@ public class ComputerStrategy implements IPlayerStrategy
         if (GameScreen.getInstance().getCurrentPlayer().equals(player) 
             && GameScreen.getInstance().canPlay()) {
             // Catch other players who did not say Uno
-            for(Player p: GameRules.getInstance().getPlayers()) {
-                if (p.isHuman() && p.getCards().size() == 1 && !p.saidUno) {
+            for(IPlayer p: GameRules.getInstance().getPlayers()) {
+                if (p.isHuman() && p.getCards().size() == 1 && !p.saidUno()) {
                     p.drawCard(2); // penalize them with +2 cards.
                 }
             }

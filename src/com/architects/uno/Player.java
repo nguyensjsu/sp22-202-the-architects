@@ -6,7 +6,7 @@ public class Player extends Actor implements IPlayer {
     String playerName;
     List<Card> cards;
     IPlayerStrategy strategy;
-    public boolean saidUno;
+    boolean saidUno;
 
     public Player(String playerName, IPlayerStrategy strategy) {
         this.playerName = playerName;
@@ -29,7 +29,7 @@ public class Player extends Actor implements IPlayer {
         return this.cards;
     }
     
-    public boolean uno() {
+    public boolean saidUno() {
         return this.saidUno;
     }
     
