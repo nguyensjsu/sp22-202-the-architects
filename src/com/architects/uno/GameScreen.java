@@ -70,9 +70,8 @@ public class GameScreen extends World implements ISoundSubject
         if (Greenfoot.mouseClicked(buttons.get(0))) {
             Greenfoot.setWorld(new MainMenu());
         } else if (Greenfoot.mouseClicked(buttons.get(1))) {
-            // update Player's state
+            PlayerRules.getInstance().sayUno();
         }
-        
     }
     
     public void attach(ISoundObserver o) {
