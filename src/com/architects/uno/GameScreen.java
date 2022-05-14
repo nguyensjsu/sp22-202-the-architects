@@ -66,6 +66,7 @@ public class GameScreen extends World implements ISoundSubject
     
     public void act(){
         if (Greenfoot.mouseClicked(buttons.get(0))) {
+            notifySoundHandler(SoundEvent.STOP);
             Greenfoot.setWorld(new MainMenu());
         } else if (Greenfoot.mouseClicked(buttons.get(1))) {
             notifySoundHandler(SoundEvent.SAY_UNO);

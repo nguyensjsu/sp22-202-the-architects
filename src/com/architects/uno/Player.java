@@ -20,6 +20,7 @@ public class Player extends Actor implements IPlayer {
     public void act() {
         GameScreen game = (GameScreen) getWorld();
         strategy.play(this);
+        GameScreen.getInstance().notifySoundHandler(SoundEvent.STOP);
         if (cards.size() == 0) {
             Greenfoot.setWorld(new GameOverScreen(playerName + " Wins!"));
         }

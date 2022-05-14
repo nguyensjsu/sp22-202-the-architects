@@ -188,6 +188,7 @@ public class GameRules
     }
     
     public void gameIsDraw() {
+        GameScreen.getInstance().notifySoundHandler(SoundEvent.STOP);
         Greenfoot.setWorld(new GameOverScreen("It's a Draw!"));
     }
     
