@@ -1,5 +1,6 @@
 public interface IPlayerRules {
+    void draw(int num);
     void reverse();
     void skip();
-    void draw(int num);  
+    void sayUno();
 }
