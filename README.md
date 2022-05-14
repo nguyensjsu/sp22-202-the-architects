@@ -85,8 +85,28 @@ The game consists of only 3 screens:
   
   
   The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation. The diagram is presented here.
-  As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects.
+<br>
+<p align="center">
+    <image src="images/factorypattern.png">
+</p>
+<br>
+  As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects. In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
 
+
+    
+2.  Deck Singleton Pattern
+   
+ 
+We present the Deck Singleton UML Diagram:
+
+<br>
+<p align="center">
+    <image src="images/decksingletonpattern.png">
+</p>
+<br>
+ 
+We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
+    
 ## Team: The Architects
 
 ## Team Members
