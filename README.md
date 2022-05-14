@@ -1,23 +1,6 @@
-# The Architects
-
-## Team Members
-1. Ashutosh Ojha
-2. Devansh Modi
-3. Hanyu Hu
-4. Paramjot Singh
-5. Waqas Kureshy
-
-## Technologies
-- Java
-- Greenfoot
-
-## Team Journals
-1. [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
-2. [Devansh's Journal](/member-journals/journal_devansh.md)
-3. [Hanyu's Journal](/member-journals/journal_hanyu.md)
-4. [Paramjot's Journal](/member-journals/journal_paramjot.md)
-5. [Waqas's Journal](/member-journals/journal_waqas.md)
-
+<p align="center">
+    <image src="images/cover.png"  width="1280" height="auto">
+</p>
 
 # UNO
 A two-player card game in which the objective is to be the first player to get rid of all the cards in their hand. 
@@ -56,31 +39,52 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 
 ## Screenshots
 
-### Main Menu Screen aka Start Screen
+### Main Menu Screen aka Start Screen:
 <br>
 <p align="center">
     <image src="images/main_menu_screen.png">
 </p>
 <br>
 
-### Game Screen
+### Game Screen:
 <br>
 <p align="center">
     <image src="images/game_screen.png">
 </p>
 <br>
 
-### Game Over Screen
+### Game Over Screen:
 <br>
 <p align="center">
     <image src="images/game_over_screen.png">
 </p>
 <br>
 
-### Burndown Chart
-### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
+## Technologies
+- Java
+- Greenfoot
   
 ## Key Design Features
 
 1.  Factory Pattern
   The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation. The diagram is presented here.
+
+## Team: The Architects
+
+## Team Members
+1. Ashutosh Ojha
+2. Devansh Modi
+3. Hanyu Hu
+4. Paramjot Singh
+5. Waqas Kureshy
+
+## Team Journals
+1. [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
+2. [Devansh's Journal](/member-journals/journal_devansh.md)
+3. [Hanyu's Journal](/member-journals/journal_hanyu.md)
+4. [Paramjot's Journal](/member-journals/journal_paramjot.md)
+5. [Waqas's Journal](/member-journals/journal_waqas.md)
+
+
+## Burndown Chart
+### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
