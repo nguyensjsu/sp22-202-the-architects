@@ -49,7 +49,7 @@ public class MainMenu extends World
         optionButton= new Button(
             buttonWidth,
             buttonHeight,
-            "Show Enemy Cards",
+            "#1Show Enemy Cards",
             textSize,
             Color.YELLOW,
             87,
@@ -60,7 +60,20 @@ public class MainMenu extends World
         addObject(closeButton, 183, 480);
     }
     
-     public void act() {  
+     public void act() { 
+        if (Greenfoot.mouseClicked(optionButton)) {
+            removeObject(optionButton);
+            optionButton= new Button(
+            buttonWidth,
+            buttonHeight,
+            "#2Show Enemy Cards",
+            textSize,
+            Color.YELLOW,
+            87,
+            22
+        );
+        addObject(optionButton, 183, 320);
+        } 
         if (Greenfoot.mouseClicked(startGameButton)) {
             Greenfoot.setWorld(GameScreen.getNewInstance());
         }        
