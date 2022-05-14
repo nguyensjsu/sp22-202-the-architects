@@ -37,19 +37,33 @@ Each player is dealt 7 cards and players take turn playing or drawing cards from
 - Clone or download this repository
 - Launch `project.greenfoot` inside src/com/architects/uno directory
 
-## Screenshots
+## Game Screens:
+The game consists of only 3 screens:
+  1. Start Screen
+  2. Game Screen
+  3. Game Over Screen
 
-### Main Menu Screen aka Start Screen:
+## Start Screen or Main Menu Screen:
 <br>
 <p align="center">
     <image src="images/main_menu_screen.png">
 </p>
 <br>
 
-### Game Screen:
+## Game Screen:
 <br>
 <p align="center">
     <image src="images/game_screen.png">
+</p>
+<p align="center">
+    <b>Training Mode OFF</b>
+</p>
+<br>
+<p align="center">
+    <image src="images/game_screen_training.png">
+</p>
+<p align="center">
+    <b>Training Mode ON</b>
 </p>
 <br>
 
