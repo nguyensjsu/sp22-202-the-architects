@@ -8,13 +8,24 @@ import java.util.*;
  */
 public class Deck extends Actor implements IDeck
 {
+    private GreenfootImage deckFull;
+    private GreenfootImage deckFew;
+    private GreenfootImage deckTwo;
+    private GreenfootImage deckOne;
     private ArrayList<Card> cardDeck;
+    
     private static Deck singleton;
 
     private Deck() {
+        deckFull = new GreenfootImage("deck-many.png");
+        deckFew = new GreenfootImage("deck-few.png");
+        deckTwo = new GreenfootImage("deck-two.png");
+        deckOne = new GreenfootImage("deck-one.png");
         cardDeck = new ArrayList<Card>();
+        
         init();
         shuffle();
+        setImage(deckFull);
     }
     
     public static synchronized Deck getNewInstance() {
@@ -115,6 +126,7 @@ public class Deck extends Actor implements IDeck
         {
             Card output = cardDeck.get(0);
             cardDeck.remove(0);
+            checkAndSetImage();
             return output;
         }
         return null;
@@ -122,5 +134,16 @@ public class Deck extends Actor implements IDeck
     
     public List<Card> getDeck() {
         return cardDeck;
+    }
+    
+    private void checkAndSetImage() {
+        if(cardDeck.size() > 10)
+            setImage(deckFull);
+        else if(cardDeck.size() > 5)
+            setImage(deckFew);
+        else if(cardDeck.size() > 1)
+            setImage(deckTwo);
+        else
+            setImage(deckOne);
     }
 }
