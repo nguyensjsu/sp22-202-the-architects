@@ -5,4 +5,5 @@ public interface IPlayer {
     boolean isHuman();
     void checkAndPlayCard(Card card);
     void sayUno();
+    List<Card> getCards();
 }
