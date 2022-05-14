@@ -14,7 +14,6 @@ public class SoundHandler implements ISoundObserver
      */
     public SoundHandler()
     {
-        GreenfootSound sound = new GreenfootSound("filename");// the filename is the same as the one you would use in the playSound method;
     }
     
     public void playSound(SoundEvent e) {
