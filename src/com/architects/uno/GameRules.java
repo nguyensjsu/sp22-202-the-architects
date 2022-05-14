@@ -129,7 +129,7 @@ public class GameRules
         
         // check if Human can Say Uno!
         if (getCurrentPlayer().isHuman() && getCurrentPlayer().getCards().size() == 2) {
-            getCurrentPlayer().sayUno();
+            //getCurrentPlayer().sayUno();
             GameScreen.getInstance().addObject(buttons.get(1), 900, 200);
         } else if(buttons.get(1).getWorld() != null) {
             GameScreen.getInstance().removeObject(buttons.get(1));
