@@ -15,6 +15,16 @@ public class Player extends Actor implements IPlayer {
         this.saidUno =  false;
         drawCard(Constants.DECK_SIZE);
     }
+    
+    @Override
+    public void act() {
+        GameScreen game = (GameScreen) getWorld();
+        strategy.play(this);
+        if (cards.size() == 0) {
+            Greenfoot.setWorld(new GameOverScreen(playerName + " Wins!"));
+        }
+        return;
+    }
 
     @Override
     public void drawCard(int amount) {
@@ -25,14 +35,6 @@ public class Player extends Actor implements IPlayer {
     }
     
     @Override
-    public List<Card> getCards() {
-        return this.cards;
-    }
-    
-    public boolean saidUno() {
-        return this.saidUno;
-    }
-    
     public void addCard(Card card) {
         for (int i=0; i<cards.size(); i++) {
             GameScreen.getInstance().removeObject(cards.get(i));
@@ -41,6 +43,7 @@ public class Player extends Actor implements IPlayer {
         renderCards();
     }
     
+    @Override
     public void removeCard(Card card) {
         // to rearrange cards, remove all first
         for (int i=0; i<cards.size(); i++) {
@@ -50,13 +53,9 @@ public class Player extends Actor implements IPlayer {
         renderCards();
     }
     
-    public void removeCard(int index) {
-        // to rearrange cards, remove all first
-        for (int i=0; i<cards.size(); i++) {
-            GameScreen.getInstance().removeObject(cards.get(i));
-        }
-        cards.remove(index);
-        renderCards();
+    @Override
+    public List<Card> getCards() {
+        return this.cards;
     }
     
     @Override
@@ -84,20 +83,15 @@ public class Player extends Actor implements IPlayer {
     public String getPlayerName() {
         return playerName;
     }
-
-    @Override
-    public void act() {
-        GameScreen game = (GameScreen) getWorld();
-        strategy.play(this);
-        if (cards.size() == 0) {
-            Greenfoot.setWorld(new GameOverScreen(playerName + " Wins!"));
-        }
-        return;
-    }
     
     @Override
     public boolean isHuman() {
         return strategy.isHuman();
+    }
+    
+    @Override
+    public void checkAndPlayCard(Card card) {
+        strategy.checkAndPlayCard(card);
     }
     
     @Override
@@ -109,7 +103,8 @@ public class Player extends Actor implements IPlayer {
     }
     
     @Override
-    public void checkAndPlayCard(Card card) {
-        strategy.checkAndPlayCard(card);
+    public boolean saidUno() {
+        return this.saidUno;
     }
+    
 }
