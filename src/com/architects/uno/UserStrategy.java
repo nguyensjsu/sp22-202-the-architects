@@ -45,24 +45,30 @@ public class UserStrategy implements IPlayerStrategy {
     }
     
     private int cardSelected(List<Card> cards) {
+        int deckSize = Constants.CARD_WIDTH + ((cards.size()-1) * Constants.CARD_GAP);
         MouseInfo mouseInfo = Greenfoot.getMouseInfo();
 
         while (mouseInfo == null) {
         }
         
         int mouseX = mouseInfo.getX();
+        int playerX = GameScreen.getInstance().getCurrentPlayer().getX();
         
-        int topLeftX = cards.get(0).getX();
-        int bottomRightX = cards.get(cards.size()-1).getX();
+        int topLeftX = playerX - deckSize/2;
+        int bottomRightX = playerX + deckSize/2 - Constants.CARD_WIDTH;
         
         int index = 0;
-        for (int i = topLeftX - Constants.CARD_WIDTH / 2; i < bottomRightX; i += Constants.CARD_GAP) {
-            if (mouseX >= i && mouseX <= i + Constants.CARD_GAP - 10) {
-                return index;
-            }
-            index++;
-        }
         
+        for(int i = topLeftX; i <= bottomRightX; i += Constants.CARD_GAP) {
+            if(i == bottomRightX) {
+                if(mouseX >= i && mouseX < (i + Constants.CARD_WIDTH))
+                    return index;
+            } else {
+                if(mouseX >= i && mouseX < (i + Constants.CARD_GAP))
+                    return index;
+                index++;
+            }
+        }
         return -1;
     }
 
