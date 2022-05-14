@@ -30,9 +30,10 @@ public class GameScreen extends World implements ISoundSubject
         super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
     }
     
-    public synchronized static GameScreen getNewInstance() {
+    public synchronized static GameScreen getNewInstance(boolean s) {
         UnoGame = new GameScreen();
         UnoGame.prepare();
+        UnoGame.setShowEnemyCardOption(s);
         return UnoGame;
     }
     
@@ -135,6 +136,10 @@ public class GameScreen extends World implements ISoundSubject
     
     public void gameIsDraw() {
         GameRules.getInstance().gameIsDraw();
+    }
+    
+    public void setShowEnemyCardOption(boolean s) {
+        showEnemyCards = s;
     }
     
     public boolean getShowEnemyCardOption() {
