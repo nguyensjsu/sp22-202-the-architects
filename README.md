@@ -136,6 +136,14 @@ Observer pattern was a good fit for sound effects as we needed multiple tracks o
 
 7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
 
+### State Pattern
+
+<br>
+<p align="center">
+    <image src="images/state_pattern.png">
+</p>
+<br>
+
 ### Strategy Pattern
 
 <br>
