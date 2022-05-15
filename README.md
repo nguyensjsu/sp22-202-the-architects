@@ -158,8 +158,10 @@ The game consists of only 3 screens:
 
 - We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. 
 - This allows IPlayer.java objects to manipulate the games using a single source.
+- GameRules also tracking all the movement for the users and makes the judge for the user actions.
+- GameScreen  directly connect to the Gamerule that all the game logic behind GameScreen was given by the GameScreen.
+- GameRule associate with Player rules to allowed the player makes actions and move in the game.
 
-<hr>
 
 ### Singleton - PlayerRules
 
@@ -172,7 +174,7 @@ The game consists of only 3 screens:
 - We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules.
 - This also ensure one source of Player Rules like draw, reverse, skip for all players.
 - This allows IPlayer.java objects to manipulate the games using a single source.
-
+- GameRule associate with Player rules to allowed the player makes actions and move in the game.
 <hr>
 
 ### State Pattern
