@@ -85,7 +85,14 @@ The game consists of only 3 screens:
 - Java
 - Greenfoot
   
-## Key Design Features
+## Team Members
+1. Ashutosh Ojha
+2. Devansh Modi
+3. Hanyu Hu
+4. Paramjot Singh
+5. Waqas Kureshy
+
+## Design Patterns
 
 1.  Factory Pattern - Paramjot
   
@@ -127,35 +134,58 @@ Observer pattern was a good fit for sound effects as we needed multiple tracks o
     <image src="images/observersound.png">
 </p>
 
-6. Strategy for User and Computer Algorithm - Ashutosh
-The Strategy pattern lets us indirectly alter the object's behavior at runtime by associating it with different sub-objects which can perform specific sub-tasks in different ways. Using the Strategy for Human players and Computer Players only differ in the way they execute their behavior.
-
-<p align="center">
-    <image src="images/strategy.png">
-</p>
-
 7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
- 
+
+### Strategy Pattern
+
+<br>
+<p align="center">
+    <image src="images/strategy_pattern.png">
+</p>
+<br>
+
+- The game has two types of players:
+  - Computer
+  - User
+- Both types of Players have common core actions:
+  - Play a card
+  - Draw from deck, check the card and play
+- The common actions are defined by an interface `IPlayer` which is implemented by a class `Player`.
+- Since, there actions are all same, both of the players are objects of class `Player`
+- The only variability is in the way the players perform these actions, i.e., the `strategy` employed by the Players.
+- Hence, `Strategy` pattern is used to encapsulate and implement the variabilities between the behavior of both Players.
+- Three entities are defined to successfully implement the Strategy pattern:
+  - interface `IPlayerStrategy`
+  - class `ComputerStrategy`
+  - class `UserStrategy`
+- The interface specifies the variabilities to be implemented for a Player.
+- Two classes are created which implement the strategies for a Computer and a User player respectively.
+- In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between a Computer and a User.
+
+### Contributions
+
+| Member | Design Pattern |
+| -------------- | -------------------------------- |
+| Ashutosh Ojha  | Strategy                         |
+| Devansh Modi   | Observer, Singleton(PlayerRules) |
+| Hanyu Hu       | Singleton(GameRules)             |
+| Paramjot Singh | Factory, Singleton(Deck)         |
+| Waqas Kureshy  | Singleton(GameScreen), State     |
+
 ## Class Diagram
 
-<image src="images/class-diagram.png">
+<br>
+<p align="center">
+    <image src="images/class_diagram.png">
+</p>
+<br>
 
-## Team: The Architects
-
-## Team Members
-1. Ashutosh Ojha
-2. Devansh Modi
-3. Hanyu Hu
-4. Paramjot Singh
-5. Waqas Kureshy
-
-## Team Journals
+## Journals
 1. [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
 2. [Devansh's Journal](/member-journals/journal_devansh.md)
 3. [Hanyu's Journal](/member-journals/journal_hanyu.md)
 4. [Paramjot's Journal](/member-journals/journal_paramjot.md)
 5. [Waqas's Journal](/member-journals/journal_waqas.md)
-
 
 ## Burndown Chart
 ### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
