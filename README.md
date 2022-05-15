@@ -80,6 +80,14 @@ The game consists of only 3 screens:
     <image src="images/game_over_screen.png">
 </p>
 <br>
+## Wireframes
+
+| Screen  | Wireframe |
+| ------------- | ------------- |
+| Main Screen  | ![](images/Main_Screen_Wireframe.png)  |
+| Game Screen  | ![](images/Game_Screen_Wireframe.png.png)  |
+| Game Over Screen | ![](images/Game_over_screen_Wireframe.png) |
+<br>
 
 ## Technologies
 - Java
@@ -120,17 +128,12 @@ We present the Deck Singleton UML Diagram:
 We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. This allows IPlayer.java objects to manipulate the games using a single source.
 
 
-### Singleton - PlayerRules
+4. PlayerRules Singleton Pattern - Devansh
+We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules and to ensure one source of Player Rules like draw, reverse, skip for all players. This allows IPlayer.java objects to manipulate the games using a single source.
 
-<br>
 <p align="center">
-    <image src="images/singleton_pattern_player_rules.png">
+    <image src="images/playerrules.png">
 </p>
-<br>
-
-- We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules
-- This also ensures one source of Player Rules like draw, reverse, skip for all players. 
-- This allows IPlayer.java objects to manipulate the games using a single source.
 
 ### Observer Pattern
 
