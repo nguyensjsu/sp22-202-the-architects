@@ -84,9 +84,9 @@ The game consists of only 3 screens:
 
 | Screen  | Wireframe |
 | ------------- | ------------- |
-| Main Screen  | ![](images/Main_Screen_Wireframe.png)  |
-| Game Screen  | ![](images/Game_Screen_Wireframe.png.png)  |
-| Game Over Screen | ![](images/Game_over_screen_Wireframe.png) |
+| Main Screen  | <image src="images/Main_Screen_Wireframe.png">  |
+| Game Screen  | <image src="images/Game_Screen_Wireframe.png">  |
+| Game Over Screen | <image src="images/Game_over_screen_Wireframe.png"> |
 <br>
 
 ## Technologies
