@@ -116,8 +116,16 @@ We present the Deck Singleton UML Diagram:
 </p>
 <br>
 
-3. GameRules Singleton Pattern - Han Yu/Devansh
-We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. This allows IPlayer.java objects to manipulate the games using a single source.
+### Singleton - GameRules
+
+<br>
+<p align="center">
+    <image src="images/singleton_pattern_game_rules.png">
+</p>
+<br>
+
+- We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. 
+- This allows IPlayer.java objects to manipulate the games using a single source.
 
 
 ### Singleton - PlayerRules
