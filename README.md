@@ -102,7 +102,16 @@ The game consists of only 3 screens:
     
 ## Design Patterns
 
-### Factory Pattern
+The project implementation carefully adheres to the SOLID design principles. A set of five object oriented design patterns have been integrated with the various features throughout the project. 
+    
+The various design patterns used are:
+- Factory
+- Obsersver
+- Singleton
+- State
+- Strategy
+    
+## Factory Pattern
 
 <br>
 <p align="center">
@@ -117,9 +126,8 @@ The game consists of only 3 screens:
 - In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. 
 - This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
 
-<hr>
 
-### Observer Pattern
+## Observer Pattern
 
 <br>
 <p align="center">
@@ -132,9 +140,8 @@ The game consists of only 3 screens:
 - Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. 
 - We also have a STOP event. 
 
-<hr>
 
-### Singleton - Deck
+## Singleton - Deck
 
 <br>
 <p align="center">
@@ -147,9 +154,8 @@ The game consists of only 3 screens:
 - This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. 
 - The GameRules and other classes access the Deck object by use of the getInstance method.
 
-<hr>
 
-### Singleton - GameRules
+## Singleton - GameRules
 
 <br>
 <p align="center">
@@ -164,7 +170,7 @@ The game consists of only 3 screens:
 - GameRule associate with Player rules to allowed the player makes actions and move in the game.
 
 
-### Singleton - PlayerRules
+## Singleton - PlayerRules
 
 <br>
 <p align="center">
@@ -177,9 +183,8 @@ The game consists of only 3 screens:
 - This allows IPlayer.java objects to manipulate the games using a single source.
 - GameRule associate with Player rules to allowed the player makes actions and move in the game.
 
-<hr>
 
-### State Pattern - TurnState
+## State Pattern - TurnState
 
 <br>
 <p align="center">
@@ -197,9 +202,9 @@ This pattern also aids in the the following game functionalities:
 - Switching player when a Draw 2 card is played and switching back
 - Keeping the same state when a Skip card is played
 - Keeping the same state when a Reverse card is played
-<hr>
 
-### Strategy Pattern
+
+## Strategy Pattern
 
 <br>
 <p align="center">
@@ -225,7 +230,6 @@ This pattern also aids in the the following game functionalities:
 - Two classes are created which implement the strategies for a Computer and a User player respectively.
 - In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between the two players.
 
-<hr>
   
 ## Technologies
 - Java
