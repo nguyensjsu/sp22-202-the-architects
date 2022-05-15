@@ -179,14 +179,24 @@ The game consists of only 3 screens:
 
 <hr>
 
-### State Pattern
+### State Pattern - TurnState
 
 <br>
 <p align="center">
     <image src="images/state_pattern.png">
 </p>
 <br>
+The State pattern was used to observe the change of turns in the Game. It provides efficient functionality for keeping the player's turns in check. A small display window is also added in the Game screen that displays the current Player's turn. The state Machine can assume two states:<br>
 
+- Computer's Turn
+- Players/User's Turn (Human)<br>
+    
+This pattern also aids in the the following game functionalities:
+    
+- Determining player turns
+- Switching player when a Draw 2 card is played and switching back
+- Keeping the same state when a Skip card is played
+- Keeping the same state when a Reverse card is played
 <hr>
 
 ### Strategy Pattern
@@ -235,7 +245,7 @@ The game consists of only 3 screens:
 | -------------- | -------------------------------- |
 | Ashutosh Ojha  | Strategy                         |
 | Devansh Modi   | Observer, Singleton(PlayerRules) |
-| Hanyu Hu       | Singleton(GameRules)             |
+| Hanyu Hu       | Singleton(GameRules), Augmented (GameScreen)             |
 | Paramjot Singh | Factory, Singleton(Deck)         |
 | Waqas Kureshy  | Singleton(GameScreen), State     |
 
