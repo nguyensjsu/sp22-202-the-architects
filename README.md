@@ -83,11 +83,11 @@ The game consists of only 3 screens:
 
  ## Wireframes:
 
-|  Screen          | Wireframe                                           |
+|  Screens          | Wireframes                                           |
 | ---------------- | --------------------------------------------------- |
-| Main Screen      | ![Wireframe](images/Main_Screen_Wireframe.png)     |
-| Game Screen      | ![Wireframe](images/Game_Screen_Wireframe.png)      |
-| Game Over Screen | ![Wireframe](images/Game_over_screen_Wireframe.png) |
+| Main Screen      | ![Wireframe](https://github.com/nguyensjsu/sp22-202-the-architects/blob/main/images/Main%20Screen%20Wireframe.png)        |
+| Game Screen      | ![Wireframe](https://github.com/nguyensjsu/sp22-202-the-architects/blob/main/images/Game%20Screen%20Wireframe.png)        |
+| Game Over Screen | ![Wireframe](https://github.com/nguyensjsu/sp22-202-the-architects/blob/main/images/Game%20over%20screen%20Wireframe.png) |
     
 <br>
 
