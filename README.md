@@ -160,7 +160,7 @@ Observer pattern was a good fit for sound effects as we needed multiple tracks o
   - class `UserStrategy`
 - The interface specifies the variabilities to be implemented for a Player.
 - Two classes are created which implement the strategies for a Computer and a User player respectively.
-- In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between a Computer and a User.
+- In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between the two players.
 
 ### Contributions
 
