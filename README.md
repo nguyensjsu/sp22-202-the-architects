@@ -95,12 +95,7 @@ The game consists of only 3 screens:
 - Java
 - Greenfoot
   
-## Team Members
-1. Ashutosh Ojha
-2. Devansh Modi
-3. Hanyu Hu
-4. Paramjot Singh
-5. Waqas Kureshy
+
 
 
 ## Design Patterns
@@ -121,6 +116,7 @@ The game consists of only 3 screens:
 - In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. 
 - This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
 
+<hr>
 
 ### Observer Pattern
 
@@ -135,6 +131,7 @@ The game consists of only 3 screens:
 - Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. 
 - We also have a STOP event. 
 
+<hr>
 
 ### Singleton - Deck
 
@@ -149,6 +146,7 @@ The game consists of only 3 screens:
 - This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. 
 - The GameRules and other classes access the Deck object by use of the getInstance method.
 
+<hr>
 
 ### Singleton - GameRules
 
@@ -161,6 +159,7 @@ The game consists of only 3 screens:
 - We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. 
 - This allows IPlayer.java objects to manipulate the games using a single source.
 
+<hr>
 
 ### Singleton - PlayerRules
 
@@ -174,6 +173,7 @@ The game consists of only 3 screens:
 - This also ensure one source of Player Rules like draw, reverse, skip for all players.
 - This allows IPlayer.java objects to manipulate the games using a single source.
 
+<hr>
 
 ### State Pattern
 
@@ -183,6 +183,7 @@ The game consists of only 3 screens:
 </p>
 <br>
 
+<hr>
 
 ### Strategy Pattern
 
@@ -210,6 +211,7 @@ The game consists of only 3 screens:
 - Two classes are created which implement the strategies for a Computer and a User player respectively.
 - In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between the two players.
 
+<hr>
 
 ### Contributions
 
@@ -230,6 +232,15 @@ The game consists of only 3 screens:
 </p>
 <br>
 
+
+## Team Members
+1. Ashutosh Ojha
+2. Devansh Modi
+3. Hanyu Hu
+4. Paramjot Singh
+5. Waqas Kureshy
+
+
 ## Journals
 1. [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
 2. [Devansh's Journal](/member-journals/journal_devansh.md)
@@ -237,5 +248,6 @@ The game consists of only 3 screens:
 4. [Paramjot's Journal](/member-journals/journal_paramjot.md)
 5. [Waqas's Journal](/member-journals/journal_waqas.md)
 
+ 
 ## Burndown Chart
 ### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
