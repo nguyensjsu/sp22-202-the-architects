@@ -80,13 +80,14 @@ The game consists of only 3 screens:
     <image src="images/game_over_screen.png">
 </p>
 <br>
-## Wireframes
+
+ ## Wireframes:
 
 |  Screen          | Wireframe                                           |
 | ---------------- | --------------------------------------------------- |
-| Main Screen      | ![](images/Main_Screen_Wireframe.png)     |
-| Game Screen      | ![](images/Game_Screen_Wireframe.png)      |
-| Game Over Screen | ![](images/Game_over_screen_Wireframe.png) |
+| Main Screen      | ![Wireframe](images/Main_Screen_Wireframe.png)     |
+| Game Screen      | ![Wireframe](images/Game_Screen_Wireframe.png)      |
+| Game Over Screen | ![Wireframe](images/Game_over_screen_Wireframe.png) |
     
 <br>
 
