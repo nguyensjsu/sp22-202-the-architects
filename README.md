@@ -101,53 +101,23 @@ The game consists of only 3 screens:
 4. Paramjot Singh
 5. Waqas Kureshy
 
+
 ## Design Patterns
-
-1.  Factory Pattern - Paramjot
-  
-  
-  The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation. The diagram is presented here.
-<br>
-<p align="center">
-    <image src="images/factorypattern.png">
-</p>
-<br>
-  As the diagram indicates, this Factory pattern follows the basic plan set out by the Gang of Four. In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects. In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
     
-2. Deck Singleton Pattern - Paramjot
-We chose to use a Singleton pattern in order to manage the Deck. The Deck object itelf is used to manage Card objects which are not associated with either Player. This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. The GameRules and other classes access the Deck object by use of the getInstance method.
-
-We present the Deck Singleton UML Diagram:
+### Factory Pattern
 
 <br>
 <p align="center">
-    <image src="images/decksingletonpattern.png">
+    <image src="images/factory_pattern.png">
 </p>
 <br>
 
-### Singleton - GameRules
-
-<br>
-<p align="center">
-    <image src="images/singleton_pattern_game_rules.png">
-</p>
-<br>
-
-- We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. 
-- This allows IPlayer.java objects to manipulate the games using a single source.
-
-
-### Singleton - GameRules
-
-<br>
-<p align="center">
-    <image src="images/singleton_pattern_player_rules.png">
-</p>
-<br>
-
-- We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules.
-- This also ensure one source of Player Rules like draw, reverse, skip for all players.
-- This allows IPlayer.java objects to manipulate the games using a single source.
+- The factory pattern is utilized in the course of the creation of Card objects, as it significantly simplifies the process of Card creation.
+- This Factory pattern follows the basic plan set out by the Gang of Four. 
+- In particular, the code is written in such a way that the Card creation method is obfuscated with the option of two additional creation methods. 
+- This allows for a single interface to be used by the other classes to create both SpecialCard and NumberCard objects. 
+- In short, the synonymous methods all named createCard makes the usage of CardFactory extremely easy. 
+- This was done so people using this Factory class would not need to worry about managing different methods to create the two kinds of Card objects.
 
 
 ### Observer Pattern
@@ -162,6 +132,45 @@ We present the Deck Singleton UML Diagram:
 - We added ISoundObserver, ISoundSubject, and SoundHandler for this pattern. 
 - Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. 
 - We also have a STOP event. 
+
+
+### Singleton - Deck
+
+<br>
+<p align="center">
+    <image src="images/singleton_pattern_deck.png">
+</p>
+<br>
+
+- We chose to use a Singleton pattern in order to manage the Deck. 
+- The Deck object itelf is used to manage Card objects which are not associated with either Player. 
+- This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. 
+- The GameRules and other classes access the Deck object by use of the getInstance method.
+
+### Singleton - GameRules
+
+<br>
+<p align="center">
+    <image src="images/singleton_pattern_game_rules.png">
+</p>
+<br>
+
+- We chose to use a Singleton pattern for Game Rules to ensure one source of Game Rules for all players. 
+- This allows IPlayer.java objects to manipulate the games using a single source.
+
+
+### Singleton - PlayerRules
+
+<br>
+<p align="center">
+    <image src="images/singleton_pattern_player_rules.png">
+</p>
+<br>
+
+- We chose to use a Singleton pattern for Player Rules to differentiate game level rules vs player level rules.
+- This also ensure one source of Player Rules like draw, reverse, skip for all players.
+- This allows IPlayer.java objects to manipulate the games using a single source.
+
 
 ### State Pattern
 
