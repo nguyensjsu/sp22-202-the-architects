@@ -105,6 +105,7 @@ The game consists of only 3 screens:
 
 ## Design Patterns
     
+
 ### Factory Pattern
 
 <br>
@@ -147,6 +148,7 @@ The game consists of only 3 screens:
 - The Deck object itelf is used to manage Card objects which are not associated with either Player. 
 - This allowed us to ensure one source of Cards would exist, and no chances of duplicate cards is present. 
 - The GameRules and other classes access the Deck object by use of the getInstance method.
+
 
 ### Singleton - GameRules
 
@@ -208,6 +210,7 @@ The game consists of only 3 screens:
 - Two classes are created which implement the strategies for a Computer and a User player respectively.
 - In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between the two players.
 
+
 ### Contributions
 
 | Member | Design Pattern |
@@ -217,6 +220,7 @@ The game consists of only 3 screens:
 | Hanyu Hu       | Singleton(GameRules)             |
 | Paramjot Singh | Factory, Singleton(Deck)         |
 | Waqas Kureshy  | Singleton(GameScreen), State     |
+
 
 ## Class Diagram
 
