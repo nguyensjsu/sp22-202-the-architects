@@ -127,14 +127,18 @@ We chose to use a Singleton pattern for Player Rules to differentiate game level
     <image src="images/playerrules.png">
 </p>
 
-5. Sound Observer Pattern - Devansh
-Observer pattern was a good fit for sound effects as we needed multiple tracks of sound. We added ISoundObserver, ISoundSubject, and SoundHandler for this pattern. Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. We also have a STOP event. 
+### Observer Pattern
 
+<br>
 <p align="center">
-    <image src="images/observersound.png">
+    <image src="images/observer_pattern.png">
 </p>
+<br>
 
-7. State Design Pattern is for Turn Management in the Game and Game Screen uses Singelton pattern- Waqas
+- Observer pattern was a good fit for sound effects as we needed multiple tracks of sound. 
+- We added ISoundObserver, ISoundSubject, and SoundHandler for this pattern. 
+- Any ISoundSubject can notify the SoundHandler to play SoundEvent enum based events. 
+- We also have a STOP event. 
 
 ### State Pattern
 
@@ -143,6 +147,7 @@ Observer pattern was a good fit for sound effects as we needed multiple tracks o
     <image src="images/state_pattern.png">
 </p>
 <br>
+
 
 ### Strategy Pattern
 
