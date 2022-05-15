@@ -213,7 +213,7 @@ The game consists of only 3 screens:
 
 <hr>
 
-### Contributions
+## Contributions
 
 | Member | Design Pattern |
 | -------------- | -------------------------------- |
