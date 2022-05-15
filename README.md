@@ -264,3 +264,7 @@ This pattern also aids in the the following game functionalities:
  
 ## Burndown Chart
 ### [![Burndown Chart](images/burndown_chart.png)](https://docs.google.com/spreadsheets/d/1Z5zIJknovuiLPphlMqS3jdI8GBqY_gp5KiWFqB5gwmQ/edit?usp=sharing)
+
+
+## Scrum Board
+### [![Scrum Board](images/scrum_board.png)](https://github.com/orgs/nguyensjsu/projects/11)
