@@ -91,15 +91,16 @@ The game consists of only 3 screens:
     
 <br>
 
-## Technologies
-- Java
-- Greenfoot
-  
+## Class Diagram
 
+<br>
+<p align="center">
+    <image src="images/class_diagram.png">
+</p>
+<br>
 
-
-## Design Patterns
     
+## Design Patterns
 
 ### Factory Pattern
 
@@ -175,6 +176,7 @@ The game consists of only 3 screens:
 - This also ensure one source of Player Rules like draw, reverse, skip for all players.
 - This allows IPlayer.java objects to manipulate the games using a single source.
 - GameRule associate with Player rules to allowed the player makes actions and move in the game.
+
 <hr>
 
 ### State Pattern
@@ -214,26 +216,11 @@ The game consists of only 3 screens:
 - In a nutshell, both Computer and User players are of the type `Player`, and it's the strategy employed that differentiates between the two players.
 
 <hr>
-
-## Contributions
-
-| Member | Design Pattern |
-| -------------- | -------------------------------- |
-| Ashutosh Ojha  | Strategy                         |
-| Devansh Modi   | Observer, Singleton(PlayerRules) |
-| Hanyu Hu       | Singleton(GameRules)             |
-| Paramjot Singh | Factory, Singleton(Deck)         |
-| Waqas Kureshy  | Singleton(GameScreen), State     |
-
-
-## Class Diagram
-
-<br>
-<p align="center">
-    <image src="images/class_diagram.png">
-</p>
-<br>
-
+  
+## Technologies
+- Java
+- Greenfoot
+    
 
 ## Team Members
 1. Ashutosh Ojha
@@ -242,7 +229,17 @@ The game consists of only 3 screens:
 4. Paramjot Singh
 5. Waqas Kureshy
 
+## Contributions
 
+| Member         | Design Pattern                   |
+| -------------- | -------------------------------- |
+| Ashutosh Ojha  | Strategy                         |
+| Devansh Modi   | Observer, Singleton(PlayerRules) |
+| Hanyu Hu       | Singleton(GameRules)             |
+| Paramjot Singh | Factory, Singleton(Deck)         |
+| Waqas Kureshy  | Singleton(GameScreen), State     |
+
+    
 ## Journals
 1. [Ashutosh's Journal](/member-journals/journal_ashutosh.md)
 2. [Devansh's Journal](/member-journals/journal_devansh.md)
